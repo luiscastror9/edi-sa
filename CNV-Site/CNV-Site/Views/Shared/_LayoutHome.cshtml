@@ -1,0 +1,135 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>CNV</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link type="text/css" href="~/Content/assets/css/bootstrap.min.css" rel="stylesheet">
+    <!-- OTHERS CSS -->
+    <link type="text/css" href="~/Content/assets/css/animate.min.css" rel="stylesheet" />
+    <link type="text/css" href="~/Content/assets/css/normalize.css" rel="stylesheet" />
+    <link href="~/Content/assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link type="text/css" href="~/Content/assets/css/style.css" rel="stylesheet">
+    <link type="text/css" href="~/Content/assets/css/home.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    <!-- jQuery -->
+    <script type="text/javascript" src="~/Content/assets/js/jquery.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script type="text/javascript" src="~/Content/assets/js/bootstrap.min.js"></script>
+    <!-- Other JavaScript -->
+    <script type="text/javascript" src="~/Content/assets/js/jquery.easing.min.js"></script>
+    <script type="text/javascript" src="~/Content/assets/js/scrolling-nav.js"></script>
+    <script type="text/javascript" src="~/Content/assets/js/wow.min.js"></script>
+    <script type="text/javascript" src="~/Content/assets/js/parallax.js"></script>
+    <!-- CUSTOM JavaScript -->
+    <script type="text/javascript" src="~/Content/assets/js/main.js"></script>
+    <script type="text/javascript" src="~/Content/assets/js/home.js"></script>
+    <!-- Google Analitycs -->
+    <script type="text/javascript" src="~/Scripts/ga.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDEMpvjMheyCtHQBwj5YTyBRxxIYYqhkqA" type="text/javascript"></script>
+    <script type="text/javascript">
+
+      jQuery(document).ready(function ($) {
+
+          Initialize();
+      });
+      function Initialize() {
+          google.maps.visualRefresh = true;
+          var uluru = { lat: -34.6057821, lng: -58.3729832 };
+
+          var map2 = new google.maps.Map(document.getElementById('map_canvas_l'), {
+              zoom: 15,
+              center: uluru
+          });
+          var marker2 = new google.maps.Marker({
+              position: uluru,
+              map: map2
+          });
+
+
+
+          marker2.setIcon('http://maps.google.com/mapfiles/ms/icons/blue-dot.png')
+
+      }
+
+// our code will go in here...
+    </script>
+
+</head>
+
+<!-- The #page-top ID is part of the scrolling feature - the data-spy and data-target are part of the built-in Bootstrap scrollspy function -->
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+    <!-- Navigation -->
+@Html.Partial("_Menu")
+    <!-- Intro Section -->
+    <section id="intro">
+        <div class="container">
+            <div class="col-md-8 col-sm-12 col-xs-12 no-padding center-logo"> <img src="~/Content/assets/img/logo-home.png" class="img-responsive"> </div>
+            <div class="col-md-4 col-sm-12 col-xs-12">
+                <ul class="nav-intro">
+                    <li><a target="_blank" href="https://www.linkedin.com/company/558258/"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                    <li><a target="_blank" href="http://youtube.com/user/CNVArgentina"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+                    <li><a target="_blank" href="http://twitter.com/CNVArgentina"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                    <li><a target="_blank" href="http://flickr.com/photos/fotografiacnv"><i class="fa fa-flickr" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+    </section>
+    @RenderBody()
+   
+    <footer>
+        <div class="container-fluid">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12"> <img src="~/Content/assets/img/logo-footer.png" class="logo-footer"> </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                    </div>
+                    <div class="col-md-9 col-sm-9 no-padding">
+                        <div class="col-md-12 col-sm-12">
+                            @*<img src="~/Content/assets/img/mapa.png" class="img-responsive mapa">*@
+                            <div class=" img-responsive mapa" id="map_canvas_l" style="max-width:330px;max-height:160px;width:330px;height:160px"></div>
+
+                            <p class="azul">
+                                25 de Mayo 175 | CP 1002 | C.A.B.A. | Argentina<br>
+                                Teléfono  <strong>0800-333-2683</strong><br>
+                            </p>
+                        </div>
+
+                    </div>
+                    <div class="col-md-3 col-sm-3 no-padding">
+                        <h1>Seguinos en las redes</h1>
+                        <ul class="nav-intro">
+                            <li><a target="_blank" href="https://www.linkedin.com/company/558258/"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                            <li><a target="_blank" href="http://youtube.com/user/CNVArgentina"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+                            <li><a target="_blank" href="http://twitter.com/CNVArgentina"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                            <li><a target="_blank" href="http://flickr.com/photos/fotografiacnv"><i class="fa fa-flickr" aria-hidden="true"></i></a></li>
+                        </ul>
+                       @Html.Partial("_MenuFooter")
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+ 
+</body>
+</html>
+

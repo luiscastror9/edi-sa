@@ -1,0 +1,226 @@
+@charset "UTF-8";
+/* CSS Document */
+
+#title-int.mapa-del-sitio{
+	 background: url(../img/shadow-top.png), url(../img/shadow-bottom.png), url(../img/bg-header-para-profesionales.jpg);
+    background-repeat: repeat-x,repeat-x,no-repeat;
+    background-position: top center,bottom center,center right;
+    background-size: 100%,100%,cover;
+}
+   
+#title-int.mapa-del-sitio h1 {
+    color: #fff;
+    text-align: center;
+    font-size: 45px;
+    font-weight: bold;
+	
+}
+#title-int.mapa-del-sitio p{margin-bottom:1em;}
+.bg-mapa-del-sitio{
+	padding-top:100px;
+	padding-bottom: 100px;
+		 background: url(../img/shadow-blue.png), url(../img/bg-para-profesionales.jpg);
+    background-repeat: repeat-x,no-repeat;
+    background-position: top center,center center;
+    background-size: 100%,cover;
+}
+.panel-body p{color:#001e62;}
+ .nav.nav-pills li{width:50%; background: white;}
+table td{color:#0066cc;}
+.btn-blue-full:link,.btn-blue-full:visited,.btn-blue-full:focus{line-height: 40px; width:100%; background: #001e62;color:white;position:relative; float: left;text-align: center;margin-top: 5px;}
+.btn-blue-full:hover{line-height: 40px; width:100%; background: #34a5d4;color:white;position:relative; float: left;text-align: center;margin-top: 5px;}
+#content p.referencias {
+    color: white;
+    text-align: right;
+    margin-bottom: 5px;
+	margin-right: 20px;
+}
+.tab-content{background:#ededed;    }
+.tab-pane{}
+.block-celeste{background:#3da5d0;padding:25px;color:white;}
+.block-celeste h1{font-size:24px;}
+.block-celeste p{color:white!important;}
+.panel-body {
+    background: #ededed;
+}
+.panel-heading {
+    background-color: #001e62;
+    border-radius: 0;
+    border: none;
+    color: #fff;
+    padding: 0;
+    text-transform: uppercase;
+}
+table {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+	background:white;
+}
+th {
+    text-align: left;
+    padding: 15px;
+    background: white;
+    color: #001e62;
+}
+tr {
+    background: white;
+    border-bottom: solid 3px #ededed;
+}
+h3{color:#0066cc; text-align: center; font-size:18px;margin-bottom:10px;}
+.form{padding-top:100px; padding-bottom: 100px;}
+.procedimiento{background: #0066cc; color:white;  padding:15px;width:100%; text-align: center;position: relative; float:left;}
+.bg-white{background:white; padding:5px; text-transform: uppercase;color:#0066cc}.field{margin-bottom:50px;}
+.block{background:white; padding:25px;color:#575757!important;min-height: 290px;margin-bottom:15px; margin-top:15px;}
+.block h1{color:#0066cc; text-align: center;}
+.block p{color:#575757!important;}
+#content{padding-top:75px;}
+select {
+    background-color: white!important;
+    color: #0066cc!important;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: 0!important;
+    border-radius: 0!important;
+    text-transform: capitalize;
+}
+input {
+    border: none!important;
+    border-radius: 0!important;
+}
+
+
+.select_arrow {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+    border-style: solid;
+    border-width: 8px 5px 0px 5px;
+    border-color: #0066cc transparent transparent transparent;
+}
+.form-horizontal .control-label {
+    padding-top: 7px;
+    margin-bottom: 0;
+    text-align: right;
+    color: #0066cc;
+    font-weight: normal;
+}
+.btn-celeste {
+    height: 40px;
+    line-height: 40px;
+    width: 100%;
+	    max-width: initial;
+}
+.gray{color:#878787!important;}
+.btn-descargar-celeste{
+    background: #3da5d0 url(../img/pdf-blanco-descarga.png);
+    color: white;
+    padding: 15px;
+    width: 100%;
+    display: block;
+    background-repeat: no-repeat;
+    background-position: right center;
+}
+.bg-celeste th{background:#3da5d0;color:white;}
+.box-blue{background: #0066cc;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    border-radius: 0;
+    display: block;
+    margin: 0 10px 30px;
+   
+    line-height: 60px;
+    font-size: 16px;
+    position: relative;
+    float: left;
+    padding: 0;max-width: initial;width:100%;}
+.box-celeste{background: #00a7d3;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    border-radius: 0;
+    display: block;
+     margin: 0 10px 30px;
+   
+    line-height: 60px;
+    font-size: 16px;
+    position: relative;
+    float: left;
+    padding: 0;max-width: initial;width:100%;}
+.box-verde{background: #01b18a;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    border-radius: 0;
+    display: block;
+    margin: 0 10px 30px;
+   
+    line-height: 60px;
+    font-size: 16px;
+    position: relative;
+    float: left;
+    padding: 0;max-width: initial;width:100%;}
+.box-violeta{background: #5957ab;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    border-radius: 0;
+    display: block;
+    margin: 0 10px 30px;
+   
+    line-height: 60px;
+    font-size: 16px;
+    position: relative;
+    float: left;
+    padding: 0;max-width: initial;width:100%;}
+.box-gris{background: #7d7d7d;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    border-radius: 0;
+    display: block;
+    margin: 0 10px 30px;
+   
+    line-height: 60px;
+    font-size: 16px;
+    position: relative;
+    float: left;
+    padding: 0;max-width: initial;width:100%;}
+.box-gris:hover,.box-celeste:hover,.box-azul:hover,.box-verde:hover,.box-violeta:hover{color:#0066cc; background:white;}
+@media (max-width: 991px) {
+	.form-horizontal .form-group {
+    margin-right: 0;
+    margin-left: 0;
+}
+	.btn-celeste {
+    height: 40px;
+    line-height: inherit;
+    width: 120px;
+}
+	.tab-content {
+    background: #ededed;
+    padding: 10px;
+}
+	#exTab1{padding:0}
+	 .nav.nav-pills li{width:25%!important; background: white;}
+	.nav.nav-pills li a {font-size:10px!important; line-height: 12px;}
+	.nav.nav-pills li a span{position:absolute; top:50%; transform: translateY(-50%);width:100%; left: 0 }
+	.bg-resoluciones-disciplinarias{
+	padding-top:50px;
+	padding-bottom: 50px;
+		
+}
+	#title-int.mapa-del-sitio h1 {
+    color: #fff;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+	
+}
+	td{min-width:100px}
+}

@@ -1,0 +1,12 @@
+@charset "UTF-8";
+/* CSS Document */
+
+#title-int.aviso-legal {
+	background: url(../img/shadow-top.png), url(../img/shadow-bottom.png), url(../img/bg-header-aviso-legal.jpg);
+    background-repeat: repeat-x,repeat-x,no-repeat;
+    background-position: top center,bottom center,center right;
+    background-size: 100%,100%,cover;
+}
+.center-title{text-align:center;}
+p{text-align: justify;}
+#content{padding-top:50px;}

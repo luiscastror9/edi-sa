@@ -1,0 +1,100 @@
+@charset "UTF-8";
+/* CSS Document */
+
+#title-int.fondos-comunes-inversion {
+	 background: url(../img/shadow-top.png), url(../img/shadow-bottom.png), url(../img/bg-header-fondos-comunes-inversion.jpg);
+    background-repeat: repeat-x,repeat-x,no-repeat;
+    background-position: top center,bottom center,center right;
+    background-size: 100%,100%,cover;
+}
+   
+#title-int.fondos-comunes-inversion h1 {
+    color: #001e62;
+    text-align: center;
+    font-size: 45px;
+    font-weight: bold;
+	margin-bottom: 0
+}
+#title-int.fondos-comunes-inversion p{margin:0 auto 1em;width: 100%; max-width: 800px;}
+.bg-fondos-comunes-inversion{
+	padding-top:100px;
+	padding-bottom: 100px;
+}
+.bg-busqueda{padding-top:100px;
+	padding-bottom: 100px;
+		 background: url(../img/shadow-blue.png), url(../img/bg-fondos-comunes-inversion.jpg);
+    background-repeat: repeat-x,no-repeat;
+    background-position: top center,center center;
+    background-size: 100%,cover;}
+h1 {
+    font-size: 32px;
+    margin: 0 0 50px 0;
+    text-align: center;
+    font-weight: bold;
+    color: #001e62;
+}
+.bg-busqueda h1 {
+    font-size: 32px;
+    margin: 0 0 50px 0;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+}
+.bg-busqueda select {
+    background-color: #fff!important;
+    color: #001e62!important;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: 0!important;
+    border-radius: 0!important;
+    text-transform: uppercase;
+}
+.bg-busqueda .select_arrow {
+    position: absolute;
+    top: 16px;
+    right: 15px;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+    border-style: solid;
+    border-width: 8px 5px 0px 5px;
+    border-color: #001e62 transparent transparent transparent;
+}
+.bg-busqueda p{color:white;}
+.bg-fondos-comunes-inversion .nav.nav-pills li{width:50%;}
+table td{color:#0066cc;}
+.btn-blue-full:link,.btn-blue-full:visited,.btn-blue-full:focus{line-height: 40px; width:100%; background: #001e62;color:white;position:relative; float: left;text-align: center;margin-top: 5px;}
+.btn-blue-full:hover{line-height: 40px; width:100%; background: #34a5d4;color:white;position:relative; float: left;text-align: center;margin-top: 5px;}
+#content p.referencias {
+    color: white;
+    text-align: right;
+    margin-bottom: 5px;
+	margin-right: 20px;
+}
+
+@media (max-width: 991px) {
+	.nav.nav-pills li {
+    border-radius: 0;
+    margin: 0;
+    text-align: center;
+    background: #001e62;
+    width: 50%!important;
+}
+	.bg-fondos-comunes-inversion{
+	padding-top:50px;
+	padding-bottom: 50px;
+		
+}
+	.bg-fondos-comunes-inversion {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+	#title-int.fondos-comunes-inversion h1 {
+    color: #001e62;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+	margin-bottom: 0
+}
+}

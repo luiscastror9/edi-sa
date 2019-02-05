@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>CNV</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link type="text/css" href="~/Content/assets/css/bootstrap.min.css" rel="stylesheet">
+    <!-- OTHERS CSS -->
+    <link type="text/css" href="~/Content/assets/css/animate.min.css" rel="stylesheet" />
+    <link type="text/css" href="~/Content/assets/css/normalize.css" rel="stylesheet" />
+    <link href="~/Content/assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link type="text/css" href="~/Content/assets/css/style.css" rel="stylesheet">
+    <link type="text/css" href="~/Content/assets/css/home.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+</head>
+
+<!-- The #page-top ID is part of the scrolling feature - the data-spy and data-target are part of the built-in Bootstrap scrollspy function -->
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+    <!-- Navigation -->
+@Html.Partial("_Menu")
+    <!-- Intro Section -->
+    <section id="intro">
+        <div class="container">
+            <div class="col-md-8 col-sm-12 col-xs-12 no-padding center-logo"> <img src="~/Content/assets/img/logo-home.png" class="img-responsive"> </div>
+            <div class="col-md-4 col-sm-12 col-xs-12">
+                <ul class="nav-intro">
+                    <li><a href="http://youtube.com"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+                    <li><a href="http://twitter.com"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                    <li><a href="http://flickr.com"><i class="fa fa-flickr" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+    </section>
+    @RenderBody()
+   
+    <footer>
+        <div class="container-fluid">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12"> <img src="~/Content/assets/img/logo-footer.png" class="logo-footer"> </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1>Dónde Estamos</h1>
+                    </div>
+                    <div class="col-md-9 col-sm-9 no-padding">
+                        <div class="col-md-12 col-sm-12">
+                            <img src="~/Content/assets/img/mapa.png" class="img-responsive mapa">
+                            <p class="azul">
+                                Estamos en 25 de Mayo 175 | CP 1002 | C.A.B.A. | Argentina<br>
+                                Teléfono  <strong>0800-333-2683</strong><br>
+                            </p>
+                        </div>
+
+                    </div>
+                    <div class="col-md-3 col-sm-3 no-padding">
+                        <h1>Seguinos en las redes.</h1>
+                        <ul class="nav-intro">
+                            <li><a href="http://youtube.com"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+                            <li><a href="http://twitter.com"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                            <li><a href="http://flickr.com"><i class="fa fa-flickr" aria-hidden="true"></i></a></li>
+                        </ul>
+                       @Html.Partial("_MenuFooter")
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script type="text/javascript" src="~/Content/assets/js/jquery.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script type="text/javascript" src="~/Content/assets/js/bootstrap.min.js"></script>
+    <!-- Other JavaScript -->
+    <script type="text/javascript" src="~/Content/assets/js/jquery.easing.min.js"></script>
+    <script type="text/javascript" src="~/Content/assets/js/scrolling-nav.js"></script>
+    <script type="text/javascript" src="~/Content/assets/js/wow.min.js"></script>
+    <script type="text/javascript" src="~/Content/assets/js/parallax.js"></script>
+    <!-- CUSTOM JavaScript -->
+    <script type="text/javascript" src="~/Content/assets/js/main.js"></script>
+    <!-- Google Analitycs -->
+    <script type="text/javascript" src="~/Scripts/ga.js"></script>
+
+</body>
+</html>
+

@@ -1,0 +1,59 @@
+﻿@* 
+ This partial controls the left menu of the AdminLTE dashboard and is called automatically by _AdminLteLayout
+    This is where you can add, modify, or remove navigation options in your app
+    TODO: This preserves the links as-is for the demo, which lead to broken pages!
+    It's up to you to make sure these links either get deleted or lead somewhere REAL!
+*@
+
+
+@{
+    Layout = null;
+}
+<aside class="main-sidebar">
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+        <!-- Sidebar user panel -->
+     
+       
+        <!-- sidebar menu: : style can be found in sidebar.less -->
+        <ul class="sidebar-menu">
+            <li class="header">BACKOFFICE</li>
+            <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-dashboard"></i> <span>Panel de Control</span> <i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="@Url.Action("Index", "Default", new { Area = "BackOffice" })"><i class="fa fa-circle-o"></i> Inicio</a></li>
+                    <li><a href="@Url.Action("Banner", "Default", new { Area = "BackOffice" })"><i class="fa fa-circle-o"></i> Banner Home</a></li>
+                    <li><a href="@Url.Action("Consulta", "Default", new { Area = "BackOffice" })"><i class="fa fa-circle-o"></i>Consultas Home</a></li>
+
+                </ul>
+            </li>
+            <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-files-o"></i>
+                    <span>Configuraciones</span><i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="@Url.Action("Index", "Configuracion", new { Area = "BackOffice" })"><i class="fa fa-circle-o"></i> Configuraciones Generales</a></li>
+               </ul>
+            </li>
+            <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-files-o"></i>
+                    <span>Prensa</span><i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="@Url.Action("Articulos", "Prensa", new { Area = "BackOffice" })"><i class="fa fa-circle-o"></i> Articulos</a></li>
+                    <li><a href="@Url.Action("Categorias", "Prensa", new { Area = "BackOffice" })"><i class="fa fa-circle-o"></i> Categorias</a></li>
+                </ul>
+            </li>
+
+           
+
+     
+        
+        </ul>
+    </section>
+    <!-- /.sidebar -->
+</aside>

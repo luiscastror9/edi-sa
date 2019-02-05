@@ -1,0 +1,121 @@
+﻿@model CofcoInd.Areas.BackOffice.Notes
+@{
+    ViewBag.Title = "Editar Articulo de Prensa CNV";
+    Layout = "~/Areas/BackOffice/Views/Shared/_AdminLteLayout.cshtml";
+}
+
+    <link type="text/css" href="~/Scripts/AdminLTE/plugins/bootstrap-toogle/bootstrap-toggle.css" rel="stylesheet">
+
+
+
+<div class="row">
+
+    <section class="col-lg-12 ">
+        <div class="box-default ">
+            @using (Html.BeginForm("EditArticulos", "Prensa", FormMethod.Post, new { name = "createArticulos", id = "createArticulos", enctype = "multipart/form-data" }))
+            {
+                <div class="box  box-success ">
+                    <div class="box-header">
+                        <i class="fa fa-fw"></i>
+
+                        <div class="box-tools pull-right" data-toggle="tooltip" title="Status">
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="box-body" id="maestro-box">
+                        @*@Html.AntiForgeryToken()*@
+                        @Html.HiddenFor(model => model.IdNote)
+
+
+                        <div class="form-group ">
+                            @Html.Label("Titulo", htmlAttributes: new { @class = "control-label " })
+
+                            @Html.EditorFor(model => model.titleNote, new { htmlAttributes = new { @class = "form-control" } })
+
+                        </div>
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                        <div class="form-group ">
+                            @Html.Label("Cuerpo", htmlAttributes: new { @class = "control-label " })
+
+
+                            @Html.TextAreaFor(model=>model.bodyNote, new { @class = "textarea", @placeholder = "Ingrese El texto ", @style = "width: 100 %; height: 200px; font - size: 14px; line - height: 18px; border: 1px solid #dddddd; padding: 10px;" })
+
+
+                        </div>
+
+                       <div class="form-group">
+
+                            @Html.Label("Activo", htmlAttributes: new { @class = "control-label" })
+                            <input id="ActiveNote" type="checkbox" @(Model.ActiveNote == true ? "checked" : "") data-toggle="toggle" data-on="Activo" data-off="Inactivo">
+                            <input type="hidden" name="h_activeNote" id="h_activeNote" value="@(Model.ActiveNote == true ? "true" : "false") ">
+
+
+                        </div>
+                        <div class="form-group">
+
+                            @Html.Label("Imagen", htmlAttributes: new { @class = "control-label" })
+                            <img src="~/Content/Upload/@(Model.imgNote)" width="250px" height="250px" />
+
+                        </div>
+                        <div class="form-group ">
+                            @Html.Label("Imagen", htmlAttributes: new { @class = "control-label " })
+
+                            @Html.TextBox("imgNote", "", new { type = "file", accept = "*.jpg, *.jpeg, *.png" }) <br />
+
+                        </div>
+
+                        <div class="form-group">
+
+                            @Html.Label("Imagen de Slider", htmlAttributes: new { @class = "control-label" })
+                            <img src="~/Content/Upload/@(Model.imgSliderNote)" width="700px" height="200px" />
+
+                        </div>
+                        <div class="form-group ">
+                            @Html.Label("Imagen de Slider", htmlAttributes: new { @class = "control-label " })
+
+                            @Html.TextBox("imgSliderNote", "", new { type = "file", accept = "*.jpg, *.jpeg, *.png" }) <br />
+
+                        </div>
+                        <div class="form-group ">
+                            @Html.Label("Etiquetas", htmlAttributes: new { @class = "control-label ", placeholder = " Coloque las etiquetas separadas por coma (,)" })
+
+                            @Html.EditorFor(model => model.tagsNote, new { htmlAttributes = new { @class = "form-control" } })
+
+                        </div>
+                        <input type="hidden" name="authorNote" id="authorNote" value="">
+                        <div class="form-group ">
+                            @Html.Label("Categoria", htmlAttributes: new { @class = "control-label " })
+
+                            @Html.DropDownList("idCategoriasNotes", (SelectList)(ViewBag.Categorias), "-- Elige --", new { @class = "form-control" })
+
+
+
+                        </div>
+                    </div>
+
+                    <div class="box-footer">
+
+                        <input id="btnSaveCategorias" type="submit" value="Actualizar" class="btn btn-info btn-infolink" style="color:white" />
+                        <input id="btnCancelarCategorias" onclick="window.location.replace('@Url.Action("Articulos", "Prensa", new { Area = "BackOffice" })')" type="reset" value="Cancelar" class="btn btn-info btn-infolink" style="color:white" />
+                    </div>
+                </div>
+            }
+
+    </section>
+
+</div>
+
+@section scripts {
+    @*NOTE: These should NOT be used in a production situation
+        They do contains useful snippets on how to setup charts*@
+    <script src="/Areas/BackOffice/Scripts/Banner.js"></script>
+<script src="~/Scripts/AdminLTE/plugins/bootstrap-toogle/bootstrap-toggle.js"></script>
+}
+<script>
+
+    //  $(".textarea").wysihtml5();
+    CKEDITOR.replace('bodyNote');
+</script>

@@ -1,0 +1,152 @@
+﻿@model CNV_Site.Models.ListaIdoneos
+@{
+    ViewBag.Title = "Resultados Idoneos";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link type="text/css" href="~/Content/assets/css/registros-publicos.css" rel="stylesheet">
+@foreach (CNV_Site.Models.Idoneos Id in Model.data)
+{
+<div id="myModal@(Id.dni)" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+               @if (Id.razonSocial != null)
+               {
+                <h4 class="modal-title">Agente: @Id.razonSocial</h4>
+               }
+               else
+               {<h4 class="modal-title">Agente: @Id.nombreApellido</h4>
+               }
+            </div>
+            <div class="modal-body">
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr class="celeste">
+                                <th>CUIT</th>
+                                <th>N° DE MATRÍCULA CNV</th>
+                                <th>CATEGORÍA</th>
+                                <th>DOMICILIO ELECTRÓNICO</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>@Id.cuit</td>
+                                <td>@Id.matricula</td>
+                                <td>
+                                  @Id.matricula 
+                                </td>
+                                <td>@Id.domicilioElectronico</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-celeste center-btn" data-dismiss="modal">VOLVER A RESULTADOS</button>
+
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div> 
+
+}
+
+<section id="title-int" class="registros-publicos">
+    <div class="container-fluid no-padding">
+        <h1>Registros Públicos</h1>
+        <p>
+            Encontrá aquí información pública sobre agentes intermediarios  e
+            infraestructura del mercado de capitales, autorizados y registrados en CNV.
+        </p>
+    </div>
+</section>
+<section id="content">
+
+    <div class="container">
+
+        <div class="panel-group wrap accordion" id="accordionb" role="tablist" aria-multiselectable="true">
+            <div class="panel">
+                <div class="panel-heading" role="tab" id="headingb1">
+                    <h4 class="panel-title center-title"><a href="registros-publicos.html" class="btn-blue back"><i class="fa fa-caret-left"></i> VOLVER</a> <a role="button" data-toggle="collapse" data-parent="#accordionb" href="#collapseb1" aria-expanded="true" aria-controls="collapseb1" class=""> <strong>IDÓNEOS</strong></a> </h4>
+                </div>
+                <div id="collapseb1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading1" aria-expanded="true" style="">
+                    <div class="panel-body  bg-gray">
+                        <p>
+                            La idoneidad es un requisito que se exige a quienes desempeñen las actividades de venta, promoción o prestación de cualquier tipo de asesoramiento al público inversor, para garantizar que cuentan con el nivel de competencia e integridad requerido. <br>
+                            De esta manera, el Registro de Idóneos, refleja a aquellas personas físicas con idoneidad aprobada por la CNV para asesorar al público inversor a través de un Agente autorizado.
+                        </p>
+                        <h2>Resultados de búsqueda:</h2>
+                        <table class="datatable">
+                            <thead>
+                                <tr class="celeste">
+                                    <th>DNI</th>
+                                    <th>
+                                        CUIL / CUIT /
+                                        N° DE REGISTRO
+                                    </th>
+                                    <th>
+                                        NOMBRE/S Y APELLIDO/S
+                                        DEL PERSONAL IDÓNEO
+                                    </th>
+                                    <th>ESTADO</th>
+                                    <th>
+                                        E-APELLIDO Y NOMBRE / RAZÓN SOCIAL
+                                        DEL AGENTE QUE LO REGISTRA
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                    @foreach (CNV_Site.Models.Idoneos Id in Model.data)
+                    {
+                        
+                                <tr>
+                                    <td id="dni">@Id.dni</td>
+                                    <td id="cuit">@Id.cuit</td>
+
+                                    <td id="nombreApellido">@Id.nombreApellido</td>
+                                    <td id="estado">@Id.estado</td>
+                                    <td id="razonSocial">@Id.razonSocial <a href="#" class="btn-blue" data-toggle="modal" data-target="#myModal@(Id.dni)">VER AGENTE</a></td>
+                                   
+                                </tr>
+                             
+                    }
+                                
+                            </tbody>
+                        </table>
+                        <div class="row">
+                        <div class="col-sm-5">
+                            <div class="dataTables_info" id="DataTables_Table_0_info" role="status" aria-live="polite">Mostrando registros del @Model.desde al @Model.hasta de un total de @Model.totalElementos registros</div>
+                        </div>
+                        <div class="col-sm-7">
+                            <div class="dataTables_paginate paging_simple_numbers" id="DataTables_Table_0_paginate" style="text-align: right;">
+                            <ul class="pagination" style="margin-top: 5px;">
+                                <li class="paginate_button previous" id="DataTables_Table_0_previous">
+                                <a href="#" aria-controls="DataTables_Table_0" data-dt-idx="0" tabindex="0">Anterior</a>
+                                    </li>
+                                @for (int i = 1; i <= @Model.totalElementos/100; i++)
+                                {
+                                <li class="paginate_button">
+                                    <a href="@Url.Action("ResultadosIdoneos", "RegistrosPublicos", new { pagina = i })" aria-controls="DataTables_Table_0" data-dt-idx="1" tabindex="0">@i</a>
+                                </li>
+                                }
+                               
+                                <li class="paginate_button next" id="DataTables_Table_0_next">
+                                <a href="#" aria-controls="DataTables_Table_0" data-dt-idx="2" tabindex="0">Siguiente</a></li></ul>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="@Url.Action("Idoneos", "RegistrosPublicos")" class="btn-celeste center-btn	">REALIZAR NUEVA BÚSQUEDA</a>
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</section>
+@Html.Partial("_Nav_int_Institucional")
+

@@ -1,0 +1,181 @@
+﻿
+@{
+    ViewBag.Title = "Contacto";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script type="text/javascript">
+
+     jQuery(document).ready(function ($) {
+
+         Initialize();
+     });
+     function Initialize() {
+         google.maps.visualRefresh = true;
+         var uluru = { lat: -34.6057821, lng: -58.3729832 };
+
+        
+      
+         var map = new google.maps.Map(document.getElementById('map_canvas'), {
+             zoom: 15,
+             center: uluru
+         });
+
+         var marker = new google.maps.Marker({
+             position: uluru,
+             map: map
+         });
+
+     }
+
+// our code will go in here...
+</script>
+
+<link type="text/css" href="~/Content/assets/css/contacto.css" rel="stylesheet">
+<!-- Intro Section -->
+
+    <section id="title-int" class="contacto">
+        <div class="container-fluid no-padding">
+            <h1>Contacto</h1>
+        </div>
+    </section>
+    <section id="content">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h2>DÓNDE ESTAMOS</h2>
+                    <p>
+                        Comisión Nacional de Valores<br>
+                        25 de Mayo 175<br>
+                        1002 C.A.B.A<br>
+                        República Argentina
+                    </p>
+                   <div id="map_canvas" class="img-responsive" style="max-width:549px;max-height:275px;width:549px;height:275px;"></div> @*<img src="~/Content/assets/img/mapa-contacto.jpg" class="img-responsive">*@
+                    <h2>CONSULTAS GENERALES</h2>
+                    <p>
+                        Lunes a viernes de 13 a 17 hs<br>
+                        0800-333-2683
+                    </p>
+                    <h2>OFICINA DE ATENCIÓN AL INVERSOR</h2>
+                    <p>
+                        inversor@cnv.gov.ar <br>
+                        0800-333-2683<br>
+                        Horario de atención telefónica: Lunes a Viernes de 13 a 17 hs.
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <h2>Oficina de Atención a Pymes</h2>
+                    <p>
+                        pyme@cnv.gov.ar<br>
+                        0800-333- 2683 (opción 3) <br>
+                        Horario de atención telefónica: Lunes a Viernes de 13 a 17 hs.
+                    </p>
+                    <h2>Oficina de Asuntos Internacionales</h2>
+                    <p>
+                        internacionales@cnv.gov.ar
+                    </p>
+                    <h2>
+                        Oficina de Comunicación
+                        Institucional y Prensa
+                    </h2>
+                    <p>
+                        prensa@cnv.gov.ar<br>
+                        (+54 11) 4329-4724
+                    </p>
+                    <h2>
+                        Consultas técnicas sobre
+                        Autopista de Información Financiera
+                    </h2>
+                    <p>aif@cnv.gov.ar</p>
+                </div>
+                <div class="col-md-12">
+                    <h2 class="center-title">Oficina de Acceso a la Información Pública</h2>
+                    <a href="javascript:void(0)" class="btn-saber-mas btn-comite" id="colaboracion">
+                        Envíenos su consulta a través de este formulario:
+                    </a>
+                    <div class="txt-saber-mas contacto no-animated">
+                        @using (Html.BeginForm("Contacto", "Home", FormMethod.Post, new { name = "createContacto", id = "createContacto", enctype = "multipart/form-data" }))
+                        {
+                            <div class="form-group">
+                                <div class="col-sm-6">
+                                    <label for="nombre" class="control-label">NOMBRE Y APELLIDO O RAZÓN SOCIAL:</label>
+                                </div>
+                                <div class="col-sm-6">
+                                    <input type="text" class="form-control" id="nombre" name="nombre" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-6">
+                                    <label for="cuit" class="control-label">CUIT / CUIL / CDI :</label>
+                                </div>
+                                <div class="col-sm-6">
+                                    <input type="text" class="form-control" id="cuit" name="cuit" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-6">
+                                    <label for="domicilio" class="control-label">DOMICILIO COMPLETO:</label>
+                                </div>
+                                <div class="col-sm-6">
+                                    <input type="text" class="form-control" id="domicilio" name="domicilio" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-6">
+                                    <label for="residencia" class="control-label">LUGAR DE RESIDENCIA:</label>
+                                </div>
+                                <div class="col-sm-6">
+                                    <input type="text" class="form-control" id="residencia" name="residencia" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-6">
+                                    <label for="cp" class="control-label">CÓDIGO POSTAL:</label>
+                                </div>
+                                <div class="col-sm-6">
+                                    <input type="text" class="form-control" id="cp" name="cp" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-6">
+                                    <label for="telefono" class="control-label">TELÉFONO DE CONTACTO:</label>
+                                </div>
+                                <div class="col-sm-6">
+                                    <input type="text" class="form-control" id="telefono" name="telefono" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-6">
+                                    <label for="email" class=" control-label">E-MAIL:</label>
+                                </div>
+                                <div class="col-sm-6">
+                                    <input type="email" class="form-control" id="email" name="email" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-6">
+                                    <label for="info" class="control-label">
+                                        DESCRIPCIÓN DE LA INFORMACIÓN REQUERIDA
+                                        (INCLUIR CUALQUIER DATO QUE FACILITE SU IDENTIFICACIÓN):
+                                    </label>
+                                </div>
+                                <div class="col-sm-6">
+                                    <textarea cols="1" rows="10" class="form-control" id="info" name="info"></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-offset-6 col-sm-6">
+                                    <button type="submit" class=" btn-blue">ENVIAR</button>
+                                    <a href="#" id="cancelar" class=" btn-celeste">CANCELAR</a>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    @Html.Raw(TempData["msg"])
+
+    @Html.Partial("_Nav_int_Institucional")
+

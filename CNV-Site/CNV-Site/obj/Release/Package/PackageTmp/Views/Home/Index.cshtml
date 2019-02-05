@@ -1,0 +1,319 @@
+﻿    @model CNV_Site.Models.ViewModelHome
+    @{
+        ViewBag.Title = "Comision Nacional de Valores";
+    }
+    @{
+        Layout = "~/Views/Shared/_LayoutHome.cshtml";
+    }
+
+    <section id="slider-novedades">
+        <div class="container-fluid no-padding">
+            <div class="filter-home">
+                <div class="btn-blue active" data-filter="novedades">ÚLTIMAS NOVEDADES</div>
+                <div class="btn-blue" data-filter="hechos-relevantes">HECHOS RELEVANTES</div>
+            </div>
+            <div id="carousel-hechos-relevantes">
+                <div class="content">
+                    <div class="table-responsive">
+
+                        <table class="">
+                            <thead>
+                                <tr>
+                                    <th>FECHA</th>
+                                    <th>ENTIDAD</th>
+                                    <th>DESCRIPCIÓN</th>
+                                    <th width="150px">DESCARGAR</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            @foreach (CNV_Site.Models.Documentos HR in Model.DOCSHR)
+                            {
+                            <tr>
+                                <td>@HR.fecha.ToString("d MMM yyyy hh:mm",
+                   System.Globalization.CultureInfo.CreateSpecificCulture("es-AR"))</td>
+                                <td>@HR.entidadDescripcion</td>
+                                <td>@HR.tipoDocumento</td>
+                                <td><a href="@HR.link"><img src="~/Content/assets/img/pdf.png"></a></td>
+                            </tr>
+ 
+                            }
+                        </tbody>
+                        </table>
+
+                    </div><a href="@Url.Action("Index", "HechosRelevantes")" class=" btn btn-leer-mas">VER TODOS</a>
+                </div>
+            </div>
+
+            <div id="carousel-novedades" class="carousel slide visible">
+                
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    @{int count = 0; }
+                    @foreach (CNV_Site.Areas.BackOffice.Models.Note SN in Model.N)
+                    {
+                        @*if (count == 0)
+                        {
+                            <li data-target="#carousel-novedades" data-slide-to="@(count)" class="active"></li>
+
+                        }
+                        else
+                        {
+                            <li data-target="#carousel-novedades" data-slide-to="@(count)" class=""></li>
+
+                        }*@
+                        count = count + 1;
+                    }
+
+                </ol>
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner">
+                    @{int count2 = 0; }
+                    @foreach (CNV_Site.Areas.BackOffice.Models.Note SN in Model.N)
+                    {
+                        if (count2 == 0)
+                        {
+                            if (String.IsNullOrWhiteSpace(SN.imgNote))
+                            {
+                                <div class="item active">
+                                    <div class="caption">
+                                        <h2>@SN.create_datetime.ToShortDateString()</h2>
+                                        <h1>@SN.titleNote</h1>
+                                        <a href="@Url.Content("~/")Prensa/Post/@SN.IdNote/@SN.GenerateSlug()" class="btn btn-leer-mas">LEER MÁS</a>
+                                    </div>
+                                </div>
+                            }
+                            else
+                            {
+                                <div class="item active">
+                                    <div class="caption">
+                                        <div class="col-md-3" ><img style="border-radius: 50%;" src="@Url.Content("~/")Content/Upload/@SN.imgNote" class="img-responsive"></div>
+                                        <div class="col-md-9">
+                                            <h2>@SN.create_datetime.ToShortDateString()</h2>
+                                            <h1>@SN.titleNote</h1>
+                                            <a href="@Url.Content("~/")Prensa/Post/@SN.IdNote/@SN.GenerateSlug()" class="btn btn-leer-mas">LEER MÁS</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        }
+                        else
+                        {
+                            if (String.IsNullOrWhiteSpace(SN.imgNote))
+                            {
+                                <div class="item ">
+                                    <div class="caption">
+                                        <h2>@SN.create_datetime.ToShortDateString()</h2>
+                                        <h1>@SN.titleNote</h1>
+                                        <a href="@Url.Content("~/")Prensa/Post/@SN.IdNote/@SN.GenerateSlug()" class="btn btn-leer-mas">LEER MÁS</a>
+                                    </div>
+                                </div>
+                            }
+                            else
+                            {
+                                <div class="item ">
+                                    <div class="caption">
+                                        <div class="col-md-3" ><img style="border-radius: 50%;" src="@Url.Content("~/")Content/Upload/@SN.imgNote" class="img-responsive"></div>
+                                        <div class="col-md-9">
+                                            <h2>@SN.create_datetime.ToShortDateString()</h2>
+                                            <h1>@SN.titleNote</h1>
+                                            <a href="@Url.Content("~/")Prensa/Post/@SN.IdNote/@SN.GenerateSlug()" class="btn btn-leer-mas">LEER MÁS</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+
+                        }
+
+                        count2 = count2 + 1;
+
+
+                    }
+                </div>
+            </div>
+
+            <!-- Controls -->
+            <a class="left carousel-control" href="#carousel-novedades" role="button" data-slide="prev">
+                <i class="fa fa-chevron-left" aria-hidden="true"></i>
+
+                <span class="sr-only">Previo</span>
+            </a>
+            <a class="right carousel-control" href="#carousel-novedades" role="button" data-slide="next">
+                <i class="fa fa-chevron-right" aria-hidden="true"></i>
+
+                <span class="sr-only">Siguiente</span>
+            </a>
+        </div>
+    </section>
+    <section id="slider-servicios">
+        <div class="container-fluid no-padding">
+            <div id="carousel-servicios" class="carousel slide ">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    @{int count3 = 0; }
+                    @foreach (CNV_Site.Areas.BackOffice.Models.SlidersHome SH in Model.SL)
+                    {
+                        if (count3 == 0)
+                        {
+                            <li data-target="#carousel-servicios" data-slide-to="@(count)" class="active"></li>
+
+                        }
+                        else
+                        {
+                            <li data-target="#carousel-servicios" data-slide-to="@(count)" class=""></li>
+
+                        }
+                        count3 = count3 + 1;
+                    }
+
+                
+                </ol>
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner">
+                    @{int count4 = 0; }
+                    @foreach (CNV_Site.Areas.BackOffice.Models.SlidersHome SH in Model.SL)
+                    {
+                        if (count4 == 0)
+                        {
+                            <div class="item active" style="background:url(@Url.Content("~/")Content/Upload/@SH.urlImgSlideHome);"> </div>
+
+                        }
+                        else
+                        {
+                            <div class="item " style="background:url(@Url.Content("~/")Content/Upload/@SH.urlImgSlideHome);"> </div>
+
+                        }
+                        count4 = count4 + 1;
+                    }
+
+                   
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="servicios">
+        <div class="container-fluid bg-white">
+            <h1 class="title">¿Qué estás buscando?</h1>
+        </div>
+        <div class="container-fluid bg-servicios shadow-top">
+            <div class="container">
+                <div class="row">
+                    <a href="@Url.Action("Index", "Empresas")">
+                        <div class="col-md-6 col-sm-12 servicio">
+                            <div class="col-md-6 col-sm-6 col-xs-6 label">
+                                <div class="label-icon">
+                                    <h1>Empresas</h1>
+                                    <p>Entidades con Oferta Pública</p>
+                                    <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-6 icon">
+                                <div class="label-icon"><img src="~/Content/assets/img/icon1.png"></div>
+                            </div>
+                        </div>
+                        </a>
+                        <div class="col-md-6 col-sm-12 servicio">
+                            <a href="http://www.cnv.gov.ar/onsimple/" target="_blank">
+                                <div class="col-md-6 col-md-push-0 col-sm-6 col-sm-push-6 col-xs-6 col-xs-push-6 label">
+                                    <div class="label-icon">
+                                        <h1>Pymes</h1><p>Alternativas de Financiamiento</p>
+                                        <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-md-pull-0 col-sm-6 col-sm-pull-6 col-xs-6 col-xs-pull-6 icon">
+                                    <div class="label-icon"><img src="~/Content/assets/img/icon4.png"></div>
+                                </div>
+                                </a>
+                            </div>
+                        <div class="col-md-6 col-sm-12 servicio">
+
+                            <div class="col-md-6 col-md-push-0 col-sm-6 col-sm-push-6 col-xs-6 col-xs-push-6 icon">
+                                <div class="label-icon"><img src="~/Content/assets/img/icon2.png"></div>
+                            </div>
+                             <a href="@Url.Action("Index", "FideicomisosFinancieros")">
+                            <div class="col-md-6 col-md-pull-0 col-sm-6 col-sm-pull-6 col-xs-6 col-xs-pull-6 label">
+                                <div class="label-icon">
+                                    <h1>Fideicomisos Financieros</h1>
+                                    <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                                 </a>
+                        </div>
+                        <a href="@Url.Action("Index", "FondosComunesInversion")">
+                            <div class="col-md-6 col-sm-12 servicio">
+                                <div class="col-md-6  col-sm-6  col-xs-6  icon">
+                                    <div class="label-icon">
+                                        <img src="~/Content/assets/img/icon3.png">
+                                    </div>
+                                </div>
+                                <div class="col-md-6  col-sm-6 col-xs-6 label">
+                                    <div class="label-icon">
+                                        <h1>Fondos Comunes de Inversión</h1>
+                                        <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    <a href="@Url.Action("Index", "ProteccionInversor")">
+                        <div class="col-md-4 col-sm-12 servicio servicio-proteccion-al-inversor">
+                            <div class="label-icon">
+                                <img src="~/Content/assets/img/icon5.png">
+                                <h1>Protección al inversor</h1><p>Advertencias y Oficina de Atención</p>
+                                <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        </a>
+                        <a href="@Url.Action("Index", "Profesionales")">
+                            <div class="col-md-4 col-sm-12 servicio servicio-para-profesionales">
+                                <div class="label-icon">
+
+                                    <img src="~/Content/assets/img/icon6.png">
+                                    <h1>Para profesionales</h1><p>Trámites e Inscripciones </p>
+                                    <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </a>
+                    <a href="@Url.Action("Index", "RegistrosPublicos")">
+                        <div class="col-md-4 col-sm-12 servicio servicio-registros-publicos">
+                            <div class="label-icon">
+                                <img src="~/Content/assets/img/icon7.png">
+                                <h1>Registros Públicos</h1><p>De Agentes, Mercados e Infraestructura</p>
+                                <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        </a>
+</div>
+            </div>
+        </div>
+        <div class="container-fluid shadow-bottom">
+            <div class="container">
+                <div class="row">
+                    <a target="_blank" href="http://www.invertir.gob.ar/">
+                        <div class="col-md-6 servicio gray">
+                            <div class="col-md-6 col-sm-6 col-xs-6 icon">
+                                <div class="label-icon"><img src="~/Content/assets/img/invertir.png" class="img-responsive"></div>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-6 label">
+                                <div class="label-icon">
+                                    <h1>Conocé el portal de educación financiera </h1>
+                                    <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a  target="_blank" href="http://www.cnv.gov.ar/suni/">
+                        <div class="col-md-6 servicio gray">
+                            <div class="col-md-6 col-sm-6 col-xs-6 icon">
+                                <div class="label-icon"><img src="~/Content/assets/img/suni.png" class="img-responsive"></div>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-6 label">
+                                <div class="label-icon">
+                                    <h1>Sistema Único de Notificaciones Inmediatas</h1>
+                                    <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>

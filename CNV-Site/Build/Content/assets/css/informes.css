@@ -1,0 +1,87 @@
+@charset "UTF-8";
+/* CSS Document */
+
+#title-int.informes {
+	 background: url(../img/shadow-top.png), url(../img/shadow-bottom.png), url(../img/bg-header-informes.jpg);
+    background-repeat: repeat-x,repeat-x,no-repeat;
+    background-position: top center,bottom center,center right;
+    background-size: 100%,100%,cover;
+}
+   
+#title-int.informes h1 {
+    color: #0066ce;
+    text-align: center;
+    font-size: 45px;
+    font-weight: bold;
+	margin-bottom: 0
+}
+#title-int.informes p{margin-bottom:1em;}
+.bg-informes{
+	padding-top:100px;
+	padding-bottom: 100px;
+		 background: url(../img/shadow-blue.png), url(../img/bg-informes.jpg);
+    background-repeat: repeat-x,no-repeat;
+    background-position: top center,center center;
+    background-size: 100%,cover;
+}
+
+	.bg-informes .nav.nav-pills li{width:33.3%;height: 70px;
+    vertical-align: middle;
+    display: table;}
+.bg-informes .nav.nav-pills li a{    padding: 10px!important; line-height: 20px;display: table-cell;
+    vertical-align: middle;}
+.bg-busqueda{background:url(../img/shadow-top.png)center top repeat-x;padding-top:75px;}
+.bg-busqueda h1{color: #0066ce;
+    text-align: center;
+    font-size: 45px;
+    font-weight: bold;
+	margin-bottom: 0}
+.bg-busqueda p {
+    margin-bottom: 1em;
+
+    text-align: center;
+    color: #0066cc;
+    font-size: 20px;
+}
+form{margin-bottom: 50px;position: relative;float: left; width:100%;}
+h2{color:#086bce; font-size: 24px;margin-bottom:25px;}
+.btn-busqueda:link,.btn-busqueda:visited,.btn-busqueda:focus{line-height: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background: #34a5d4;
+    color: white;
+    text-align: center;
+    margin: 25px auto;
+    display: block;
+    max-width: 300px;}
+.btn-busqueda:hover{line-height: 40px;  background: #0066ce;color:white;text-align: center;}
+
+.resultados tr{background:#ededed; border-bottom: solid 2px white;}
+@media (max-width: 991px) {
+	.bg-busqueda h1 {
+    color: #0066ce;
+    text-align: center;
+    font-size: 35px;
+    font-weight: bold;
+    margin-bottom: 0;
+		margin-top:0
+}
+	.bg-informes, .bg-busqueda {
+    padding-top: 50px;
+    padding-bottom: 50px;
+   
+}
+	table {
+    width: 100%;
+    font-size: 12px;
+}
+	#title-int.informes h1 {
+    color: #0066ce;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+	    margin-bottom: 10px;
+		margin-left:0;
+		margin-right:0;
+}
+}

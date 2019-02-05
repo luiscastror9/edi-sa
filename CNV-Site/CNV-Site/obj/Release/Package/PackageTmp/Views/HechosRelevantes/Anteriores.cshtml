@@ -1,0 +1,56 @@
+﻿@model CNV_Site.Models.ViewModelHechosRelevantesBusqueda
+
+@{
+    ViewBag.Title = "Anteriores";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link type="text/css" href="~/Content/assets/css/hechos-relevantes.css" rel="stylesheet">
+
+<section id="title-int" class="hechos-relevantes">
+    <div class="container-fluid no-padding">
+        <h1>Hechos Relevantes</h1>
+        <p>Encontrá aquí los últimos hechos relevantes de nuestros regulados</p>
+    </div>
+</section>
+<section id="content">
+    <div class="container-fluid bg-hechos-relevantes">
+        <div class="container">
+            <p class="referencias">AG: AGENTE - EM: EMISORAS - FC: FONDOS COMUNES</p>
+            <div class="table-responsive">
+
+                <table class="datatable">
+                    <thead>
+                        <tr>
+                            <th>FECHA</th>
+                            <th>ENTIDAD</th>
+                            <th>TIPO</th>
+                            <th>DESCRIPCIÓN</th>
+                            <th width="150px">DESCARGAR</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (CNV_Site.Models.DocumentosHechosR HR in Model.Busqueda.data)
+                        {
+                            <tr>
+                                <td>
+                                    @HR.fecha.ToString("d MMM yyyy hh:mm",
+               System.Globalization.CultureInfo.CreateSpecificCulture("es-AR"))
+                            </td>
+                            <td>@HR.Entidadtipo</td>
+                            <td>@HR.tipoDocumento</td>
+                                <td>@HR.entidadDescripcion</td>
+                            <td><a href="@HR.link"><img src="~/Content/assets/img/pdf.png"></a></td>
+                        </tr>
+
+                        }
+                       
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script type="text/javascript" src="~/Content/assets/js/hechos-relevantes.js"></script>
+@Html.Partial("_Nav_int_Institucional")

@@ -1,0 +1,455 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link type="text/css" href="~/Content/assets/css/resoluciones-disciplinarias.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="~/Content/assets/js/DataTables/datatables.min.css" />
+
+
+<section id="title-int" class="resoluciones-disciplinarias">
+    <div class="container-fluid no-padding">
+        <h1>Resoluciones Disciplinarias</h1>
+    </div>
+</section>
+<section id="content">
+    <div class="container">
+        <div id="exTab1" class="container">
+            <ul class="nav nav-pills">
+                <li class="active"> <a href="#1a" data-toggle="tab"><span>SUMARIOS</span></a> </li>
+                <li>
+                    <a href="#2a" data-toggle="tab">
+                        <span>
+                            SUSPENSIONES
+                            PREVENTIVAS
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#3a" data-toggle="tab">
+                        <span>
+                            IRREGULARIDAD E
+                            INEFICACIA
+                        </span>
+                    </a>
+                </li>
+                <li><a href="#4a" data-toggle="tab"><span>RESOLUCIONES ORDINARIAS</span></a> </li>
+            </ul>
+            <div class="tab-content clearfix">
+                <div class="tab-pane active" id="1a">
+                    <p>Consultá los hechos, que de acuerdo a lo dispuesto en la normativa vigente para el mercado de capitales argentino, constituyen una sanción para la entidad fiscalizada. Podrás encontrar los sumarios iniciados en Aperturas y su resolución en las Conclusiones.</p>
+                    <div class="panel-group wrap accordion" id="accordion" role="tablist" aria-multiselectable="true">
+                        <div class="panel">
+                            <div class="panel-heading" role="tab" id="heading1">
+                                <h4 class="panel-title"> <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse1" aria-expanded="true" aria-controls="collapse1"> <strong>APERTURAS</strong></a> </h4>
+                            </div>
+                            <div id="collapse1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading1">
+                                <div class="panel-body">
+                                    <div class="table-responsive">
+                                        <table class="table">
+                                            <thead>
+                                                <tr>
+                                                    <th>N° DE EXPEDIENTE</th>
+                                                    <th>N°  DE RESOLUCIÓN</th>
+                                                    <th>FECHA</th>
+                                                    <th>CARÁTULA</th>
+                                                    <th>
+                                                        TIPO DE
+                                                        PERSONA
+                                                    </th>
+                                                    <th>DNI / CUIT</th>
+                                                    <th>ESTADO</th>
+                                                    <th>DESCARGAR</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>26.831</td>
+                                                    <td>18898</td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td><a href="#"><img src="~/Content/assets/img/pdf.png"></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>26.831</td>
+                                                    <td>18898</td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td><a href="#"><img src="~/Content/assets/img/pdf.png"></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>26.831</td>
+                                                    <td>18898</td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td><a href="#"><img src="~/Content/assets/img/pdf.png"></a></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel">
+                            <div class="panel-heading" role="tab" id="heading2">
+                                <h4 class="panel-title"> <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse2" aria-expanded="true" aria-controls="collapse2"> <strong>CONCLUSIONES</strong> </a> </h4>
+                            </div>
+                            <div id="collapse2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading2">
+                                <div class="panel-body">
+                                    <div class="table-responsive">
+                                        <table class="table">
+                                            <thead>
+                                                <tr>
+                                                    <th>N° DE EXPEDIENTE</th>
+                                                    <th>N°  DE RESOLUCIÓN</th>
+                                                    <th>FECHA</th>
+                                                    <th>CARÁTULA</th>
+                                                    <th>
+                                                        TIPO DE
+                                                        PERSONA
+                                                    </th>
+                                                    <th>DNI / CUIT</th>
+                                                    <th>
+                                                        TIPO DE
+                                                        RESOL.
+                                                    </th>
+                                                    <th>MONTO</th>
+                                                    <th>TIEMPO</th>
+                                                    <th>NOVEDAD</th>
+                                                    <th>ESTADO</th>
+                                                    <th>DESCARGAR</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>26.831</td>
+                                                    <td>18898</td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td><a href="#"><img src="~/Content/assets/img/pdf.png"></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>26.831</td>
+                                                    <td>18898</td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td><a href="#"><img src="~/Content/assets/img/pdf.png"></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>26.831</td>
+                                                    <td>18898</td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td><a href="#"><img src="~/Content/assets/img/pdf.png"></a></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="buscador-sumarios" class="col-md-10 col-md-offset-1 col-sm-12 col-sm-offset-0">
+                        <div class="col-sm-9 col-sm-offset-4">
+                            <h3>Buscador de sumarios</h3>
+                        </div>
+                        <form class="form-horizontal">
+                            <div class="form-group">
+                                <label for="select1" class="col-sm-4 control-label">BUSCAR POR:</label>
+                                <div class="col-md-12">
+                                    <select class="form-control" id="select1">
+                                        <option>Seleccione búsqueda por apertura o conclusión de Sumarios</option>
+                                    </select>
+                                    <div class="select_arrow"> </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="anio" class="col-sm-4 control-label">AÑO:</label>
+                                <div class="col-md-12">
+                                    <input type="text" class="form-control" id="anio">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="resolucion" class="col-sm-4 control-label">N° DE RESOLUCIÓN:</label>
+                                <div class="col-md-12">
+                                    <input type="text" class="form-control" id="resolucion">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="expediente" class="col-sm-4 control-label">N° DE EXPEDIENTE:</label>
+                                <div class="col-md-12">
+                                    <input type="text" class="form-control" id="expediente">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="entidad" class="col-sm-4 control-label">ENTIDAD:</label>
+                                <div class="col-md-12">
+                                    <input type="text" class="form-control" id="entidad">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-12 col-sm-offset-4">
+                                    <input type="submit" class="btn btn-celeste" value="BUSCAR">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="tab-pane" id="2a">
+                    <div class="panel-group wrap accordion" id="accordionb" role="tablist" aria-multiselectable="true">
+                        <div class="panel">
+                            <div class="panel-heading" role="tab" id="headingb1">
+                                <h4 class="panel-title"> <a role="button" data-toggle="collapse" data-parent="#accordionb" href="#collapseb1" aria-expanded="true" aria-controls="collapseb1"> <strong>SUSPENSIÓN PREVENTIVA DE OP</strong></a> </h4>
+                            </div>
+                            <div id="collapseb1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading1">
+                                <div class="panel-body">
+                                    <div class="table-responsive">
+                                        <table class="table">
+                                            <thead>
+                                                <tr>
+                                                    <th>FECHA</th>
+                                                    <th>N°  DE RESOLUCIÓN</th>
+                                                    <th>N° DE EXPEDIENTE</th>
+                                                    <th>ENTIDAD</th>
+                                                    <th>DESCARGAR</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>26.831</td>
+                                                    <td>18898</td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td><a href="#"><img src="~/Content/assets/img/pdf.png"></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>26.831</td>
+                                                    <td>18898</td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td><a href="#"><img src="~/Content/assets/img/pdf.png"></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>26.831</td>
+                                                    <td>18898</td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td><a href="#"><img src="~/Content/assets/img/pdf.png"></a></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <a href=#" class="btn-blue-full">VER TODAS</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel">
+                            <div class="panel-heading" role="tab" id="headingb2">
+                                <h4 class="panel-title"> <a role="button" data-toggle="collapse" data-parent="#accordionb" href="#collapseb2" aria-expanded="true" aria-controls="collapseb2"> <strong>SUSPENSIÓN PREVENTIVA DE FIDUCIARIOS</strong> </a> </h4>
+                            </div>
+                            <div id="collapseb2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading2">
+                                <div class="panel-body">
+                                    <div class="table-responsive">
+                                        <table class="table">
+                                            <thead>
+                                                <tr>
+                                                    <th>FECHA</th>
+                                                    <th>N°  DE RESOLUCIÓN</th>
+                                                    <th>N° DE EXPEDIENTE</th>
+                                                    <th>ENTIDAD</th>
+                                                    <th>DESCARGAR</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>26.831</td>
+                                                    <td>18898</td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td><a href="#"><img src="~/Content/assets/img/pdf.png"></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>26.831</td>
+                                                    <td>18898</td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td><a href="#"><img src="~/Content/assets/img/pdf.png"></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>26.831</td>
+                                                    <td>18898</td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td><a href="#"><img src="~/Content/assets/img/pdf.png"></a></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <a href=#" class="btn-blue-full">VER TODAS</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel">
+                            <div class="panel-heading" role="tab" id="headingb3">
+                                <h4 class="panel-title"> <a role="button" data-toggle="collapse" data-parent="#accordionb" href="#collapseb3" aria-expanded="true" aria-controls="collapseb3"> <strong>SUSPENSIÓN PREVENTIVA (ART 51 LEY 26.831)</strong> </a> </h4>
+                            </div>
+                            <div id="collapseb3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading3">
+                                <div class="panel-body">
+                                    <div class="table-responsive">
+                                        <table class="table">
+                                            <thead>
+                                                <tr>
+                                                    <th>FECHA</th>
+                                                    <th>N°  DE RESOLUCIÓN</th>
+                                                    <th>N° DE EXPEDIENTE</th>
+                                                    <th>ENTIDAD</th>
+                                                    <th>DESCARGAR</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>26.831</td>
+                                                    <td>18898</td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td><a href="#"><img src="~/Content/assets/img/pdf.png"></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>26.831</td>
+                                                    <td>18898</td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td><a href="#"><img src="~/Content/assets/img/pdf.png"></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>26.831</td>
+                                                    <td>18898</td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td><a href="#"><img src="~/Content/assets/img/pdf.png"></a></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <a href="#" class="btn-blue-full">VER TODAS</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane" id="3a">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>FECHA</th>
+                                    <th>N°  DE RESOLUCIÓN</th>
+                                    <th>N° DE EXPEDIENTE</th>
+                                    <th>ENTIDAD</th>
+                                    <th>DESCARGAR</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>26.831</td>
+                                    <td>18898</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td><a href="#"><img src="~/Content/assets/img/pdf.png"></a></td>
+                                </tr>
+                                <tr>
+                                    <td>26.831</td>
+                                    <td>18898</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td><a href="#"><img src="~/Content/assets/img/pdf.png"></a></td>
+                                </tr>
+                                <tr>
+                                    <td>26.831</td>
+                                    <td>18898</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td><a href="#"><img src="~/Content/assets/img/pdf.png"></a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <a href="#" class="btn-blue-full">VER TODAS</a>
+                </div>
+                <div class="tab-pane" id="4a">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>FECHA</th>
+                                    <th>N°  DE RESOLUCIÓN</th>
+                                    <th>N° DE EXPEDIENTE</th>
+                                    <th>ENTIDAD</th>
+                                    <th>DESCARGAR</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>26.831</td>
+                                    <td>18898</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td><a href="#"><img src="~/Content/assets/img/pdf.png"></a></td>
+                                </tr>
+                                <tr>
+                                    <td>26.831</td>
+                                    <td>18898</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td><a href="#"><img src="~/Content/assets/img/pdf.png"></a></td>
+                                </tr>
+                                <tr>
+                                    <td>26.831</td>
+                                    <td>18898</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td><a href="#"><img src="~/Content/assets/img/pdf.png"></a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <a href="#" class="btn-blue-full">VER TODAS</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+@Html.Partial("_Nav_int_Institucional")

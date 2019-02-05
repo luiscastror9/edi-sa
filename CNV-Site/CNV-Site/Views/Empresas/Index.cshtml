@@ -1,0 +1,539 @@
+﻿@model CNV_Site.Models.ViewModelEmpresas
+@{
+    ViewBag.Title = "Empresas";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<script src="~/Scripts/AdminLTE/plugins/datepicker/bootstrap-datepicker.js"></script>
+
+<style>
+    .ui-autocomplete-loading {
+        background: white url("/Content/assets/img/ui-anim_basic_16x16.gif") right center no-repeat;
+    }
+</style>
+<link rel="stylesheet" href="~/AdminLTE/plugins/jquery-ui/jquery-ui.css">
+
+<link type="text/css" href="~/Content/assets/css/empresas.css" rel="stylesheet">
+<section id="title-int" class="empresas">
+    <div class="container-fluid no-padding">
+        <h1>Empresas</h1>
+        <p>Son entidades que encuentran financiamiento en el mercado de capitales para concretar sus  proyectos, mediante distintos instrumentos autorizados por CNV.</p>
+        <p class="aviso">La CNV no puede realizar recomendaciones de inversión. Cada inversor debe evaluar la relación riesgo-rentabilidad de su cartera en función de sus necesidades y disponibilidades financieras</p>
+    </div>
+</section>
+<section id="content">
+    <div class="container-fluid bg-empresas">
+        <div class="container">
+            <h2 class="title-center">Últimos hechos relevantes</h2>
+            <div id="carousel-empresas" class="carousel ">
+                <!-- Indicators -->
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner">
+                    <div class="item active">
+
+                        <div class="table-responsive">
+                            <table class="table tabla-hechos-relevantes">
+                                <thead>
+                                    <tr>
+                                        <th>FECHA</th>
+                                        <th>HORA</th>
+                                        <th>ENTIDAD</th>
+                                        <th>DESCRIPCIÓN</th>
+
+                                        <th>DESCARGAR</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                 @foreach (CNV_Site.Models.Documentos HR in Model.DOCSUN)
+                                 {
+                                    <tr>
+                                        <td>
+                                            @HR.fecha.ToString("d MMM yyyy",
+                   System.Globalization.CultureInfo.CreateSpecificCulture("es-AR"))
+                                    </td>
+                                        <td>
+                                            @HR.fecha.ToString("hh:mm",
+                   System.Globalization.CultureInfo.CreateSpecificCulture("es-AR"))
+                                        </td>
+                                    <td>@HR.entidadDescripcion</td>
+                                    <td>@HR.tipoDocumento</td>
+                                    <td><a href="@HR.link"><img src="~/Content/assets/img/pdf.png"></a></td>
+                                </tr>
+
+                                 }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                  
+
+                </div>
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel-empresas" data-slide-to="0" class="active"></li>
+                    @*<li data-target="#carousel-empresas" data-slide-to="1" class=""></li>
+                    <li data-target="#carousel-empresas" data-slide-to="2" class=""></li>*@
+                </ol>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid bg-empresas2">
+        <div class="container">
+            <h2 class="title-center-azul">Últimas Colocaciones de Instrumentos</h2>
+
+            <ul class="nav nav-pills">
+                <li class="active"> <a href="#1a" data-toggle="tab"><span>Obligaciones Negociables</span></a> </li>
+                <li><a href="#2a" data-toggle="tab"><span>ACCIONES</span></a> </li>
+
+            </ul>
+            <div class="tab-content clearfix panel-hechos-relevantes">
+                <div class="tab-pane active" id="1a">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>FECHA</th>
+                                    <th>SOCIEDAD EMISORA</th>
+                                    <th>AUTORIZADO POR</th>
+                                    <th>TIPO DE AUTORIZACIÓN</th>
+                                    <th>CANTIDAD DE ACCIONES</th>
+                                    <th>TIPO DE ACCIONES</th>
+                                    <th>VN DE LA ACCIÓN</th>
+                                    <th>CANTIDAD DE VOTOS</th>
+                                    <th>
+                                        OBSERVACIONES
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (CNV_Site.Models.UltimaColocacionesInstrumentos fci in Model.Lfci.data)
+                                {
+                                <tr>
+                                    <td>@fci.fechaLanzamiento.ToString("d MMM yyyy",
+            System.Globalization.CultureInfo.CreateSpecificCulture("es-AR"))</td>
+                                    <td>@fci.denominacion</td>
+                                    <td>@fci.sociedadGerente</td>
+                                    <td>@fci.tipo</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="tab-pane" id="2a">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>FECHA</th>
+                                    <th>SOCIEDAD EMISORA</th>
+                                    <th>AUTORIZADO POR</th>
+                                    <th>TIPO DE AUTORIZACIÓN</th>
+                                    <th>CANTIDAD DE ACCIONES</th>
+                                    <th>TIPO DE ACCIONES</th>
+                                    <th>VN DE LA ACCIÓN</th>
+                                    <th>CANTIDAD DE VOTOS</th>
+                                    <th>
+                                        OBSERVACIONES
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (CNV_Site.Models.UltimaColocacionesInstrumentos fci in Model.Lfci.data)
+                                {
+                                    <tr>
+                                        <td>@fci.fechaLanzamiento.ToString("d MMM yyyy",
+            System.Globalization.CultureInfo.CreateSpecificCulture("es-AR"))</td>
+                                        <td>@fci.denominacion</td>
+                                        <td>@fci.sociedadGerente</td>
+                                        <td>@fci.tipo</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                }
+                               
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <h2 class="title-center-azul no-margin">Elegí la empresa de tu interés</h2>
+        
+            @using (Html.BeginForm("Index", "Empresas", FormMethod.Post, new { @class="form-inline", name = "EmpresasBuscar", id = "EmpresasBuscar", enctype = "multipart/form-data" }))
+            {
+            <div class="form-group">
+                <div class="col-md-6 col-md-offset-3">
+                    <div class="ui-widget">
+                        <input name="nombreempresa" id="nombreempresa" type="text" class="form-control width-100" required min="5">
+                    </div>
+                    </div>
+            </div>
+            <h2 class="title-center-azul  no-margin">Filtrá los documentos que querés</h2>
+            <div class="col-md-8 col-md-offset-2">
+                <div class="form-group">
+                    <div class="col-md-6"><div class="checkbox"><label><input name="todosdocumentos" id="todosdocumentos" type="checkbox" checked> Todos</label></div></div>
+                    <div class="col-md-6">
+                        <div class="checkbox">
+                            <label>
+                                <input name="emisionesdocumentos" type="checkbox">
+                                Emisiones
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="checkbox">
+                            <label><input name="ultimadocumentos" type="checkbox"> Última información recibida
+                                </label>
+                            </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="checkbox">
+                            <label>
+                                <input name="actasorganosdocumentos" type="checkbox">
+                                Actas de Órganos Societarios
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="checkbox">
+                            <label><input name="hechosrelevantesdocumentos" type="checkbox"> Hechos Relevantes
+                                </label>
+                            </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="checkbox">
+                            <label>
+                                <input name="codigogobiernodocumentos" type="checkbox">
+                                Código de Gobierno Societario
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="checkbox">
+                            <label>
+                                <input name="infofinancieradocumentos" type="checkbox">
+                                Información Financiera
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="checkbox">
+                            <label>
+                                <input name="infopublicodocumentos" type="checkbox">
+                                Información al Público Inversor
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="checkbox">
+                            <label>
+                                <input name="infosocietariadocumentos" type="checkbox">
+                                Información Societaria
+                            </label>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <h2 class="title-center-azul no-margin">Seleccioná rango de fechas</h2>
+            <div class="form-group">
+                <div class="col-md-4 col-md-offset-2"><label for="desde">Desde </label><input type="text" class="form-control" id="desde" name="desde"></div>
+                <div class="col-md-4"><label for="hasta">Hasta </label><input type="text" class="form-control" name="hasta" id="hasta"></div>
+
+            </div>
+            <div class="form-group"><button class="btn-celeste">BUSCAR</button></div>
+            }
+    </div>
+    @if (ViewData["Results"] == "true")
+    {
+        int count = 1;
+       
+        <div id="container-res" class="container resultados">
+            <h2 class="title-resultados">Resultados de búsqueda:</h2>
+            @foreach (CNV_Site.Models.ListaEstructuraDocumentos LeD in Model.leD)
+            { //toggleAccordion('result'+@count)
+            <h1 >@LeD.entidadDescripcion<small>(en el Regimen de Oferta Pública)</small></h1>
+            
+            <div id="result@(count)">
+               
+                @foreach (CNV_Site.Models.EstructuraDocumentos eD in LeD.data)
+                {
+                         if (eD.id == 1)
+                         {
+                    <h3 id="accordiontitle">INFORMACIÓN PÚBLICA</h3>
+                        <div class="panel-group wrap accordion" id="accordion" role="tablist" aria-multiselectable="true">
+                        @ListaEstructuraDocumentos(eD)
+                        </div>
+                        }
+                        if (eD.id == 2)
+                        {
+                            <h3 id="accordiontitler">INFORMACIÓN RESTRINGIDA</h3>
+                            <div class="panel-group wrap accordion" id="accordion" role="tablist" aria-multiselectable="true">
+                                @ListaEstructuraDocumentos(eD)
+                                </div>
+                        }
+                 }
+                            </div>
+            <br/>
+            }
+
+        </div>
+       
+
+         
+
+    }
+   @helper ListaEstructuraDocumentos(CNV_Site.Models.EstructuraDocumentos lEd)
+   {
+if (lEd.hijos.Count > 0)
+{
+    foreach (CNV_Site.Models.EstructuraDocumentos eS in lEd.hijos)
+    {
+
+        <div class="panel">
+            <div class="panel-heading" role="tab" id="heading@(eS.id)">
+                <h4 class="panel-title"> <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse@(eS.id)" aria-expanded="true" aria-controls="collapse@(eS.id)"> <strong>@eS.descripcion</strong></a> </h4>
+            </div>
+            <div id="collapse@(eS.id)" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading@(eS.id)">
+                <div class="panel-body">
+                    @if (eS.ListaDocs != null)
+                    {
+                        if (eS.ListaDocs.data.Count > 0)
+                        {
+                    <div class="table-responsive">
+                        <table class="table tabla-hechos-relevantes">
+                            <thead>
+                                <tr>
+                                    <th>FECHA</th>
+                                    <th>HORA</th>
+                                    <th>DESCRIPCIÓN</th>
+
+                                    <th>DESCARGAR</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (CNV_Site.Models.Documentos HR in eS.ListaDocs.data)
+                                {
+                                    <tr>
+                                        <td>
+                                            @HR.fecha.ToString("d MMM yyyy",
+         System.Globalization.CultureInfo.CreateSpecificCulture("es-AR"))
+                                        </td>
+                                        <td>
+                                            @HR.fecha.ToString("hh:mm",
+         System.Globalization.CultureInfo.CreateSpecificCulture("es-AR"))
+                                        </td>
+                                        <td>@HR.tipoDocumento</td>
+                                        @if (String.IsNullOrWhiteSpace(@HR.link))
+                                        {
+                                            <td></td>
+                                        }
+                                        else { 
+                                        <td><a href="@HR.link"><img src="~/Content/assets/img/pdf.png"></a></td>
+                                        }
+                                    </tr>
+
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                        }
+                    }
+            @if (eS.hijos.Count > 0)
+            {
+                <div class="panel-group wrap accordion" id="accordion2" role="tablist" aria-multiselectable="true">
+
+                    @foreach (CNV_Site.Models.EstructuraDocumentos eS1 in eS.hijos)
+                    {
+
+                        <div class="panel">
+                            <div class="panel-heading" role="tab" id="headingc@(eS1.id)">
+                                <h4 class="panel-title"> <a role="button" data-toggle="collapse" data-parent="#accordion@(eS1.id)" href="#collapsec@(eS1.id)" aria-expanded="true" class="collapsed" aria-controls="collapsec@(eS1.id)"> <strong>@eS1.descripcion</strong></a> </h4>
+                            </div>
+                            <div id="collapsec@(eS1.id)" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingc@(eS1.id)">
+                                <div class="panel-body">
+                                    @if (eS1.ListaDocs != null)
+                                    {
+                                        if (eS1.ListaDocs.data.Count > 0)
+                                        {
+                                        <div class="table-responsive">
+                                            <table class="table tabla-hechos-relevantes">
+                                                <thead>
+                                                    <tr>
+                                                        <th>FECHA</th>
+                                                        <th>HORA</th>
+                                                        <th>DESCRIPCIÓN</th>
+
+                                                        <th>DESCARGAR</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    @foreach (CNV_Site.Models.Documentos HR in eS1.ListaDocs.data)
+                                                    {
+                                                        <tr>
+                                                            <td>
+                                                                @HR.fecha.ToString("d MMM yyyy",
+System.Globalization.CultureInfo.CreateSpecificCulture("es-AR"))
+                                                            </td>
+                                                            <td>
+                                                                @HR.fecha.ToString("hh:mm",
+System.Globalization.CultureInfo.CreateSpecificCulture("es-AR"))
+                                                            </td>
+                                                            <td>@HR.tipoDocumento</td>
+                                                            @if (String.IsNullOrWhiteSpace(@HR.link))
+                                                            {
+                                                                <td></td>
+                                                            }
+                                                            else
+                                                            {
+                                                                <td><a href="@HR.link"><img src="~/Content/assets/img/pdf.png"></a></td>
+                                                            }
+                                                        </tr>
+
+                                                    }
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        }
+                                    }
+                                   @if (eS1.hijos.Count > 0)
+                                   {
+                                    <div class="panel-group wrap accordion" id="accordion@(eS1.id)a" role="tablist" aria-multiselectable="true">
+                                        @foreach (CNV_Site.Models.EstructuraDocumentos eS2 in eS1.hijos)
+                                        {
+                                        <div class="panel">
+                                            <div class="panel-heading" role="tab" id="headingca@(eS2.id)">
+                                                <h4 class="panel-title"> <a role="button" data-toggle="collapse" data-parent="#accordion@(eS1.id)a" href="#collapseca@(eS2.id)" aria-expanded="true" aria-controls="collapseca@(eS2.id)" class="collapsed"> <strong>@eS2.descripcion</strong></a> </h4>
+                                            </div>
+                                            <div id="collapseca@(eS2.id)" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingca@(eS2.id)">
+                                                <div class="panel-body">
+                                                    @if (eS2.ListaDocs != null)
+                                                    {
+                                                        if (eS2.ListaDocs.data.Count > 0)
+                                                        {
+                                                        <div class="table-responsive">
+                                                            <table class="table tabla-hechos-relevantes">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th>FECHA</th>
+                                                                        <th>HORA</th>
+                                                                     
+                                                                        <th>DESCRIPCIÓN</th>
+
+                                                                        <th>DESCARGAR</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    @foreach (CNV_Site.Models.Documentos HR in eS2.ListaDocs.data)
+                                                                    {
+                                                                        <tr>
+                                                                            <td>
+                                                                                @HR.fecha.ToString("d MMM yyyy",
+System.Globalization.CultureInfo.CreateSpecificCulture("es-AR"))
+                                                                            </td>
+                                                                            <td>
+                                                                                @HR.fecha.ToString("hh:mm",
+System.Globalization.CultureInfo.CreateSpecificCulture("es-AR"))
+                                                                            </td>
+                                                                            <td>@HR.tipoDocumento</td>
+                                                                            @if (String.IsNullOrWhiteSpace(@HR.link))
+                                        {
+                                                                                <td></td>
+                                                                            }
+                                                                            else
+                                                                            {
+                                                                                <td><a href="@HR.link"><img src="~/Content/assets/img/pdf.png"></a></td>
+                                                                            }
+                                                                        </tr>
+
+                                                                    }
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                        }
+                                                    }
+                                                </div>
+                                            </div>
+                                        </div>
+                                        }
+                                    </div>
+                                   }
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        //  ListaEstructuraDocumentos(eS1);
+                    }
+                 </div>
+            }
+                    </div>
+                </div>
+        </div>
+
+    }
+}
+
+    }
+</section>
+
+@Html.Raw(TempData["msg"])
+@Html.Partial("_Nav_int_Institucional")
+<script type="text/javascript" src="~/Content/assets/js/main.js"></script>
+<script type="text/javascript" src="~/Content/assets/js/hechos-relevantes.js"></script>
+<script type="text/javascript">
+    jQuery.datepicker.regional['es'] = {
+        closeText: 'Cerrar',
+        prevText: '< Ant',
+        nextText: 'Sig >',
+        currentText: 'Hoy',
+        monthNames: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
+        monthNamesShort: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'],
+        dayNames: ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'],
+        dayNamesShort: ['Dom', 'Lun', 'Mar', 'Mié', 'Juv', 'Vie', 'Sáb'],
+        dayNamesMin: ['Do', 'Lu', 'Ma', 'Mi', 'Ju', 'Vi', 'Sá'],
+        weekHeader: 'Sm',
+        dateFormat: 'dd/mm/yy',
+        firstDay: 1,
+        isRTL: false,
+        showMonthAfterYear: false,
+        yearSuffix: ''
+    };
+    jQuery.datepicker.setDefaults(jQuery.datepicker.regional['es']);
+    jQuery(function () {
+        jQuery('#desde').datepicker({
+            autoclose: true,
+            language: "es"
+        });
+        jQuery('#hasta').datepicker({
+            autoclose: true,
+            language: "es"
+        });
+    });   
+
+</script>
+@if (ViewData["Results"] == "true")
+{
+<script>
+    
+    jQuery(document).ready(function() {
+        var scrollPos = jQuery("#container-res").offset().top;
+
+        jQuery(window).scrollTop(scrollPos);
+        });
+    
+</script>
+}

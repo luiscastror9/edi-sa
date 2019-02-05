@@ -1,0 +1,200 @@
+@charset "UTF-8";
+/* CSS Document */
+
+#title-int.fideicomisos-financieros {
+	 background: url(../img/shadow-top.png), url(../img/shadow-bottom.png), url(../img/bg-header-fideicomisos.jpg);
+    background-repeat: repeat-x,repeat-x,no-repeat;
+    background-position: top center,bottom center,center right;
+    background-size: 100%,100%,cover;
+}
+   
+#title-int.fideicomisos-financieros h1 {
+    color: #001e62;
+    text-align: center;
+    font-size: 45px;
+    font-weight: bold;
+	margin-bottom: 0
+}
+#title-int.fideicomisos-financieros p{margin-bottom: 1em;
+    font-size: 14px;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 800px;}
+.title{text-align:center; font-weight:bold;}
+.bg-fideicomisos-financieros{
+	padding-top:100px;
+	padding-bottom: 100px;
+		 background: url(../img/shadow-blue.png), url(../img/bg-informes.jpg);
+    background-repeat: repeat-x,no-repeat;
+    background-position: top center,center center;
+    background-size: 100%,cover;
+}
+.bg-fideicomisos-financieros h2,.bg-fideicomisos-financieros p{
+	color:#fff!important;
+	text-align:center;
+}
+.sep-white{width:100%; height:2px; background:white; }
+	.bg-fideicomisos-financieros .nav.nav-pills li{width:33.3%;height: 70px;
+    vertical-align: middle;
+    display: table;}
+.bg-fideicomisos-financieros .nav.nav-pills li a{    padding: 10px!important; line-height: 20px;display: table-cell;
+    vertical-align: middle;}
+.bg-busqueda{background:url(../img/shadow-top.png)center top repeat-x;padding-top:75px;}
+h3{color:white; font-size:16px;}
+.fa-question-circle{color:white; font-size:36px;}
+.bg-busqueda h1{color: #001e62;
+    text-align: center;
+    font-size: 45px;
+    font-weight: bold;
+	margin-bottom: 0}
+.bg-busqueda p {
+    margin-bottom: 1em;
+
+    text-align: center;
+    color: #0066cc;
+    font-size: 20px;
+}
+form{margin-bottom: 50px;position: relative;float: left; width:100%;}
+h2{color:#086bce; font-size: 24px;margin-bottom:25px;}
+.btn-busqueda:link,.btn-busqueda:visited,.btn-busqueda:focus{line-height: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background: #34a5d4;
+    color: white;
+    text-align: center;
+    margin: 25px auto;
+    display: block;
+    max-width: 300px;}
+.btn-busqueda:hover{line-height: 40px;  background: #001e62;color:white;text-align: center;}
+
+.resultados tr{background:#ededed; border-bottom: solid 2px white;}
+thead.celeste tr th{font-size:14px;} 
+tbody.azul tr td {
+    background: #0066cc;
+    color: white;
+	font-size:14px;max-width: 150px;
+}
+.btn-white {
+    color: #0066cc;
+    text-align: center;
+    background: white;
+    text-decoration: none;
+    border-radius: 0;
+    display: block;
+    margin: 0 10px;
+    width: initial;
+	line-height:initial;
+    max-width: initial;
+    font-size: 14px;
+    position: relative;
+    float: left;
+    padding: 10px;
+}
+.bg-busqueda h3{color:#0066cc; width:100%;margin:20px auto 25px;}
+.txt-blue{color:#0066cc;}
+.txt-white{color:white;}
+.btn-descarga {
+    position: relative;
+    float: left;
+    background: url(../img/pdf-blanco-descarga.png) #0066cc;
+    padding: 10px 50px 10px 10px;
+    color: #fff;
+    background-position: center right;
+    background-repeat: no-repeat;
+    width: 100%;
+   
+    clear: both;
+    margin-bottom: 3px;
+}
+
+.btn-descarga:hover{
+	background: url(../img/pdf-blanco-descarga.png) #34a5d4;
+	background-position: center right;
+    background-repeat: no-repeat;
+	color:white;
+	}
+	.margin-center{margin:auto; display:table; float:initial;}
+	.aviso{font-size:10px!important; text-align:center; border-bottom:solid 2px #0066cc;margin-bottom:50px;padding-bottom:20px; margin-top:50px;}
+.fa-caret-right{font-size:36px;}
+.panel-heading {
+    background-color: #0066cc;
+    border-radius: 0;
+    border: none;
+    color: #fff;
+    padding: 0;
+    text-transform: uppercase;
+}
+.panel-body {
+    padding: 1px 15px;
+}
+.panel-body .btn-descarga{position: relative;
+    float: left;
+    background: url(../img/pdf-blanco-descarga.png) #34a5d4;
+    padding: 10px 50px 10px 10px;
+    color: #fff;
+    background-position: center right;
+    background-repeat: no-repeat;
+    width: 100%;
+    clear: both;margin-bottom:2px!important;}
+.panel-group {
+    margin-bottom: 0px;
+}
+.level0 .panel-group .panel-heading {
+	 background-color: #34a5d4;
+	margin-bottom: 2px;
+}
+.level0 .panel-group .btn-descarga{position: relative;
+    float: left;
+    background: url(../img/pdf-azul.png) #ededed;
+    padding: 10px 50px 10px 10px;
+    color: #001e62;
+    background-position: center right;
+    background-repeat: no-repeat;
+    width: 100%;
+    clear: both;margin-bottom:2px!important;}
+.level0 .panel-group .panel-group .panel-heading {
+	 background-color: #ededed;
+}
+.level0 .panel-group .panel-group .panel-heading a{
+	color: #001e62;
+}
+   .level0 .panel-group .panel-group .btn-descarga{position: relative;
+    float: left;
+    background: url(../img/pdf-gris.png) #fff;
+    padding: 10px 50px 10px 10px;
+    color: #6f6f6f;
+    background-position: center right;
+    background-repeat: no-repeat;
+    width: 100%;
+    clear: both;margin-bottom:2px!important;}
+#btn-nueva-busqueda{margin-top:50px;}
+#ver-mas-contenido{display:none;}
+@media (max-width: 991px) {
+	.bg-busqueda h1 {
+    color: #001e62;
+    text-align: center;
+    font-size: 35px;
+    font-weight: bold;
+    margin-bottom: 0;
+		margin-top:0
+}
+	.bg-fideicomisos-financieros, .bg-busqueda {
+    padding-top: 50px;
+    padding-bottom: 50px;
+   
+}
+	table {
+    width: 100%;
+    font-size: 12px;
+}
+	#title-int.fideicomisos-financieros h1 {
+    color: #001e62;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+	    margin-bottom: 10px;
+		margin-left:0;
+		margin-right:0;
+}
+}

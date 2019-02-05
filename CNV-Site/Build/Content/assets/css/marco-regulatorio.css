@@ -1,0 +1,118 @@
+@charset "UTF-8";
+/* CSS Document */
+
+#title-int.marco-regulatorio {
+	 background: url(../img/shadow-top.png), url(../img/shadow-bottom.png), url(../img/bg-header-marco-regulatorio.jpg);
+    background-repeat: repeat-x,repeat-x,no-repeat;
+    background-position: top center,bottom center,center right;
+    background-size: 100%,100%,cover;
+}
+   
+#title-int.marco-regulatorio h1 {
+    color: #0066ce;
+    text-align: center;
+    font-size: 45px;
+    font-weight: bold;
+}
+.center {
+    text-align: center;
+    
+    margin: 30px auto;
+    font-weight: bold;
+}
+.panel-heading {
+    background-color: #0066ce;
+    border-radius: 0;
+    border: none;
+    color: #fff;
+    padding: 0;
+    text-transform: uppercase;
+}
+.panel .panel .panel-heading {
+    background-color: #34a5d4;
+    border-radius: 0;
+    border: none;
+    color: #fff;
+    padding: 0;
+    text-transform: uppercase;
+}
+thead{width:100%;}
+th {
+    text-align: left;
+    padding: 15px;
+    background: #34a5d4;
+    color: white;
+	
+}
+.panel-group .panel {
+    margin-bottom: 5px;
+
+}
+.panel-body {
+    background: #ededed;
+}
+table {
+    position: relative;
+    float: left;
+    margin-top: 20px;
+	    width: 100%;
+}
+tbody{background:white;}
+td{padding:15px; color:#595959;}
+.capitulo{position:relative; float:left; color:#0066cc; font-size:16px; }
+.actualizacion{position:relative; float:right;color:#0066cc; font-size:16px;  }
+.panel-group {
+    margin-bottom: 20px;
+    position: relative;
+    float: left;
+    margin-top: 20px;
+	    width: 100%;
+}
+.titulo{margin-right:50px;}
+.btn-pdf  {
+    position: relative;
+    float: left;
+    background: url(../img/pdf-blanco.png) #0066ce;
+    padding: 10px 50px 10px 10px;
+    color: white;
+    background-position: 140px;
+    background-repeat: no-repeat;
+}
+.btn-pdf:hover  {background:url(../img/pdf-blanco.png) #34a5d4; background-position: 140px;
+    background-repeat: no-repeat;color:white;}
+	
+	.panel h1{font-size:24px; font-weight:bold; color: #0066ce;position: relative;
+    float: left;
+    width: 100%;}
+	
+	.btn-convenio  {
+    position: relative;
+    float: left;
+    background: url(../img/pdf-descarga.png) #fff;
+    padding: 10px 50px 10px 10px;
+    color: #595959;
+    background-position: center right;
+    background-repeat: no-repeat;
+	width:100%;
+		max-width:490px;
+	clear:both;
+	margin-bottom:10px;
+}
+.btn-convenio:hover  {background:url(../img/pdf-descarga.png) #34a5d4; background-position: center right;
+    background-repeat: no-repeat;color:white;}
+	thead.blue th{background:#0066ce; text-align:center;}
+@media (max-width: 991px) {
+	.titulo {
+    margin-right: 50px;
+    clear: both;
+    float: left;
+    position: relative;
+    width: 1000%;
+}
+	#title-int.marco-regulatorio h1 {
+    color: #0066ce;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+}

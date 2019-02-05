@@ -1,0 +1,92 @@
+﻿@model CNV_Site.Areas.BackOffice.ImagesSliderNotes
+@{
+    ViewBag.Title = "Editar Imagen de Galeria de Prensa CNV";
+    Layout = "~/Areas/BackOffice/Views/Shared/_AdminLteLayout.cshtml";
+}
+
+    <link type="text/css" href="~/Scripts/AdminLTE/plugins/bootstrap-toogle/bootstrap-toggle.css" rel="stylesheet">
+
+
+
+<div class="row">
+
+    <section class="col-lg-12 ">
+        <div class="box-default ">
+            @using (Html.BeginForm("EditImagenesGaleria", "Prensa", FormMethod.Post, new { name = "editImagenesGalerias", id = "editImagenesGalerias", enctype = "multipart/form-data" }))
+            {
+              
+                <div class="box  box-success ">
+                    <div class="box-header">
+                        <i class="fa fa-fw"></i>
+
+                        <div class="box-tools pull-right" data-toggle="tooltip" title="Status">
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="box-body" id="maestro-box">
+                        @*@Html.AntiForgeryToken()*@
+                        @Html.HiddenFor(model => model.IdImagesSliderNotes)
+                        @Html.HiddenFor(model => model.IdSliderNotes)
+
+
+
+
+                        <div class="form-group ">
+                            @Html.Label("Nombre", htmlAttributes: new { @class = "control-label " })
+
+                            @Html.EditorFor(model => model.nameImagesSliderNotes, new { htmlAttributes = new { @class = "form-control" } })
+
+                        </div>
+                        <div class="form-group ">
+                            @Html.Label("Descripcion", htmlAttributes: new { @class = "control-label " })
+
+                            @Html.EditorFor(model => model.descImagesSliderNotes, new { htmlAttributes = new { @class = "form-control" } })
+
+                        </div>
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                       
+                       <div class="form-group">
+
+                            @Html.Label("Activo", htmlAttributes: new { @class = "control-label" })
+                            <input id="activeImagesSliderNotes" type="checkbox" @(Model.activeImagesSliderNotes == true ? "checked" : "") data-toggle="toggle" data-on="Activo" data-off="Inactivo">
+                            <input type="hidden" name="h_activeImagesSliderNotes" id="h_activeImagesSliderNotes" value="@(Model.activeImagesSliderNotes == true ? "true" : "false") ">
+
+
+                        </div>
+                        <div class="form-group">
+
+                            @Html.Label("Imagen", htmlAttributes: new { @class = "control-label" })
+                            <img src="~/Content/Upload/@(Model.urlImagesSliderNotes)" width="700px" height="300px" />
+
+                        </div>
+                        <div class="form-group ">
+                            @Html.Label("Imagen", htmlAttributes: new { @class = "control-label " })
+
+                            @Html.EditorFor(model => model.urlImagesSliderNotes,  new { type = "file", accept = "*.jpg, *.jpeg, *.png" }) <br />
+
+                        </div>
+                        
+                    </div>
+
+                    <div class="box-footer">
+
+                        <input id="btnSaveImagenesGalerias" type="submit" value="Actualizar" class="btn btn-info btn-infolink" style="color:white" />
+                        <input id="btnCancelarImagenesGalerias" type="reset" value="Cancelar" class="btn btn-info btn-infolink" style="color:white" />
+                    </div>
+                </div>
+            }
+
+    </section>
+
+</div>
+
+@section scripts {
+    @*NOTE: These should NOT be used in a production situation
+        They do contains useful snippets on how to setup charts*@
+<script src="~/Areas/BackOffice/Scripts/ImagenesGalerias.js"></script>
+
+<script src="~/Scripts/AdminLTE/plugins/bootstrap-toogle/bootstrap-toggle.js"></script>
+}

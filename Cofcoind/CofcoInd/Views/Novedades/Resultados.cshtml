@@ -1,0 +1,66 @@
+﻿
+@{
+    ViewBag.Title = "Resultados";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container-fluid int" id="content-novedades">
+    <div class="caption-int">
+        <h1>Ofrecemos <br>soluciones<br>innovadoras</h1>
+        <p>en el comercio nacional <br>e internacional de granos, <br>oleaginosas y subproductos <br>de valor agregado.</p>
+    </div>
+
+    <div class=" wow fadeInRight" data-wow-delay="0" data-wow-duration="2s" id="content">
+        <div class="row height-100">
+            <div class="col-md-3 col-submenu wow fadeInRight" data-wow-delay="1.5s" data-wow-duration=".5s">
+                <h3>Novedades</h3>
+                    @using (Html.BeginForm("Resultados", "Novedades", FormMethod.Post, new { name = "createNovedades", id = "createNovedades", enctype = "multipart/form-data" }))
+                    {
+                        <select class="form-control" id="anio">
+                        <option>Año</option>
+                        <option value="2018">2018</option>
+                        <option value="2018">2017</option>
+                        <option value="2018">2016</option>
+                    </select>
+                    <select class="form-control" id="mes">
+                        <option>Mes</option>
+                        <option value="01">Enero</option>
+                        <option value="02">Febrero</option>
+                        <option value="03">Febrero</option>
+                        <option value="04">Abril</option>
+                        <option value="05">Mayo</option>
+                        <option value="06">Junio</option>
+                        <option value="07">Julio</option>
+                        <option value="08">Agosto</option>
+                        <option value="09">Septiembre</option>
+                        <option value="10">Octubre</option>
+                        <option value="11">Noviembre</option>
+                        <option value="12">Diciembre</option>
+                    </select>
+                    <input type="text" placeholder="Buscar" id="buscar" class="form-control">
+                    <button id="search">
+                        <i class="fa fa-search"></i>
+                    </button>
+
+}
+                    <a href="@Url.Action("Index", "Novedades")" class="btn">Ver todas las novedades</a>
+
+            </div>
+
+
+
+            <div class="scroll-content " id="novedades">
+                <div class="row  display-flex">
+                    <div class="col-content full wow fadeInRight" data-wow-delay=".5s" data-wow-duration=".5s">
+                        <h2>#NovedadesCofcoIntlArg</h2>
+                        <p><strong>Compartimos las principales  noticias y novedades sobre nuestros productos, eventos e información técnica, con el objetivo de mantenerte informado sobre las actividades de Cofco Intl Arg.</strong></p>
+                        <div class="sep"></div>
+                        <p class="resultados">No se encontraron resultados </p>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

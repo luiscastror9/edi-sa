@@ -1,0 +1,256 @@
+﻿
+@{
+    ViewBag.Title = "Busqueda";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link type="text/css" href="~/Content/assets/css/informes.css" rel="stylesheet">
+<section id="title-int" class="informes">
+    <div class="container-fluid no-padding">
+        <h1>Informes del Mercado de Capitales</h1>
+        <p>Accedé a los informes y estadísticas producidas por CNV</p>
+    </div>
+</section>
+<section id="content">
+    <div class="container-fluid bg-informes">
+        <div class="container">
+            <div class="col-lg-10 col-lg-offset-1">
+
+                <div id="exTab1">
+                    <ul class="nav nav-pills">
+                        <li class="active">
+                            <a href="#1a" data-toggle="tab">EVOLUCIÓN DEL FINANCIAMIENTO - MENSUAL </a>
+                        </li>
+                        <li>
+                            <a href="#2a" data-toggle="tab">
+                                FINANCIAMIENTO PYME
+                                -TRIMESTRAL
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#3a" data-toggle="tab">DATOS ESTADÍSTICOS</a>
+                        </li>
+                    </ul>
+
+                    <div class="tab-content clearfix">
+                        <div class="tab-pane active" id="1a">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>FECHA</th>
+                                        <th width="300px" align="center" class="align-center">DESCARGAR</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Abril 2017</td>
+                                        <td align="center"><a href="#"><img src="~/Content/assets/img/pdf.png"></a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Marzo 2017</td>
+                                        <td align="center"><a href="#"><img src="~/Content/assets/img/pdf.png"></a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Febrero 2017</td>
+                                        <td align="center"><a href="#"><img src="~/Content/assets/img/pdf.png"></a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+
+                        </div>
+                        <div class="tab-pane" id="2a">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>SERIES SOBRE INSTRUMENTOS</th>
+                                        <th width="300px" align="center" class="align-center">DESCARGAR</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>TABLA 1. FIDEICOMISO FINANCIERO.</td>
+                                        <td align="center"><a href="#"><img src="~/Content/assets/img/pdf.png"></a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>TABLA 1. FIDEICOMISO FINANCIERO.</td>
+                                        <td align="center"><a href="#"><img src="~/Content/assets/img/pdf.png"></a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>TABLA 1. FIDEICOMISO FINANCIERO.</td>
+                                        <td align="center"><a href="#"><img src="~/Content/assets/img/pdf.png"></a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="tab-pane" id="3a">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>SERIES SOBRE INSTRUMENTOS</th>
+                                        <th width="300px" align="center" class="align-center">DESCARGAR</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>TABLA 1. FIDEICOMISO FINANCIERO.</td>
+                                        <td align="center"><a href="#"><img src="~/Content/assets/img/pdf.png"></a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>TABLA 1. FIDEICOMISO FINANCIERO.</td>
+                                        <td align="center"><a href="#"><img src="~/Content/assets/img/pdf.png"></a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>TABLA 1. FIDEICOMISO FINANCIERO.</td>
+                                        <td align="center"><a href="#"><img src="~/Content/assets/img/pdf.png"></a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="container-fluid bg-busqueda">
+        <div class="container">
+            <h1>Búsqueda de informes</h1>
+            <p>Para ver más informes utilizá nuestro buscador</p>
+            <div class="col-lg-10 col-lg-offset-1">
+                <form>
+                    <div class="form-group">
+
+                        <select class="form-control" id="tipo">
+                            <option>Seleccioná tipo de informe</option>
+                            <option value="pyme">PYME</option>
+                            <option value="financiamiento">FINANCIAMIENTO</option>
+                            <option value="todos" class="all">BUSCAR TODOS LOS INFORMES</option>
+                        </select> <div class="select_arrow"> </div>
+                    </div>
+                    <div class="form-group">
+
+                        <select class="form-control" id="anio">
+                            <option>Seleccioná AÑO</option>
+                            <option value="2017">2017</option>
+                            <option value="2016">2016</option>
+                            <option value="2015">2015</option>
+                        </select> <div class="select_arrow"> </div>
+                    </div>
+                    <div class="form-group">
+
+                        <select class="form-control" id="mes">
+                            <option>Seleccioná MES</option>
+                            <option value="AGOSTO">AGOSTO</option>
+                            <option value="JULIO">JULIO</option>
+                            <option value="JUNIO">JUNIO</option>
+                            <option value="MAYO">MAYO</option>
+                            <option value="ABRIL">ABRIL</option>
+                            <option value="MARZO">MARZO</option>
+                            <option value="FEBRERO">FEBRERO</option>
+                            <option value="ENERO">ENERO</option>
+                            <option value="TODOS">TODOS</option>
+
+                        </select> <div class="select_arrow">
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="col-md-12">
+                <h2>Todos los informes</h2>
+                <table class="resultados">
+                    <thead>
+                        <tr>
+                            <th>2017</th>
+                            <th>FECHA</th>
+                            <th>TIPO</th>
+                            <th>TÍTULO</th>
+                            <th width="300px" align="center" class="align-center">DESCARGAR</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td>JULIO 2017</td>
+                            <td>PYME</td>
+                            <td>MERCADO DE CAPITALES</td>
+                            <td align="center"><a href="#"><img src="~/Content/assets/img/pdf.png"></a></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>JULIO 2017</td>
+                            <td>PYME</td>
+                            <td>MERCADO DE CAPITALES</td>
+                            <td align="center"><a href="#"><img src="~/Content/assets/img/pdf.png"></a></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>JULIO 2017</td>
+                            <td>PYME</td>
+                            <td>MERCADO DE CAPITALES</td>
+                            <td align="center"><a href="#"><img src="~/Content/assets/img/pdf.png"></a></td>
+                        </tr>
+                        <tr>
+                            <th>2016</th>
+                            <th>FECHA</th>
+                            <th>TIPO</th>
+                            <th>TÍTULO</th>
+                            <th width="300px" align="center" class="align-center">DESCARGAR</th>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>JULIO 2017</td>
+                            <td>PYME</td>
+                            <td>MERCADO DE CAPITALES</td>
+                            <td align="center"><a href="#"><img src="~/Content/assets/img/pdf.png"></a></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>JULIO 2017</td>
+                            <td>PYME</td>
+                            <td>MERCADO DE CAPITALES</td>
+                            <td align="center"><a href="#"><img src="~/Content/assets/img/pdf.png"></a></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+            <div class="col-md-12">
+                <h2>Resultados de búsqueda:</h2>
+                <table class="resultados">
+                    <thead>
+                        <tr>
+                            <th>FECHA</th>
+                            <th>TÍTULO</th>
+                            <th width="300px" align="center" class="align-center">DESCARGAR</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>JULIO 2017</td>
+                            <td>MERCADO DE CAPITALES</td>
+                            <td align="center"><a href="#"><img src="~/Content/assets/img/pdf.png"></a></td>
+                        </tr>
+                        <tr>
+                            <td>JULIO 2017</td>
+                            <td>MERCADO DE CAPITALES</td>
+                            <td align="center"><a href="#"><img src="~/Content/assets/img/pdf.png"></a></td>
+                        </tr>
+                        <tr>
+                            <td>JULIO 2017</td>
+                            <td>MERCADO DE CAPITALES</td>
+                            <td align="center"><a href="#"><img src="~/Content/assets/img/pdf.png"></a></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <a href="#" class="btn-busqueda">REALIZAR UNA NUEVA BÚSQUEDA</a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+@Html.Partial("_Nav_int_Institucional")
+
+

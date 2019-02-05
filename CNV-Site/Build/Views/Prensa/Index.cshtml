@@ -1,0 +1,98 @@
+﻿@model CNV_Site.Models.PrensaHome
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- Custom CSS -->
+<link type="text/css" href="~/Content/assets/css/prensa.css" rel="stylesheet">
+<section id="title-int" class="prensa">
+    <div class="container-fluid no-padding">
+        <h1>Prensa</h1>
+        <p>Bienvenidos a la sección de Prensa de la CNV</p>
+    </div>
+</section>
+<section id="content">
+    <div class="container-fluid bg-prensa">
+        <div class="container">
+
+
+            <div class="row">
+                <div class="col-sm-2 col-sm-push-10 col-xs-12 col-xs-push-0 sidebar">
+                    @foreach(var year in ViewBag.Years)
+                    {
+                        <h1>@year</h1>
+                   
+                    <ul class="months">
+                        @foreach(var month in ViewBag.Months)
+                        {
+                        <li><a href="#">@month</a></li>
+                       
+                        }
+                    </ul>
+                    }
+                </div>
+                <div class="col-sm-10 col-md-pull-2 col-xs-12 col-xs-push-0 ">
+                    <div class="row">
+                        <div class="col-xs-12"><h1>Últimas Novedades > <small>@ViewBag.Months[0] @ViewBag.Years[0]</small></h1></div>
+                        @foreach (CNV_Site.Areas.BackOffice.Notes nt in Model.Noticias)
+                        {
+                            <div class="col-sm-3 noticia">
+                                <a class="inner" href="@Url.Action("Post", "Prensa", new { id =nt.IdNote, titleNoteGenerateSlug=nt.GenerateSlug() })">
+                                    <div class="fecha-noticia">@nt.create_datetime.ToShortDateString()</div>
+                                    <img src="~/Content/Upload/@nt.imgNote" class="pic-noticia img-responsive">
+                                    <p class="text-noticia">
+                                        @nt.titleNote
+                                    </p>
+                                </a>
+                            </div>
+
+                        }
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</section>
+<section>
+    <div class="container-fluid bg-prensa-2">
+        <div class="container">
+            <div class="col-md-6">
+                <div class="gallery-block">
+
+                    <div class="row">
+                        <h1>Galería de imágenes</h1>
+                        <h2>Accedé a nuestra galería de imágenes</h2>
+                        @foreach (var f in ViewBag.Photos)
+                        {
+                            <div class="col-md-4 col-xs-6 pic">
+                                <a href="@f.LargeUrl" data-fancybox="gallery"><img src="@f.LargeSquareThumbnailUrl" class="img-responsive"></a>
+                            </div>
+                           
+
+                        }
+                        
+                        <a href="@Url.Action("Galeria", "Prensa")" class="btn-blue">
+                            VER GALERÍA <i class="fa fa-caret-right" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="twitter-block">
+                    <h1>Seguinos en Twitter <a href="http://twitter.com" class="btn-ver-twitter">ver en twitter <i class="fa fa-caret-right" aria-hidden="true"></i></a></h1>
+                    <a class="twitter-timeline" data-width="100%" data-height="400" href="https://twitter.com/CNVArgentina?ref_src=twsrc%5Etfw">Tweets by CNVArgentina</a>
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+@Html.Partial("_Menu_int_Prensa")
+@Html.Partial("_Nav_int_Institucional")
+
+
+

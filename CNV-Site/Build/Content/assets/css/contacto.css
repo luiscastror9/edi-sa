@@ -1,0 +1,107 @@
+@charset "UTF-8";
+/* CSS Document */
+
+#title-int.contacto {
+	background: url(../img/shadow-top.png), url(../img/shadow-bottom.png), url(../img/bg-header-contacto.jpg);
+    background-repeat: repeat-x,repeat-x,no-repeat;
+    background-position: top center,bottom center,center right;
+    background-size: 100%,100%,cover;
+}
+.btn-saber-mas:link ,.btn-saber-mas:active,.btn-saber-mas:visited,.btn-saber-mas:focus{
+	
+	background: #0066cc;
+	color: white;
+	padding: 10px;
+	text-align: center;
+	position: relative;
+	float: left;
+	clear: both;
+	text-decoration: none;
+}
+.btn-saber-mas.btn-:hover,.btn-saber-mas.on {
+	background: #ededed;
+	color: #0066cc;
+	text-decoration: none;
+}
+.btn-saber-mas.btn-comite {
+	    margin-left: 0;
+    background: #34a5d4;
+    color: white;
+    padding: 10px;
+    text-align: left;
+    position: relative;
+    float: left;
+    clear: both;
+    text-decoration: none;
+    margin-bottom: 0;
+    width: 100%;
+    margin-top: 10px;
+	text-transform: initial;
+}
+
+.btn-saber-mas .fa{margin-left:5px;}
+
+.btn-saber-mas .fa{margin-left:5px;}
+
+.txt-saber-mas.contacto {
+	position: relative;
+	float: left;
+	padding: 15px;
+	margin-left: 0;
+	background: #ededed;
+	display: block;
+	    width: 100%;
+}
+input,textarea{border-radius:0!important; border:none!important;}
+textarea{height:200px;}
+.control-label{width:100%;text-align:right;color:#0066cc;}
+.btn-celeste {
+    background: #34a5d4;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    border-radius: 0;
+    display: block;
+    margin: 0 10px;
+    width: 100%;
+    max-width: 120px;
+    line-height: 40px;
+    font-size: 16px;
+    position: relative;
+    float: left;
+    padding: 0 20px;
+}
+.btn-blue {
+	cursor: pointer;
+    background: #0066cc;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    border-radius: 0;
+    display: block;
+    margin: 0 10px 0 0;
+    width: 100px;
+    line-height: 40px;
+    font-size: 16px;
+    position: relative;
+    float: left;
+    padding: 0;
+	border:none;
+}
+#content{padding-top:50px;}
+#content h2 {
+    color: #0066cc;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+	text-transform:uppercase;
+}
+.center-title{text-align:center;}
+@media (max-width: 991px) {
+	
+	.btn-ver-mas {
+
+		    font-size: 12px!important;
+}
+
+}

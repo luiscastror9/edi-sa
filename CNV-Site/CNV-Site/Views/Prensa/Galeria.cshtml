@@ -1,0 +1,70 @@
+﻿@model CNV_Site.Models.PrensaHome
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- Custom CSS -->
+<link type="text/css" href="~/Content/assets/css/prensa.css" rel="stylesheet">
+<section id="title-int" class="prensa">
+    <div class="container-fluid no-padding">
+        <h1>Prensa</h1>
+        <p>Bienvenidos a la sección de Prensa de la CNV</p>
+    </div>
+</section>
+<section id="content">
+    <section>
+        <div class="container-fluid bg-prensa-2">
+            <div class="container">
+                <div class="col-md-12">
+                    <div class="gallery-block">
+
+                        <div id="flickr_m" class="row">
+                            <h1>Galería de imágenes</h1>
+                            <script>
+
+
+                                var url = "https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=12c6658dd3fc36b164fee653181086e4&user_id=131743739%40N02&tags=&per_page=20&page=1&format=json&nojsoncallback=1&auth_token=72157691286038684-296d959a694b17df&api_sig=f7f556054355aa637823913efeb14fd3";
+                            var src;
+                            jQuery.getJSON(url , function (data) {
+                                jQuery.each(data.photos.photo, function (i, item) {
+                                    src = "http://farm" + item.farm + ".static.flickr.com/" + item.server + "/" + item.id + "_" + item.secret + "_m.jpg";
+                                    srcc = "http://farm" + item.farm + ".static.flickr.com/" + item.server + "/" + item.id + "_" + item.secret + "_c.jpg";
+                                    jQuery('<div id="imgflick' + i +'" class="col-md-2 col-xs-8 pic">').appendTo("#flickr_m");
+                                    jQuery('<a href="' + srcc + '" data-fancybox="gallery">').appendTo("#flickr_m");
+                                    jQuery("<img class='img-responsive' />").attr("src", src).appendTo('#imgflick'+i);
+                                    jQuery('</a>').appendTo("#flickr_m");
+                                    jQuery('</div>').appendTo('#imgflick' + i);
+                                    if (i == 20) return false;
+                                });
+                               // jQuery('<a href="@Url.Action("Galeria", "Prensa")" class="btn-blue">VER GALERÍA <i class="fa fa-caret-right" aria-hidden="true"></i></a> ').appendTo("#flickr_m");
+
+                            });
+
+                            </script>
+                            @*@foreach (var f in ViewBag.Photos)
+                            {
+                                <div class="col-md-2 col-xs-8 pic">
+                                    <a href="@f.LargeUrl" data-fancybox="gallery"><img src="@f.LargeSquareThumbnailUrl" class="img-responsive"></a>
+                                </div>
+
+
+                            }*@
+
+                          
+                        </div>
+                    </div>
+                </div>
+              </div>
+        </div>
+    </section>
+
+
+
+</section>
+
+@Html.Partial("_Menu_int_Prensa")
+@Html.Partial("_Nav_int_Institucional")
+
+
+

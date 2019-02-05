@@ -1,0 +1,119 @@
+﻿@model CNV_Site.Models.ViewModelHechosRelevantes
+@{
+    ViewBag.Title = "Hechos Relevantes";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link type="text/css" href="~/Content/assets/css/hechos-relevantes.css" rel="stylesheet">
+
+<section id="title-int" class="hechos-relevantes">
+    <div class="container-fluid no-padding">
+        <h1>Hechos Relevantes</h1>
+        <p>Encontrá aquí los últimos hechos relevantes de nuestros regulados</p>
+    </div>
+</section>
+<section id="content">
+    <div class="container-fluid bg-hechos-relevantes">
+        <div class="container">
+            <div id="exTab1" class="container">
+                <ul class="nav nav-pills">
+                    <li class="active">
+                        <a href="#1a" data-toggle="tab">EMPRESAS</a>
+                    </li>
+                    <li>
+                        <a href="#2a" data-toggle="tab">FONDOS COMUNES DE INVERSIÓN</a>
+                    </li>
+                    <li>
+                        <a href="#3a" data-toggle="tab">AGENTES Y MERCADOS</a>
+                    </li>
+                </ul>
+
+                <div class="tab-content clearfix">
+                    <div class="tab-pane active" id="1a">
+                        <div class="table-responsive">
+
+                            <table class="">
+                                <thead>
+                                    <tr>
+                                        <th>FECHA</th>
+                                        <th>ENTIDAD</th>
+                                        <th>DESCRIPCIÓN</th>
+                                        <th width="150px">DESCARGAR</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                   @foreach (CNV_Site.Models.Documentos HR in Model.Empresas.data)
+                                        {
+                                            <tr>
+                                                <td>@HR.fecha.ToString("d MMM yyyy hh:mm",
+               System.Globalization.CultureInfo.CreateSpecificCulture("es-AR"))</td>
+                                                <td>@HR.entidadDescripcion.</td>
+                                                <td>@HR.tipoDocumento</td>
+                                                <td><a href="@HR.link"><img src="~/Content/assets/img/pdf.png"></a></td>
+                                            </tr>
+
+                                        }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="2a">
+                        <table class="">
+                            <thead>
+                                <tr>
+                                    <th>FECHA</th>
+                                    <th>ENTIDAD</th>
+                                    <th>DESCRIPCIÓN</th>
+                                    <th width="150px">DESCARGAR</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (CNV_Site.Models.Documentos HR in Model.FCI.data)
+                                    {
+                                        <tr>
+                                            <td>@HR.fecha.ToString("d MMM yyyy hh:mm",
+               System.Globalization.CultureInfo.CreateSpecificCulture("es-AR"))</td>
+                                            <td>@HR.entidadDescripcion.</td>
+                                            <td>@HR.tipoDocumento</td>
+                                            <td><a href="@HR.link"><img src="~/Content/assets/img/pdf.png"></a></td>
+                                        </tr>
+
+                                    }
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="tab-pane" id="3a">
+                        <table class="">
+                            <thead>
+                                <tr>
+                                    <th>FECHA</th>
+                                    <th>ENTIDAD</th>
+                                    <th>DESCRIPCIÓN</th>
+                                    <th width="150px">DESCARGAR</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (CNV_Site.Models.Documentos HR in Model.Agentes.data)
+                                        {
+                                            <tr>
+                                                <td>@HR.fecha.ToString("d MMM yyyy hh:mm",
+               System.Globalization.CultureInfo.CreateSpecificCulture("es-AR"))</td>
+                                                <td>@HR.entidadDescripcion.</td>
+                                                <td>@HR.tipoDocumento</td>
+                                                <td><a href="@HR.link"><img src="~/Content/assets/img/pdf.png"></a></td>
+                                            </tr>
+
+                                        }
+                            </tbody>
+                        </table>
+                    </div>
+                    <a href="@Url.Action("Anteriores", "HechosRelevantes")" class="btn-blue-full">ÚLTIMOS 3 MESES</a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script type="text/javascript" src="~/Content/assets/js/hechos-relevantes.js"></script>
+
+@Html.Partial("_Nav_int_Institucional")
+

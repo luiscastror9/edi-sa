@@ -1,0 +1,142 @@
+﻿@model List<CNV_Site.Models.RegulacionesTiposViewModel>
+@{
+    ViewBag.Title = "Institucional";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link type="text/css" href="~/Content/assets/css/marco-regulatorio.css" rel="stylesheet">
+<section id="title-int" class="marco-regulatorio">
+    <div class="container-fluid no-padding">
+        <h1>Marco Regulatorio</h1>
+    </div>
+</section>
+<section id="content">
+    <div class="container">
+
+        <div class="col-sm-12">
+            <p class="center">En esta sección podés acceder a las Leyes, Decretos y Resoluciones Generales que forman parte de la legislación que le posibilita a la CNV a ejercer sus funciones de regulador en el mercado de capitales argentino</p>
+
+
+            <div class="panel-group wrap" id="accordion" role="tablist" aria-multiselectable="true">
+                @{int count = 0;
+                    string act = "";string col = ""; string styl = "";}
+                @foreach (CNV_Site.Models.RegulacionesTiposViewModel RTVM in Model)
+                {
+
+                    count = count + 1;
+                    if (count == 1)
+                    {
+                        act = "active";
+                        col = "in";
+                        styl = "style='height: 0px; '";
+                    }
+                    else
+                    {
+                        act = "";
+                        col = "";
+                        styl = "";
+                    }
+                    <div class="panel">
+                        <div class="panel-heading @act" role="tab" id="heading@(count)">
+                            <h4 class="panel-title">
+                                @if (count == 1)
+                                {  <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse@(count)" aria-expanded="true" aria-controls="collapse@(count)"> <strong>@RTVM.TipoRegulacion.nombre</a>
+                                }
+                                else
+                                {
+                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse@(count)" aria-expanded="false" aria-controls="collapse@(count)" class="collapsed"> <strong>@RTVM.TipoRegulacion.nombre</a> 
+                                }
+                            </h4>
+
+                        </div>
+
+                        <div id="collapse@(count)" class="panel-collapse collapse  @(col)" role="tabpanel" aria-labelledby="heading@(count)" @(styl)>
+                            <div class="panel-body">
+                                <p>En esta sección podés acceder a las Leyes, Decretos y Resoluciones Generales que forman parte de la legislación que le posibilita a la CNV a ejercer sus funciones de regulador en el mercado de capitales argentino.</p>
+                                <div class="table-responsive">
+
+
+
+                                    @if (RTVM.Regulaciones.Select(z => z.links.Count == 0).Count() > 0 && RTVM.Regulaciones.Select(z => z.anexos.Count == 0).Count() > 0)
+                                    {
+                                        <table class="table">
+                                            <thead>
+                                                <tr>
+                                                    <th width="22">LEY</th>
+                                                    <th width="457">DESCRIPCIÓN</th>
+
+                                                    <th width="423">REGLAMENTACIONES / NORMATIVA COMPLEMENTARIA</th>
+
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                @foreach (CNV_Site.Models.Regulaciones R in RTVM.Regulaciones)
+                                                {
+                                                    <tr>
+                                                        <td align="right">@R.numero</td>
+                                                        <td>@Html.Raw(R.titulo)</td>
+                                                        <td>@Html.Raw(R.descripcion)</td>
+                                                    </tr>
+                                                }
+
+                                            </tbody>
+                                        </table>
+                                    }
+                                    @if (RTVM.Regulaciones.Select(z => z.links.Count == 0).Count() > 0 && RTVM.Regulaciones.Select(z => z.anexos.Count > 0).Count() > 0)
+
+                                    {
+                                        <table class="table">
+                                            <thead>
+                                                <tr>
+                                                    <th width="22">LEY</th>
+                                                    <th width="457">DESCRIPCIÓN</th>
+                                                    <th width="423">ENLACES</th>
+
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                @foreach (CNV_Site.Models.Regulaciones R in RTVM.Regulaciones)
+                                                {
+                                                    <tr>
+                                                        <td align="right">@R.numero</td>
+                                                        <td>@Html.Raw(R.titulo)</td>
+
+                                                        <td>@Html.Raw(R.descripcion)</td>
+
+                                                    </tr>
+                                                }
+                                            </tbody>
+                                        </table>
+                                    }
+
+
+
+
+                                </div>
+                                @foreach (CNV_Site.Models.Regulaciones R in RTVM.Regulaciones)
+                                {
+                                    if (R.anexos.Count > 0)
+                                    {<h1>Anexos</h1>
+                                        break;
+                                    }
+                                }
+                                @foreach (CNV_Site.Models.Regulaciones R in RTVM.Regulaciones)
+                                {
+
+                                    foreach (CNV_Site.Models.Anexos link in R.anexos)
+                                    {
+                                        <a href="@(link.anexoLink)" class="btn-convenio">@(link.anexoTexto)</a>
+                                    }
+                                }
+                            </div>
+                        </div>
+                    </div>
+                }
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
+@Html.Partial("_Nav_int_Institucional")

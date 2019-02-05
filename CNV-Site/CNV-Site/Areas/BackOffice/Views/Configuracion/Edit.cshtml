@@ -1,0 +1,76 @@
+﻿@model CNV_Site.Areas.BackOffice.SettingsIntegrationNotes
+@{   
+ Layout = "~/Areas/BackOffice/Views/Shared/_AdminLteLayout.cshtml";
+}
+
+@{
+
+    ViewBag.Title = "Configuraciones CNV BackOffice";
+    ViewBag.TitleSmall = "Version 1.0";
+
+
+    ViewBag.Breadcrumb = new Breadcrumb(new Crumb[] {
+        new Crumb("Configuraciones", "", "fa-dashboard")
+    });
+}
+
+
+<link type="text/css" href="~/Scripts/AdminLTE/plugins/bootstrap-toogle/bootstrap-toggle.css" rel="stylesheet">
+
+
+
+<div class="row">
+    <section class="col-lg-12 ">
+        <div class="box-default ">
+            @using (Html.BeginForm("Edit", "Configuracion", FormMethod.Post, new { name = "editConfiguracion", id = "editConfiguracion" }))
+            {
+                <div class="box  box-success ">
+                    <div class="box-header">
+                        <i class="fa fa-fw fa-balance-scale"></i>
+                        <h3 class="box-title"></h3>
+                        <div class="box-tools pull-right" data-toggle="tooltip" title="Status">
+
+                        </div>
+                    </div>
+
+                    <div class="box-body" id="maestro-box">
+
+                        @Html.AntiForgeryToken()
+
+                        @*@foreach (var item in Model)
+                        {*@
+                           
+                                <div class="form-group">
+                                    @Html.Label(Model.descSettingsIntegrationNotes, htmlAttributes: new { @class = "control-label" })
+                                    <input id="keySettingsIntegrationNotes" name="keySettingsIntegrationNotes" type="text" class="form-control" value="@Model.valueSettingsIntegrationNotes">
+
+                                </div>
+                          @*}*@
+
+                    </div>
+                    <div class="form-group">
+
+                        @Html.Label("Activo", htmlAttributes: new { @class = "control-label" })
+                        <input id="ActiveNote" type="checkbox" @(Model.ActiveSettingsIntegrationNotes == true ? "checked" : "") data-toggle="toggle" data-on="Activo" data-off="Inactivo">
+                        <input type="hidden" name="h_ActiveSettingsIntegrationNotes" id="h_ActiveSettingsIntegrationNotes" value="@(Model.ActiveSettingsIntegrationNotes == true ? "true" : "false") ">
+
+
+                    </div>
+                    <div class="box-footer">
+
+                        <input id="btnEditSettings" type="submit" value="Guardar" class="btn btn-info btn-infolink" style="color:white" />
+                        <input id="btnCancelarSettings" onclick="window.location.replace('@Url.Action("Index", "Configuracion", new { Area = "BackOffice" })')" type="submit" value="Cancelar" class="btn btn-info btn-infolink" style="color:white" />
+                    </div>
+                </div>
+            }
+        </div>
+
+    </section>
+</div>
+
+@section scripts {
+    @*NOTE: These should NOT be used in a production situation
+        They do contains useful snippets on how to setup charts*@
+    <script src="/Areas/BackOffice/Scripts/Configuracion.js"></script>
+    <script src="~/Scripts/AdminLTE/plugins/bootstrap-toogle/bootstrap-toggle.js"></script>
+}

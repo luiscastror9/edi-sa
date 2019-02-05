@@ -1,0 +1,317 @@
+﻿@model CNV_Site.Models.ViewModelFideicomisosFinancieros
+
+@{
+    ViewBag.Title = "Programa";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link type="text/css" href="~/Content/assets/css/fideicomisos-financieros.css" rel="stylesheet">
+<style>
+    .ui-autocomplete-loading {
+        background: white url("/Content/assets/img/ui-anim_basic_16x16.gif") right center no-repeat;
+    }
+</style>
+<link rel="stylesheet" href="~/AdminLTE/plugins/jquery-ui/jquery-ui.css">
+
+@foreach (CNV_Site.Models.FideicomisosFF FFF1 in Model.FFF)
+{
+    foreach (CNV_Site.Models.SeriesFF DF in FFF1.programa.series)
+    {
+        if (DF.documentos.Count() > 0)
+        {
+<div class="modal fade" id="myModal@(DF.id)" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">@DF.denominacion</h4>
+            </div>
+            <div class="modal-body">
+                <table width="100%" border="0" cellspacing="0" cellpadding="0" style="margin-bottom: 50px;">
+                    <tbody>
+                        <tr>
+                            <td>DOCUMENTO</td>
+                            <td align="center">BAJAR DOCUMENTO</td>
+
+                        </tr>
+                        @foreach (CNV_Site.Models.DocumentoFF DF1 in DF.documentos)
+                        {
+
+                            <tr>
+                                <td>@DF1.nombreDocumento</td>
+                                <td align="center"><a href="@DF1.url" target="_blank"><img src="~/Content/assets/img/pdf-gris.png"></a></td>
+
+                            </tr>
+                        }
+
+                    </tbody>
+                </table>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+        }
+    }
+}
+<!-- Navigation -->
+
+<section id="title-int" class="fideicomisos-financieros">
+    <div class="container-fluid no-padding">
+        <h1>Fideicomisos Financieros</h1>
+        <p>Es un instrumento de financiamiento que integra el denominado proceso de titulización de activos o securitización. <a id="ver-mas" href="javascript:void(0);"><u>VER MÁS</u></a> <span id="ver-mas-contenido">El fideicomiso financiero es una alternativa a la que recurren las empresas u organizaciones para obtener financiación, segregando de su patrimonio un número determinado de activos cuyo producido estará destinado al pago de los servicios de los valores fiduciarios emitidos, constituyendo a su vez dichos activos la garantía básica del cumplimiento de las obligaciones de pago asumidas.</span></p>
+    </div>
+</section>
+<section id="content">
+    <div class="container padding-50">
+        <h2 class="title">Últimas Colocaciones</h2>
+        <div class="table-responsive">
+            <table class="table">
+                <thead class="celeste">
+                    <tr>
+                        <th>
+                            FECHA DE
+                            LANZAMIENTO
+                        </th>
+                        <th>
+                            DENOMINACIÓN
+                        </th>
+                        <th>
+                            SERIE/ FF.
+                            INDIVIDUAL
+                        </th>
+                        <th>
+                            FIDUCIARIO
+                            FINANCIERO
+                        </th>
+                        <th>
+                            FIDUCIANTE/S
+                        </th>
+                        <th>
+                            ACTIVO
+                            FIDEICOMITIDO
+                        </th>
+                        <th>AVISO DE SUSCRIPCIÓN</th>
+                        <th>RESULTADO DE COLOCACIÓN</th>
+                        <th>PROSPECTO</th>
+                    </tr>
+                </thead>
+                <tbody class="azul">
+
+                    @foreach (CNV_Site.Models.UltimasColocacionesFideicomisosFinancieros UCFF in Model.UCFF)
+                    {
+                        <tr>
+                            <td>@UCFF.fechaColocacion</td>
+                            <td>@UCFF.denominacion</td>
+                            <td>@UCFF.tipo</td>
+                            
+                            <td>@UCFF.fiduciario</td>
+                            <td>
+                                @string.Join(",", @UCFF.fiduciantes)
+                            </td>
+                            <td>
+                                @UCFF.activosFideicomiso
+                            </td>
+                            <td>
+                                @foreach (CNV_Site.Models.DocumentoFF DFF in UCFF.documentos)
+                                {
+                                    if (DFF.nombreDocumento == "Prospecto")
+                                    {<a href="@DFF.url" target="_blank"><img src="~/Content/assets/img/pdf-blanco.png"></a>}
+                                }
+                            </td>
+
+                            <td>
+                                @foreach (CNV_Site.Models.DocumentoFF DFF in UCFF.documentos)
+                                {
+                                    if (DFF.nombreDocumento == "Avisos de Suscripción y Prórrogas")
+                                    { <a href="@DFF.url" target="_blank"><img src="~/Content/assets/img/pdf-blanco.png"></a>}
+                                }
+                            </td>
+                            <td>
+                                @foreach (CNV_Site.Models.DocumentoFF DFF in UCFF.documentos)
+                                {
+                                    if (DFF.nombreDocumento == "Resultados de Colocación")
+                                    {<a href="@DFF.url" target="_blank"><img src="~/Content/assets/img/pdf-blanco.png"></a>}
+                                }
+                            </td>
+
+
+
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="container-fluid bg-fideicomisos-financieros">
+        <div class="container">
+            <div class="col-lg-10 col-lg-offset-1">
+                <h2>Buscador de Fideicomisos Financieros</h2>
+                <p>Utilizá el buscador para consultar prospectos y suplementos de prospectos correspondientes a programas, series y fideicomisos financieros autorizados por CNV</p>
+                <div class="sep-white"></div>
+                <h3>Seleccioná el Fideicomiso Financiero de tu interés:</h3>
+                @using (Html.BeginForm("Busqueda", "FideicomisosFinancieros", FormMethod.Post, new { name = "FideicomisosFinancierosBuscar", id = "FideicomisosFinancierosBuscar", enctype = "multipart/form-data" }))
+                {
+                    <div class="form-group">
+
+                        <select id="tipoBFF" class="form-control">
+                            <option value="0">Seleccione el Tipo de Busqueda</option>
+                            <option value="1">Denominación del Fideicomiso</option>
+                            <option value="2">Denominación del Programa</option>
+                            <option value="3">Denominación del Fiduciario</option>
+                        </select> <div class="select_arrow"> </div>
+                    </div>
+                    <div id="DIVdenominacionFF" class="form-group hidden">
+                        <div class="col-sm-11">
+                            <div class="ui-widget">
+                                <input id="denominacionFF" name="denominacionFF" type="text" class="form-control" placeholder="Buscá por denominación del Fideicomiso">
+                            </div>
+                        </div>
+                        <div class="col-sm-1"><a href="#"><i class="fa fa-question-circle" aria-hidden="true"></i></a></div>
+                    </div>
+                    <div id="DIVprogramaFF" class="form-group hidden">
+                        <div class="col-sm-11">
+                            <div class="ui-widget">
+                                <input id="programaFF" name="programaFF" type="text" class="form-control" placeholder="Buscá por denominación del Programa">
+                            </div>
+                        </div>
+                        <div class="col-sm-1"><a href="#"><i class="fa fa-question-circle" aria-hidden="true"></i></a></div>
+                    </div>
+                    <div id="DIVfiduciarioFF" class="form-group hidden">
+                        <div class="col-sm-11">
+                            <div class="ui-widget">
+                                <input id="fiduciarioFF" name="fiduciarioFF" type="text" class="form-control" placeholder="Buscá por denominación del Fiduciario">
+                            </div>
+                        </div>
+                        <div class="col-sm-1"><a href="#"><i class="fa fa-question-circle" aria-hidden="true"></i></a></div>
+                    </div>
+                    <button id="btnFFBuscar" class="btn-blue hidden">BUSCAR</button>
+                }
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+
+    jQuery("#tipoBFF").on('change', function () {
+        var opt = jQuery('#tipoBFF').val();
+        if (opt == 1) {
+            jQuery('#DIVdenominacionFF').removeClass("hidden");
+            jQuery('#DIVprogramaFF').removeClass("hidden").addClass("hidden");
+            jQuery('#DIVfiduciarioFF').removeClass("hidden").addClass("hidden");
+
+
+        }
+        if (opt == 2) {
+            jQuery('#DIVprogramaFF').removeClass("hidden");
+            jQuery('#DIVdenominacionFF').removeClass("hidden").addClass("hidden");
+            jQuery('#DIVfiduciarioFF').removeClass("hidden").addClass("hidden");
+
+        }
+        if (opt == 3) {
+            jQuery('#DIVfiduciarioFF').removeClass("hidden");
+            jQuery('#DIVdenominacionFF').removeClass("hidden").addClass("hidden");
+            jQuery('#DIVprogramaFF').removeClass("hidden").addClass("hidden");
+
+        }
+        jQuery('#btnFFBuscar').removeClass("hidden");
+    });
+
+</script>
+
+
+<section>
+
+    <div class="container-fluid bg-busqueda">
+        <div class="container">
+            <div id="resultP" class="col-md-8 col-md-offset-2">
+                @foreach (CNV_Site.Models.FideicomisosFF FFF1 in Model.FFF)
+                {
+                <h3>Denominación del programa:  @FFF1.denominacion</h3>
+                <div class="panel-group wrap accordion" id="accordion4" role="tablist" aria-multiselectable="true">
+                    <div class="panel ">
+                        <div class="panel-heading" role="tab" id="headinge1">
+                            <h4 class="panel-title center-title"> <a role="button" data-toggle="collapse" data-parent="#accordion4" href="#collapsee1" aria-expanded="true" aria-controls="collapsee1" class="">DOCUMENTOS DEL PROGRAMA</a> </h4>
+                        </div>
+                        <div id="collapsee1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headinge1" aria-expanded="true" style="">
+                            <div class="panel-body  bg-gray">
+                                <table width="100%" border="0" cellspacing="0" cellpadding="0" style="margin-bottom: 50px;">
+                                    <tbody>
+                                        <tr>
+                                            <td>DOCUMENTO</td>
+                                            <td align="center">BAJAR DOCUMENTO</td>
+
+                                        </tr>
+                                        @foreach (CNV_Site.Models.DocumentoFF DF in FFF1.programa.documentos)
+                                        {
+
+                                            <tr>
+                                                <td>@DF.nombreDocumento</td>
+                                                <td align="center"><a href="@DF.url" target="_blank"><img src="~/Content/assets/img/pdf-gris.png"></a></td>
+
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel ">
+                        <div class="panel-heading" role="tab" id="headinge2">
+                            <h4 class="panel-title center-title"> <a role="button" data-toggle="collapse" data-parent="#accordion2" href="#collapsee2" aria-expanded="true" aria-controls="collapsee2" class="">SERIES DEL PROGRAMA</a> </h4>
+                        </div>
+                        <div id="collapsee2" class="panel-collapse collapse " role="tabpanel" aria-labelledby="headinge2" aria-expanded="false" style="">
+                            <div class="panel-body  bg-gray">
+                                <table width="100%" border="0" cellspacing="0" cellpadding="0" style="margin-bottom: 50px;">
+                                    <tbody>
+                                        <tr>
+                                            <td>FIDEICOMISO</td>
+                                            <td>FIDUCIARIO</td>
+                                            <td>FIDUCIANTE</td>
+                                            <td align="center">VER DOCUMENTOS</td>
+                                        </tr>
+
+                                        @foreach (CNV_Site.Models.SeriesFF DF in FFF1.programa.series)
+                                        {
+                                            <tr>
+                                                <td>@DF.denominacion</td>
+                                                <td>@DF.fiduciario</td>
+                                                <td align="center">@string.Join(",", DF.fiduciantes)</td>
+                                                <td align="center"><a href="#" class="flecha" data-toggle="modal" data-target="#myModal@(DF.id)"><i class="fa fa-caret-right"></i></a></td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sep"></div>
+                <a href="@Url.Action("Index", "FideicomisosFinancieros")" class="btn-celeste margin-center">REALIZAR NUEVA BÚSQUEDA</a>
+                }
+            </div>
+
+
+            <div class="col-lg-12">
+                <p class="aviso">*La información suministrada a través del subsistema de Fideicomisos Financieros es responsabilidad de los Fiduciarios Financieros</p>
+
+
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+@Html.Partial("_Nav_int_Institucional")
+<script type="text/javascript" src="~/Content/assets/js/main.js"></script>
+<script>
+
+    jQuery(document).ready(function () {
+        var scrollPos = jQuery("#resultP").offset().top;
+
+        jQuery(window).scrollTop(scrollPos);
+    });
+
+</script>

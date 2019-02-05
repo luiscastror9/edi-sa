@@ -1,0 +1,188 @@
+﻿@model CNV_Site.Models.ViewModelFondoComunesInversion
+
+@{
+    ViewBag.Title = "Fondos Comunes de Inversion";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link type="text/css" href="~/Content/assets/css/fondos-comunes-inversion.css" rel="stylesheet">
+
+<section id="title-int" class="fondos-comunes-inversion">
+    <div class="container-fluid no-padding">
+        <h1>Fondos Comunes de Inversión</h1>
+        <p>Es un instrumento de inversión mediante el cual un grupo de personas con similares objetivos de inversión aporta su dinero para que un profesional lo administre, invirtiendo en una cartera diversificada de activos.</p>
+    </div>
+</section>
+<section id="content">
+    <div class="container-fluid bg-fondos-comunes-inversion">
+        <div class="container">
+            <h1>Últimas Colocaciones</h1>
+            <div id="exTab1" class="container">
+                <ul class="nav nav-pills">
+                    <li class="active"> <a href="#1a" data-toggle="tab">FCI CERRADOS</a> </li>
+                    <li><a href="#2a" data-toggle="tab">FCI ABIERTOS</a> </li>
+                </ul>
+                <div class="tab-content clearfix">
+                    <div class="tab-pane active" id="1a">
+                        <div class="table-responsive">
+                            <div class="icon-scroll"><img src="~/Content/assets/img/horizontal-scroll.png"></div>
+                            <table class="">
+                                <thead>
+                                    <tr>
+                                        <th>Fecha de Lanzamiento</th>
+                                        <th>DENOMINACIÓN</th>
+                                        <th>
+                                            OBJETO DE
+                                            INVERSIÓN
+                                        </th>
+                                        <th>
+                                            SOCIEDAD
+                                            GERENTE
+                                        </th>
+
+                                        <th>
+                                            SOCIEDAD
+                                            DEPOSITARIA
+                                        </th>
+                                        <th>PROSPECTO</th>
+                                        <th>REGLAMENTO DE GESTIÓN</th>
+                                        <th>
+                                            AVISO DE
+                                            SUSCRIPCIÓN
+                                        </th>
+                                        <th>RESULTADO DE COLOCACIÓN</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (CNV_Site.Models.UltimaColocacionesInstrumentos fci in Model.LUCIC.data)
+                                    {
+                                        <tr>
+                                            <td>
+                                                @fci.fechaLanzamiento.ToString("d MMM yyyy",
+            System.Globalization.CultureInfo.CreateSpecificCulture("es-AR"))
+                                        </td>
+                                        <td>@fci.denominacion</td>
+                                        <td>@fci.tipo</td>
+                                        <td>
+                                            @fci.sociedadDepositaria
+                                    </td>
+                                    <td>
+                                        @fci.sociedadGerente
+                                    </td>
+                                    <td><a href="#"><img src="~/Content/assets/img/pdf.png"></a></td>
+                                    <td><a href="#"><img src="~/Content/assets/img/pdf.png"></a></td>
+                                    <td><a href="#"><img src="~/Content/assets/img/pdf.png"></a></td>
+                                    <td><a href="#"><img src="~/Content/assets/img/pdf.png"></a></td>
+                                </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="2a">
+                        <div class="table-responsive">
+                            <table class="">
+                                <thead>
+                                    <tr>
+                                        <th>Fecha de Lanzamiento</th>
+                                        <th>DENOMINACIÓN</th>
+                                        <th>OBJETO DE INVERSIÓN / TIPO DE RENTA</th>
+                                        <th>
+                                            SOCIEDAD
+                                            GERENTE
+                                        </th>
+
+                                        <th>
+                                            SOCIEDAD
+                                            DEPOSITARIA
+                                        </th>
+                                        <th>PROSPECTO</th>
+                                        <th>REGLAMENTO DE GESTIÓN</th>
+
+                                        <th>RESULTADO DE COLOCACIÓN</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (CNV_Site.Models.UltimaColocacionesInstrumentos fci in Model.LUCIA.data)
+                                    {
+                                        <tr>
+                                            <td>
+                                                @fci.fechaLanzamiento.ToString("d MMM yyyy",
+            System.Globalization.CultureInfo.CreateSpecificCulture("es-AR"))
+                                        </td>
+                                        <td>@fci.denominacion</td>
+                                        <td>@fci.tipo</td>
+                                        <td>
+                                            @fci.sociedadDepositaria
+                                        </td>
+                                        <td>
+                                            @fci.sociedadGerente
+                                        </td>
+                                        <td><a href="#"><img src="~/Content/assets/img/pdf.png"></a></td>
+                                        <td><a href="#"><img src="~/Content/assets/img/pdf.png"></a></td>
+                                        <td><a href="#"><img src="~/Content/assets/img/pdf.png"></a></td>
+                                    </tr>
+                                    }
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <a href="#" class="btn-blue-full">VER MES COMPLETO</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="container-fluid bg-busqueda">
+        <div class="container">
+            <h1>Buscador de Fondos Comunes de Inversión</h1>
+
+            <div class="col-lg-8 col-lg-offset-2">
+                @using (Html.BeginForm("Busqueda", "FondoComunesInversion", FormMethod.Post, new { @class = "form-inline", name = "FondoComunesInversionBuscar", id = "FondoComunesInversionBuscar", enctype = "multipart/form-data" }))
+                {
+                    <p>Mostrar:</p>
+                    <div class="form-group">
+
+                        <select class="form-control" id="tipo">
+                            <option value="0">Todos</option>
+                            <option value="2">Abiertos</option>
+                            <option value="1">Cerrados</option>
+
+                        </select> <div class="select_arrow"> </div>
+                    </div> <p>Criterios de búsqueda:</p>
+                        <div class="form-group">
+                            @Html.DropDownListFor(model => model.Lti, new SelectList(Model.Lti.data.AsEnumerable(), "idSocGerente", "denominacion"), "por Tipo de Inversión", new { @class = "form-control" })
+
+
+                            @*<select class="form-control">
+                                    <option>por Tipo de Inversión</option>
+
+                                </select>*@ <div class="select_arrow"> </div>
+                        </div><div class="form-group">
+                            @Html.DropDownListFor(model => model.Lsg, new SelectList(Model.Lsg.data.AsEnumerable(), "idSocGerente", "denominacion"), "por Sociedad Gerente", new { @class = "form-control" })
+
+
+                            @*<select class="form-control">
+                                    <option>por Sociedad Gerente</option>
+
+                                </select>*@ <div class="select_arrow"> </div>
+                        </div><div class="form-group">
+                            @Html.DropDownListFor(model => model.Lsd, new SelectList(Model.Lsd.data.AsEnumerable(), "idSocGerente", "denominacion"), "por Sociedad Depositaria", new { @class = "form-control" })
+
+
+                            @*<select class="form-control" id="anio">
+                                    <option>por Sociedad Depositaria</option>
+
+                                </select>*@ <div class="select_arrow"> </div>
+                        </div>
+                        <a href="#" class="btn btn-blue-full">BUSCAR</a>
+                }
+            </div>
+
+        </div>
+    </div>
+</section>
+<script type="text/javascript" src="~/Content/assets/js/hechos-relevantes.js"></script>
+
+@Html.Partial("_Nav_int_Institucional")

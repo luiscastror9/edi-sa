@@ -1,0 +1,91 @@
+﻿
+@{
+    ViewBag.Title = "Mapa del Sitio";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- Intro Section -->
+<link type="text/css" href="~/Content/assets/css/mapa-del-sitio.css" rel="stylesheet">
+
+<section id="title-int" class="mapa-del-sitio">
+    <div class="container-fluid no-padding">
+        <h1>Mapa del Sitio</h1>
+    </div>
+</section>
+<section id="content" class="bg-mapa-del-sitio">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <div class="row">
+                    <div class="col-md-12">
+                        <a href="@Url.Action("Index", "Home")" class=" block-btn box-blue"><span>HOME</span></a>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="@Url.Action("Index", "Institucional")" class=" block-btn box-blue"><span>INSTITUCIONAL</span></a>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="@Url.Action("Index", "MarcoRegulatorio")" class=" block-btn box-blue"><span>MARCO REGULATORIO</span></a>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="@Url.Action("Index", "ResolucionesDisciplinarias")" class=" block-btn box-blue"><span>RESOLUCIONES DISCIPLINARIAS</span></a>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="@Url.Action("Index", "Informes")" class=" block-btn box-blue"><span>INFORMES</span></a>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="@Url.Action("Index", "Prensa")" class=" block-btn box-blue"><span>PRENSA</span></a>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="@Url.Action("Index", "Prensa")" class=" block-btn box-celeste"><span>ÚLTIMAS NOEVEDADES</span></a>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="@Url.Action("Index", "HechosRelevantes")" class=" block-btn box-celeste"><span>HECHOS RELEVANTES</span></a>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="#" class=" block-btn box-celeste"><span>ALERTA AL INVERSOR</span></a>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="#" class=" block-btn box-celeste"><span>SANCIONES</span></a>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="#" class=" block-btn box-celeste"><span>EMPRESAS</span></a>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="#" class=" block-btn box-celeste"><span>FIDEICOMISOS FINANCIEROS</span></a>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="@Url.Action("Index", "FondosComunesInversion")" class=" block-btn box-celeste"><span>FONDOS COMUNES DE INVERSIÓN</span></a>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="#" class=" block-btn box-celeste"><span>PYMES</span></a>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="@Url.Action("Index", "Profesionales")" class=" block-btn box-violeta"><span>PARA PROFESIONALES</span></a>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="#" class=" block-btn box-verde"><span>REGISTROS PÚBLICOS</span></a>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="#" class=" block-btn box-gris"><span>DENUNCIÁ ACÁ</span></a>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="@Url.Action("Contacto", "Home")" class=" block-btn box-gris"><span>CONSULTAS Y RECLAMOS</span></a>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="#" class=" block-btn box-gris"><span>PREGUNTAS FRECUENTES</span></a>
+                    </div>
+                    <div class="col-md-4 col-md-offset-2">
+                        <a href="@Url.Action("Mapa", "Home")" class=" block-btn box-gris"><span>MAPA DEL SITIO</span></a>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="@Url.Action("Legal", "Home")" class=" block-btn box-gris"><span>AVISO LEGAL</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script type="text/javascript" src="~/Content/assets/js/hechos-relevantes.js"></script>
+
+@Html.Partial("_Nav_int_Institucional")

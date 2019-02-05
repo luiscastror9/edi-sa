@@ -1,0 +1,2 @@
+G:\Resp Luis C Equipo SOfttek\Cofcoind\CofcoInd\obj\Release\CofcoInd.csprojResolveAssemblyReference.cache
+G:\Resp Luis C Equipo SOfttek\Cofcoind\CofcoInd\obj\Release\CofcoInd.csproj.CoreCompileInputs.cache

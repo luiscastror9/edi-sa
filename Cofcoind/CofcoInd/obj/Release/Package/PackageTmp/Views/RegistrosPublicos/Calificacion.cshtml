@@ -1,0 +1,610 @@
+﻿
+@{
+    ViewBag.Title = "Calificacion";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link type="text/css" href="~/Content/assets/css/registros-publicos.css" rel="stylesheet">
+
+<section id="title-int" class="registros-publicos">
+    <div class="container-fluid no-padding">
+        <h1>Registros Públicos</h1>
+        <p>
+            Encontrá aquí información pública sobre agentes intermediarios  e
+            infraestructura del mercado de capitales, autorizados y registrados en CNV.
+        </p>
+    </div>
+</section>
+<section id="content">
+    <div class="container">
+        <div class="panel-group wrap accordion" id="accordionb" role="tablist" aria-multiselectable="true">
+            <div class="panel">
+                <div class="panel-heading" role="tab" id="headingb1">
+                    <h4 class="panel-title center-title"><a href="@Url.Action("Index", "RegistrosPublicos")" class="btn-blue back"><i class="fa fa-caret-left"></i> VOLVER</a> <a role="button" data-toggle="collapse" data-parent="#accordionb" href="#collapseb1" aria-expanded="true" aria-controls="collapseb1" class=""> <strong>AGENTES DE CALIFICACIÓN</strong></a> </h4>
+                </div>
+                <div id="collapseb1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading1" aria-expanded="true" style="">
+                    <div class="panel-body  bg-gray">
+                        <p>Son aquellas entidades que se dedican a realizar calificaciones de riesgo. En Argentina las entidades deben estar registradas en la CNV para poder desarrollar la actividad y pueden ser de carácter privado o Universidades Públicas. <a href="#">VER MÁS</a></p>
+                        <h2>Privadas</h2>
+                        <div class="panel-group" id="accordion-privadas" role="tablist" aria-multiselectable="true">
+                            <div class="panel level0">
+                                <div class="panel-heading" role="tab" id="privadas-heading1">
+                                    <h4 class="panel-title"><a class="collapsed" data-toggle="collapse" data-parent="#accordion-privadas" href="#privadas-collapse1" aria-expanded="false" aria-controls="privadas-collapse1">FIX SCR S.A.</a></h4>
+                                </div>
+                                <div id="privadas-collapse1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading1">
+                                    <div class="panel-body">
+                                        <div class="panel-group" id="accordion-sub-1" role="tablist" aria-multiselectable="true">
+                                            <div class="panel">
+                                                <div class="panel-heading" role="tab" id="sub1-heading1">
+                                                    <h4 class="panel-title"><a class="collapsed" data-toggle="collapse" data-parent="#accordion-sub-1" href="#sub1-collapse1" aria-expanded="false" aria-controls="sub1-collapse1">ÚLTIMA INFORMACIÓN RECIBIDA</a></h4>
+                                                </div>
+                                                <div id="sub1-collapse1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading1">
+                                                    <div class="panel-body">
+                                                        <div class="box-mercado"><h2>CALIFICACIONES POR INSTRUMENTOS</h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="panel">
+                                                <div class="panel-heading" role="tab" id="sub1-heading2">
+                                                    <h4 class="panel-title"><a class="collapsed" data-toggle="collapse" data-parent="#accordion-sub-1" href="#sub1-collapse2" aria-expanded="false" aria-controls="sub1-collapse2">HECHOS RELEVANTES</a></h4>
+                                                </div>
+                                                <div id="sub1-collapse2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading2">
+                                                    <div class="panel-body">
+                                                        <div class="box-mercado"><h2>Modificación de calificación</h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div>
+                                                        <div class="box-mercado"><h2>Otros hechos</h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="panel">
+                                                <div class="panel-heading" role="tab" id="sub1-heading3">
+                                                    <h4 class="panel-title"><a class="collapsed" data-toggle="collapse" data-parent="#accordion-sub-1" href="#sub1-collapse3" aria-expanded="false" aria-controls="sub1-collapse3">INFORMACIÓN SOCIETARIA</a></h4>
+                                                </div>
+                                                <div id="sub1-collapse3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading3">
+                                                    <div class="panel-body">
+                                                        <div class="box-mercado"><h2>Estatuto Social </h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div>
+                                                        <div class="box-mercado"><h2>Actividades afines y complementarias</h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div>
+                                                        <div class="box-mercado"><h2>Organigrama</h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div>
+                                                        <div class="box-mercado"><h2>Registro de Accionistas</h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div>
+                                                        <div class="box-mercado"><h2>Informe del Oficial de Cumplimiento Regulatorio </h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div>
+                                                        <div class="box-mercado"><h2>Inscripciones impositivas y previsionales</h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div>
+                                                        <div class="box-mercado"><h2>Información Adicional</h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div>
+                                                        <div class="panel-group" id="sub2-accordion" role="tablist" aria-multiselectable="true">
+                                                            <div class="panel">
+                                                                <div class="panel-heading" role="tab" id="sub2-heading1">
+                                                                    <h4 class="panel-title">
+                                                                        <a class="collapsed" data-toggle="collapse" data-parent="#sub2-accordion" href="#sub2-collapse1" aria-expanded="false" aria-controls="sub2-collapse1">
+                                                                            Nóminas
+                                                                        </a>
+                                                                    </h4>
+                                                                </div>
+                                                                <div id="sub2-collapse1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="sub2-heading1">
+                                                                    <div class="panel-body">
+                                                                        <h3>DEL PERSONAL</h3>
+                                                                        <div class="box-mercado"><h2>Nómina de Personal ACR inc a.8) Art. 83 </h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf.png"></a></div>
+                                                                        <div class="sep-acordeon"></div>
+                                                                        <h3>DEL ÓRGANO DE ADMINISTRACIÓN</h3>
+                                                                        <div class="box-mercado"><h2>Datos indicados en el Art. 83 inc. a.9) </h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf.png"></a></div>
+                                                                        <div class="box-mercado"><h2>Datos del oficial de cumplimiento Art. 83 inc. a. 10)  </h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf.png"></a></div>
+                                                                        <div class="sep-acordeon"></div>
+                                                                        <h3>DEL AUDITOR</h3>
+                                                                        <div class="box-mercado"><h2></h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf.png"></a></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="panel">
+                                                                <div class="panel-heading" role="tab" id="sub2-heading2">
+                                                                    <h4 class="panel-title">
+                                                                        <a class="collapsed" data-toggle="collapse" data-parent="#sub2-accordion" href="#sub2-collapse2" aria-expanded="false" aria-controls="sub2-collapse2">
+                                                                            Consejo de Calificación
+                                                                        </a>
+                                                                    </h4>
+                                                                </div>
+                                                                <div id="sub2-collapse2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="sub2-heading2">
+                                                                    <div class="panel-body">
+                                                                        <h3>Del Consejo de Calificación</h3>
+                                                                        <div class="box-mercado"><h2>Integrantes del Consejo de Calificación</h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf.png"></a></div>
+
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="panel">
+                                                <div class="panel-heading" role="tab" id="sub1-heading4">
+                                                    <h4 class="panel-title"><a class="collapsed" data-toggle="collapse" data-parent="#accordion-sub-1" href="#sub1-collapse4" aria-expanded="false" aria-controls="sub1-collapse4">ACTAS DE ORGANOS SOCIETARIOS</a></h4>
+                                                </div>
+                                                <div id="sub1-collapse4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading4">
+                                                    <div class="panel-body">
+                                                        <div class="box-mercado"><h2>Actas de Asamblea</h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div>
+                                                        <div class="box-mercado"><h2>Actas de Directorio</h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="panel">
+                                                <div class="panel-heading" role="tab" id="sub1-heading5">
+                                                    <h4 class="panel-title"><a class="collapsed" data-toggle="collapse" data-parent="#accordion-sub-1" href="#sub1-collapse5" aria-expanded="false" aria-controls="sub1-collapse5">INFORMACIÓN FINANCIERA</a></h4>
+                                                </div>
+                                                <div id="sub1-collapse5" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading5">
+                                                    <div class="panel-body">
+                                                        <div class="panel-group" id="sub2b-accordion" role="tablist" aria-multiselectable="true">
+                                                            <div class="panel">
+                                                                <div class="panel-heading" role="tab" id="sub2b-heading1">
+                                                                    <h4 class="panel-title">
+                                                                        <a class="collapsed" data-toggle="collapse" data-parent="#sub2b-accordion" href="#sub2b-collapse1" aria-expanded="false" aria-controls="sub2b-collapse1">
+                                                                            Estados Contables Anuales
+                                                                        </a>
+                                                                    </h4>
+                                                                </div>
+                                                                <div id="sub2b-collapse1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="sub2b-heading1">
+                                                                    <div class="panel-body">
+
+                                                                        <div class="box-mercado"><h3>COMPLETOS </h3><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf.png"></a></div>
+
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="panel">
+                                                                <div class="panel-heading" role="tab" id="sub2b-heading2">
+                                                                    <h4 class="panel-title">
+                                                                        <a class="collapsed" data-toggle="collapse" data-parent="#sub2b-accordion" href="#sub2b-collapse2" aria-expanded="false" aria-controls="sub2b-collapse2">
+                                                                            Estados Contables Trimestrales
+                                                                        </a>
+                                                                    </h4>
+                                                                </div>
+                                                                <div id="sub2b-collapse2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="sub2b-heading2">
+                                                                    <div class="panel-body">
+
+                                                                        <div class="box-mercado"><h3>COMPLETOS </h3><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf.png"></a></div>
+
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="panel">
+                                                <div class="panel-heading" role="tab" id="sub1-heading6">
+                                                    <h4 class="panel-title"><a class="collapsed" data-toggle="collapse" data-parent="#accordion-sub-1" href="#sub1-collapse6" aria-expanded="false" aria-controls="sub1-collapse6">INFORMES</a></h4>
+                                                </div>
+                                                <div id="sub1-collapse6" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading6">
+                                                    <div class="panel-body">
+                                                        <div class="box-mercado"><h2>Informes de calificación con Oferta Pública</h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div>
+                                                        <div class="box-mercado"><h2>Informes de calificación sin Oferta Pública</h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div>
+                                                        <div class="box-mercado"><h2>Informes de calificación previo a la Oferta Pública</h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="panel">
+                                                <div class="panel-heading" role="tab" id="sub1-heading7">
+                                                    <h4 class="panel-title"><a class="collapsed" data-toggle="collapse" data-parent="#accordion-sub-1" href="#sub1-collapse7" aria-expanded="false" aria-controls="sub1-collapse7">MATRICES DE RESULTADOS HISTÓRICOS </a></h4>
+                                                </div>
+                                                <div id="sub1-collapse7" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading7">
+                                                    <div class="panel-body">
+                                                        <div class="box-mercado"><h2>Tasas de incumplimiento</h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div>
+                                                        <div class="box-mercado"><h2>Matriz de transición </h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="panel">
+                                                <div class="panel-heading" role="tab" id="sub1-heading8">
+                                                    <h4 class="panel-title"><a class="collapsed" data-toggle="collapse" data-parent="#accordion-sub-1" href="#sub1-collapse8" aria-expanded="false" aria-controls="sub1-collapse8">METODOLOGÍAS DE CALIFICACIÓN DE RIESGO</a></h4>
+                                                </div>
+                                                <div id="sub1-collapse8" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading8">
+                                                    <div class="panel-body">
+                                                        <div class="box-mercado"><h2>Acciones</h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div>
+                                                        <div class="box-mercado"><h2>Empresas</h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div>
+                                                        <div class="box-mercado"><h2>Fideicomisos Financieros </h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div>
+                                                        <div class="box-mercado"><h2>Bancos </h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div>
+                                                        <div class="box-mercado"><h2>FCI </h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div>
+                                                        <div class="box-mercado"><h2>Títulos Públicos</h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div>
+                                                        <div class="box-mercado"><h2>Otras</h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div>
+                                                        <div class="box-mercado"><h2>Revisión anual de metodologías de calificacion</h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="panel">
+                                                <div class="panel-heading" role="tab" id="sub1-heading9">
+                                                    <h4 class="panel-title"><a class="collapsed" data-toggle="collapse" data-parent="#accordion-sub-1" href="#sub1-collapse9" aria-expanded="false" aria-controls="sub1-collapse9">CÓDIGO DE CONDUCTA-INDEPENDENCIA DEL ACR</a></h4>
+                                                </div>
+                                                <div id="sub1-collapse9" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading9">
+                                                    <div class="panel-body">
+                                                        <div class="box-mercado"><h2>Código de Conducta</h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div>
+                                                        <div class="box-mercado"><h2>Rango de honorarios</h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div>
+                                                        <div class="box-mercado"><h2>Ingresos mayores del 10% de un solo cliente</h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div>
+                                                        <div class="box-mercado"><h2>DDJJ de Incompatibilidades</h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="panel">
+                                                <div class="panel-heading" role="tab" id="sub1-heading10">
+                                                    <h4 class="panel-title"><a class="collapsed" data-toggle="collapse" data-parent="#accordion-sub-1" href="#sub1-collapse10" aria-expanded="false" aria-controls="sub1-collapse10">INFORMACIÓN AL PÚBLICO INVERSOR</a></h4>
+                                                </div>
+                                                <div id="sub1-collapse10" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading10">
+                                                    <div class="panel-body">
+                                                        <div class="box-mercado"><h2>Publicidad Promocional</h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div>
+                                                        <div class="box-mercado"><h2>Reclamos y Denuncias</h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="panel">
+                                                <div class="panel-heading" role="tab" id="sub1-heading11">
+                                                    <h4 class="panel-title"><a class="collapsed" data-toggle="collapse" data-parent="#accordion-sub-1" href="#sub1-collapse11" aria-expanded="false" aria-controls="sub1-collapse11">CALIFICACIONES POR INSTRUMENTO</a></h4>
+                                                </div>
+                                                <div id="sub1-collapse11" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading11">
+                                                    <div class="panel-body">
+                                                        <div class="box-mercado"><h2>Acciones</h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div>
+                                                        <div class="box-mercado"><h2>Obligaciones Negociables </h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div>
+                                                        <div class="box-mercado"><h2>Títulos de Deuda de Corto Plazo (CNV RG Nº 344)</h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div>
+                                                        <div class="box-mercado"><h2>Títulos Públicos</h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div>
+                                                        <div class="box-mercado"><h2>Fondos Comunes de Inversión</h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div>
+                                                        <div class="box-mercado"><h2>Fondos Comunes Cerrados de Crédito</h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div>
+                                                        <div class="box-mercado"><h2>Fideicomisos Financieros</h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h2>Información restringida</h2>
+                                        <div class="panel-group" id="accordion-sub-1b" role="tablist" aria-multiselectable="true">
+                                            <div class="panel ">
+                                                <div class="panel-heading" role="tab" id="sub1c-heading1"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" data-parent="#accordion-sub-1b" href="#sub1c-collapse1" aria-expanded="false" aria-controls="sub1c-collapse1">AIF</a></h4></div><div id="sub1c-collapse1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading1">
+                                                    <div class="panel-body">
+                                                        <div class="box-mercado"><h2>Operadores</h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div>
+                                                        <div class="box-mercado"><h2>Firmantes </h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div>
+                                                        <div class="box-mercado"><h2>Formulario Dec. Jurada Correo Electrónico</h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div>
+                                                        <div class="box-mercado"><h2>Ficha General del Administrado</h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div>
+                                                    </div>
+                                                </div>
+                                            </div><div class="panel "><div class="panel-heading" role="tab" id="sub1c-heading2"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" data-parent="#accordion-sub-1b" href="#sub1c-collapse2" aria-expanded="false" aria-controls="sub1c-collapse2">ÓRGANOS SOCIETARIOS</a></h4></div><div id="sub1c-collapse2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading2"><div class="panel-body"> <div class="box-mercado"><h2>Formulario Datos Personales </h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div><div class="box-mercado"><h2>Ficha Individual del Oficial de Cumplimiento (PLD/CFT) </h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div><div class="box-mercado"><h2>Declaracion Jurada de Tenencias Accionarias </h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div><div class="box-mercado"><h2>Antecedentes curriculares de los miembros del Consejo de Calificación</h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div><div class="box-mercado"><h2>Certificado de Antecedentes Penales</h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div><div class="box-mercado"><h2>DDJJ Prevención de Lavado </h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div></div></div></div><div class="panel "><div class="panel-heading" role="tab" id="sub1c-heading3"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" data-parent="#accordion-sub-1b" href="#sub1c-collapse3" aria-expanded="false" aria-controls="sub1c-collapse3">CÓDIGO DE CONDUCTA-INDEPENDENCIA DEL ACR</a></h4></div><div id="sub1c-collapse3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading3"><div class="panel-body"> <div class="box-mercado"><h2>Código de Conducta</h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div><div class="box-mercado"><h2>Monto Honorarios </h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div><div class="box-mercado"><h2>Detalle de Reclamos y o Denuncias </h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div><div class="box-mercado"><h2>Conflictos reales o potenciales</h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div></div></div></div><div class="panel "><div class="panel-heading" role="tab" id="sub1c-heading4"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" data-parent="#accordion-sub-1b" href="#sub1c-collapse4" aria-expanded="false" aria-controls="sub1c-collapse4">REUNIONES DEL CONSEJO DE CALIFICACIÓN</a></h4></div><div id="sub1c-collapse4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading4"><div class="panel-body"> <div class="box-mercado"><h2>Aviso de Reunión</h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div><div class="box-mercado"><h2>Actas del Consejo de Calificación</h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div></div></div></div><div class="panel "><div class="panel-heading" role="tab" id="sub1c-heading5"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" data-parent="#accordion-sub-1b" href="#sub1c-collapse5" aria-expanded="false" aria-controls="sub1c-collapse5">ORGANIZACIÓN INTERNA</a></h4></div><div id="sub1c-collapse5" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading5"><div class="panel-body"><div class="box-mercado"><h2>Política de Conservación de la Documentación </h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div><div class="box-mercado"><h2>Sistemas Informáticos</h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div><div class="box-mercado"><h2>Mecanismos de Control Interno</h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div><div class="box-mercado"><h2>Manuales de procedimientos internos</h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div><div class="box-mercado"><h2>Tercerización de actividades</h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div> </div></div></div><div class="panel "><div class="panel-heading" role="tab" id="sub1c-heading6"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" data-parent="#accordion-sub-1b" href="#sub1c-collapse6" aria-expanded="false" aria-controls="sub1c-collapse6">CUMPLIMIENTO REGULATORIO</a></h4></div><div id="sub1c-collapse6" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading6"><div class="panel-body"> <div class="box-mercado"><h2>Informe especial del Oficial de Cumplimiento Regulatorio</h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div><div class="box-mercado"><h2>datos completos del encargado de funcion relaciones con el público </h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div></div></div></div><div class="panel "><div class="panel-heading" role="tab" id="sub1c-heading7"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" data-parent="#accordion-sub-1b" href="#sub1c-collapse7" aria-expanded="false" aria-controls="sub1c-collapse7">METODOLOGÍAS DE CALIFICACIÓN</a></h4></div><div id="sub1c-collapse7" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading7"><div class="panel-body"> <div class="box-mercado"><h2>Solicitud de Registración</h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div><div class="box-mercado"><h2>Modificación de Metodologías</h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div></div></div></div><div class="panel "><div class="panel-heading" role="tab" id="sub1c-heading8"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" data-parent="#accordion-sub-1b" href="#sub1c-collapse8" aria-expanded="false" aria-controls="sub1c-collapse8">INFORMES DE CALIFICACIÓN PRIVADO</a></h4></div><div id="sub1c-collapse8" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading8"><div class="panel-body"> <div class="box-mercado"><h2>Dictamen</h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div><div class="box-mercado"><h2>Anexo</h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div></div></div></div><div class="panel "><div class="panel-heading" role="tab" id="sub1c-heading9"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" data-parent="#accordion-sub-1b" href="#sub1c-collapse9" aria-expanded="false" aria-controls="sub1c-collapse9">CONVENIOS</a></h4></div><div id="sub1c-collapse9" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading9"><div class="panel-body"> <div class="box-mercado"><h2>Convenios de calificación de riesgo</h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div><div class="box-mercado"><h2>Convenios con ACR del exterior</h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div></div></div></div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel">
+                                <div class="panel-heading" role="tab" id="privadas-heading2">
+                                    <h4 class="panel-title"><a class="collapsed" data-toggle="collapse" data-parent="#accordion-privadas" href="#privadas-collapse2" aria-expanded="false" aria-controls="privadas-collapse2">MOODY’S LATIN AMERICA</a></h4>
+                                </div>
+                                <div id="privadas-collapse2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading2">
+                                    <div class="panel-body"></div>
+                                </div>
+                            </div>
+                            <div class="panel">
+                                <div class="panel-heading" role="tab" id="privadas-heading3">
+                                    <h4 class="panel-title"><a class="collapsed" data-toggle="collapse" data-parent="#accordion-privadas" href="#privadas-collapse3" aria-expanded="false" aria-controls="privadas-collapse3">   STANDARD  & POOR’S RATING ARGENTINA S.R.L.</a></h4>
+                                </div>
+                                <div id="privadas-collapse3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading3">
+                                    <div class="panel-body"></div>
+                                </div>
+                            </div>
+                            <div class="panel">
+                                <div class="panel-heading" role="tab" id="privadas-heading4">
+                                    <h4 class="panel-title"><a class="collapsed" data-toggle="collapse" data-parent="#accordion-privadas" href="#privadas-collapse4" aria-expanded="false" aria-controls="privadas-collapse4">EVALUADORA LATINOAMERICANA S.A.</a></h4>
+                                </div>
+                                <div id="privadas-collapse4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading4">
+                                    <div class="panel-body"></div>
+                                </div>
+                            </div>
+                            <div class="panel">
+                                <div class="panel-heading" role="tab" id="privadas-heading5">
+                                    <h4 class="panel-title"><a class="collapsed" data-toggle="collapse" data-parent="#accordion-privadas" href="#privadas-collapse5" aria-expanded="false" aria-controls="privadas-collapse5">PROFESSIONAL RATING SERVICES</a></h4>
+                                </div>
+                                <div id="privadas-collapse5" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading5">
+                                    <div class="panel-body"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <h2>Universidades Públicas</h2>
+                        <div class="panel-group" id="accordion-publicas" role="tablist" aria-multiselectable="true">
+                            <div class="panel level0">
+                                <div class="panel-heading" role="tab" id="publicas-heading1">
+                                    <h4 class="panel-title"><a class="collapsed" data-toggle="collapse" data-parent="#accordion-publicas" href="#publicas-collapse1" aria-expanded="false" aria-controls="publicas-collapse1">UNIDAD CEPAF - ACR UP</a></h4>
+                                </div>
+                                <div id="publicas-collapse1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading1">
+                                    <div class="panel-body">
+                                        <div class="panel-group" id="accordion-sub-3" role="tablist" aria-multiselectable="true">
+                                            <div class="panel">
+                                                <div class="panel-heading" role="tab" id="sub3-heading1">
+                                                    <h4 class="panel-title"><a class="collapsed" data-toggle="collapse" data-parent="#accordion-sub-3" href="#sub3-collapse1" aria-expanded="false" aria-controls="sub3-collapse1">ÚLTIMA INFORMACIÓN RECIBIDA</a></h4>
+                                                </div>
+                                                <div id="sub3-collapse1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading1">
+                                                    <div class="panel-body">
+                                                        <div class="box-mercado"><h2>CALIFICACIONES POR INSTRUMENTOS</h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="panel">
+                                                <div class="panel-heading" role="tab" id="sub3-heading2">
+                                                    <h4 class="panel-title"><a class="collapsed" data-toggle="collapse" data-parent="#accordion-sub-3" href="#sub3-collapse2" aria-expanded="false" aria-controls="sub3-collapse2">HECHOS RELEVANTES</a></h4>
+                                                </div>
+                                                <div id="sub3-collapse2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading2">
+                                                    <div class="panel-body">
+                                                        <div class="box-mercado"><h2>Modificación de calificación</h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div>
+                                                        <div class="box-mercado"><h2>Otros hechos</h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="panel">
+                                                <div class="panel-heading" role="tab" id="sub3-heading3">
+                                                    <h4 class="panel-title"><a class="collapsed" data-toggle="collapse" data-parent="#accordion-sub-3" href="#sub3-collapse3" aria-expanded="false" aria-controls="sub3-collapse3">INFORMACIÓN SOCIETARIA</a></h4>
+                                                </div>
+                                                <div id="sub3-collapse3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading3">
+                                                    <div class="panel-body">
+                                                        <div class="box-mercado"><h2>Estatuto Social </h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div>
+                                                        <div class="box-mercado"><h2>Actividades afines y complementarias</h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div>
+                                                        <div class="box-mercado"><h2>Organigrama</h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div>
+                                                        <div class="box-mercado"><h2>Registro de Accionistas</h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div>
+                                                        <div class="box-mercado"><h2>Informe del Oficial de Cumplimiento Regulatorio </h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div>
+                                                        <div class="box-mercado"><h2>Inscripciones impositivas y previsionales</h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div>
+                                                        <div class="box-mercado"><h2>Información Adicional</h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div>
+                                                        <div class="panel-group" id="sub4-accordion" role="tablist" aria-multiselectable="true">
+                                                            <div class="panel">
+                                                                <div class="panel-heading" role="tab" id="sub4-heading1">
+                                                                    <h4 class="panel-title">
+                                                                        <a class="collapsed" data-toggle="collapse" data-parent="#sub4-accordion" href="#sub4-collapse1" aria-expanded="false" aria-controls="sub4-collapse1">
+                                                                            Nóminas
+                                                                        </a>
+                                                                    </h4>
+                                                                </div>
+                                                                <div id="sub4-collapse1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="sub4-heading1">
+                                                                    <div class="panel-body">
+                                                                        <h3>DEL PERSONAL</h3>
+                                                                        <div class="box-mercado"><h2>Nómina de Personal ACR inc a.8) Art. 83 </h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf.png"></a></div>
+                                                                        <div class="sep-acordeon"></div>
+                                                                        <h3>DEL ÓRGANO DE ADMINISTRACIÓN</h3>
+                                                                        <div class="box-mercado"><h2>Datos indicados en el Art. 83 inc. a.9) </h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf.png"></a></div>
+                                                                        <div class="box-mercado"><h2>Datos del oficial de cumplimiento Art. 83 inc. a. 10)  </h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf.png"></a></div>
+                                                                        <div class="sep-acordeon"></div>
+                                                                        <h3>DEL AUDITOR</h3>
+                                                                        <div class="box-mercado"><h2></h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf.png"></a></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="panel">
+                                                                <div class="panel-heading" role="tab" id="sub4-heading2">
+                                                                    <h4 class="panel-title">
+                                                                        <a class="collapsed" data-toggle="collapse" data-parent="#sub4-accordion" href="#sub4-collapse2" aria-expanded="false" aria-controls="sub4-collapse2">
+                                                                            Consejo de Calificación
+                                                                        </a>
+                                                                    </h4>
+                                                                </div>
+                                                                <div id="sub4-collapse2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="sub4-heading2">
+                                                                    <div class="panel-body">
+                                                                        <h3>Del Consejo de Calificación</h3>
+                                                                        <div class="box-mercado"><h2>Integrantes del Consejo de Calificación</h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf.png"></a></div>
+
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="panel">
+                                                <div class="panel-heading" role="tab" id="sub3-heading4">
+                                                    <h4 class="panel-title"><a class="collapsed" data-toggle="collapse" data-parent="#accordion-sub-3" href="#sub3-collapse4" aria-expanded="false" aria-controls="sub3-collapse4">ACTAS DE ORGANOS SOCIETARIOS</a></h4>
+                                                </div>
+                                                <div id="sub3-collapse4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading4">
+                                                    <div class="panel-body">
+                                                        <div class="box-mercado"><h2>Actas de Asamblea</h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div>
+                                                        <div class="box-mercado"><h2>Actas de Directorio</h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="panel">
+                                                <div class="panel-heading" role="tab" id="sub3-heading5">
+                                                    <h4 class="panel-title"><a class="collapsed" data-toggle="collapse" data-parent="#accordion-sub-3" href="#sub3-collapse5" aria-expanded="false" aria-controls="sub3-collapse5">INFORMACIÓN FINANCIERA</a></h4>
+                                                </div>
+                                                <div id="sub3-collapse5" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading5">
+                                                    <div class="panel-body">
+                                                        <div class="panel-group" id="sub4b-accordion" role="tablist" aria-multiselectable="true">
+                                                            <div class="panel">
+                                                                <div class="panel-heading" role="tab" id="sub4b-heading1">
+                                                                    <h4 class="panel-title">
+                                                                        <a class="collapsed" data-toggle="collapse" data-parent="#sub4b-accordion" href="#sub4b-collapse1" aria-expanded="false" aria-controls="sub4b-collapse1">
+                                                                            Estados Contables Anuales
+                                                                        </a>
+                                                                    </h4>
+                                                                </div>
+                                                                <div id="sub4b-collapse1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="sub4b-heading1">
+                                                                    <div class="panel-body">
+
+                                                                        <div class="box-mercado"><h3>COMPLETOS </h3><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf.png"></a></div>
+
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="panel">
+                                                                <div class="panel-heading" role="tab" id="sub4b-heading2">
+                                                                    <h4 class="panel-title">
+                                                                        <a class="collapsed" data-toggle="collapse" data-parent="#sub4b-accordion" href="#sub4b-collapse2" aria-expanded="false" aria-controls="sub4b-collapse2">
+                                                                            Estados Contables Trimestrales
+                                                                        </a>
+                                                                    </h4>
+                                                                </div>
+                                                                <div id="sub4b-collapse2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="sub4b-heading2">
+                                                                    <div class="panel-body">
+
+                                                                        <div class="box-mercado"><h3>COMPLETOS </h3><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf.png"></a></div>
+
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="panel">
+                                                <div class="panel-heading" role="tab" id="sub3-heading6">
+                                                    <h4 class="panel-title"><a class="collapsed" data-toggle="collapse" data-parent="#accordion-sub-3" href="#sub3-collapse6" aria-expanded="false" aria-controls="sub3-collapse6">INFORMES</a></h4>
+                                                </div>
+                                                <div id="sub3-collapse6" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading6">
+                                                    <div class="panel-body">
+                                                        <div class="box-mercado"><h2>Informes de calificación con Oferta Pública</h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div>
+                                                        <div class="box-mercado"><h2>Informes de calificación sin Oferta Pública</h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div>
+                                                        <div class="box-mercado"><h2>Informes de calificación previo a la Oferta Pública</h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="panel">
+                                                <div class="panel-heading" role="tab" id="sub3-heading7">
+                                                    <h4 class="panel-title"><a class="collapsed" data-toggle="collapse" data-parent="#accordion-sub-3" href="#sub3-collapse7" aria-expanded="false" aria-controls="sub3-collapse7">MATRICES DE RESULTADOS HISTÓRICOS </a></h4>
+                                                </div>
+                                                <div id="sub3-collapse7" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading7">
+                                                    <div class="panel-body">
+                                                        <div class="box-mercado"><h2>Tasas de incumplimiento</h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div>
+                                                        <div class="box-mercado"><h2>Matriz de transición </h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="panel">
+                                                <div class="panel-heading" role="tab" id="sub3-heading8">
+                                                    <h4 class="panel-title"><a class="collapsed" data-toggle="collapse" data-parent="#accordion-sub-3" href="#sub3-collapse8" aria-expanded="false" aria-controls="sub3-collapse8">METODOLOGÍAS DE CALIFICACIÓN DE RIESGO</a></h4>
+                                                </div>
+                                                <div id="sub3-collapse8" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading8">
+                                                    <div class="panel-body">
+                                                        <div class="box-mercado"><h2>Acciones</h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div>
+                                                        <div class="box-mercado"><h2>Empresas</h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div>
+                                                        <div class="box-mercado"><h2>Fideicomisos Financieros </h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div>
+                                                        <div class="box-mercado"><h2>Bancos </h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div>
+                                                        <div class="box-mercado"><h2>FCI </h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div>
+                                                        <div class="box-mercado"><h2>Títulos Públicos</h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div>
+                                                        <div class="box-mercado"><h2>Otras</h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div>
+                                                        <div class="box-mercado"><h2>Revisión anual de metodologías de calificacion</h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="panel">
+                                                <div class="panel-heading" role="tab" id="sub3-heading9">
+                                                    <h4 class="panel-title"><a class="collapsed" data-toggle="collapse" data-parent="#accordion-sub-3" href="#sub3-collapse9" aria-expanded="false" aria-controls="sub3-collapse9">CÓDIGO DE CONDUCTA-INDEPENDENCIA DEL ACR</a></h4>
+                                                </div>
+                                                <div id="sub3-collapse9" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading9">
+                                                    <div class="panel-body">
+                                                        <div class="box-mercado"><h2>Código de Conducta</h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div>
+                                                        <div class="box-mercado"><h2>Rango de honorarios</h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div>
+                                                        <div class="box-mercado"><h2>Ingresos mayores del 10% de un solo cliente</h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div>
+                                                        <div class="box-mercado"><h2>DDJJ de Incompatibilidades</h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="panel">
+                                                <div class="panel-heading" role="tab" id="sub3-heading10">
+                                                    <h4 class="panel-title"><a class="collapsed" data-toggle="collapse" data-parent="#accordion-sub-3" href="#sub3-collapse10" aria-expanded="false" aria-controls="sub3-collapse10">INFORMACIÓN AL PÚBLICO INVERSOR</a></h4>
+                                                </div>
+                                                <div id="sub3-collapse10" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading10">
+                                                    <div class="panel-body">
+                                                        <div class="box-mercado"><h2>Publicidad Promocional</h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div>
+                                                        <div class="box-mercado"><h2>Reclamos y Denuncias</h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="panel">
+                                                <div class="panel-heading" role="tab" id="sub3-heading11">
+                                                    <h4 class="panel-title"><a class="collapsed" data-toggle="collapse" data-parent="#accordion-sub-3" href="#sub3-collapse11" aria-expanded="false" aria-controls="sub3-collapse11">CALIFICACIONES POR INSTRUMENTO</a></h4>
+                                                </div>
+                                                <div id="sub3-collapse11" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading11">
+                                                    <div class="panel-body">
+                                                        <div class="box-mercado"><h2>Acciones</h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div>
+                                                        <div class="box-mercado"><h2>Obligaciones Negociables </h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div>
+                                                        <div class="box-mercado"><h2>Títulos de Deuda de Corto Plazo (CNV RG Nº 344)</h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div>
+                                                        <div class="box-mercado"><h2>Títulos Públicos</h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div>
+                                                        <div class="box-mercado"><h2>Fondos Comunes de Inversión</h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div>
+                                                        <div class="box-mercado"><h2>Fondos Comunes Cerrados de Crédito</h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div>
+                                                        <div class="box-mercado"><h2>Fideicomisos Financieros</h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h2>Información restringida</h2>
+                                        <div class="panel-group" id="accordion-sub-3b" role="tablist" aria-multiselectable="true">
+                                            <div class="panel ">
+                                                <div class="panel-heading" role="tab" id="sub3c-heading1"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" data-parent="#accordion-sub-3b" href="#sub3c-collapse1" aria-expanded="false" aria-controls="sub3c-collapse1">AIF</a></h4></div><div id="sub3c-collapse1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading1">
+                                                    <div class="panel-body">
+                                                        <div class="box-mercado"><h2>Operadores</h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div>
+                                                        <div class="box-mercado"><h2>Firmantes </h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div>
+                                                        <div class="box-mercado"><h2>Formulario Dec. Jurada Correo Electrónico</h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div>
+                                                        <div class="box-mercado"><h2>Ficha General del Administrado</h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div>
+                                                    </div>
+                                                </div>
+                                            </div><div class="panel "><div class="panel-heading" role="tab" id="sub3c-heading2"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" data-parent="#accordion-sub-3b" href="#sub3c-collapse2" aria-expanded="false" aria-controls="sub3c-collapse2">ÓRGANOS SOCIETARIOS</a></h4></div><div id="sub3c-collapse2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading2"><div class="panel-body"> <div class="box-mercado"><h2>Formulario Datos Personales </h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div><div class="box-mercado"><h2>Ficha Individual del Oficial de Cumplimiento (PLD/CFT) </h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div><div class="box-mercado"><h2>Declaracion Jurada de Tenencias Accionarias </h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div><div class="box-mercado"><h2>Antecedentes curriculares de los miembros del Consejo de Calificación</h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div><div class="box-mercado"><h2>Certificado de Antecedentes Penales</h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div><div class="box-mercado"><h2>DDJJ Prevención de Lavado </h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div></div></div></div><div class="panel "><div class="panel-heading" role="tab" id="sub3c-heading3"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" data-parent="#accordion-sub-3b" href="#sub3c-collapse3" aria-expanded="false" aria-controls="sub3c-collapse3">CÓDIGO DE CONDUCTA-INDEPENDENCIA DEL ACR</a></h4></div><div id="sub3c-collapse3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading3"><div class="panel-body"> <div class="box-mercado"><h2>Código de Conducta</h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div><div class="box-mercado"><h2>Monto Honorarios </h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div><div class="box-mercado"><h2>Detalle de Reclamos y o Denuncias </h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div><div class="box-mercado"><h2>Conflictos reales o potenciales</h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div></div></div></div><div class="panel "><div class="panel-heading" role="tab" id="sub3c-heading4"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" data-parent="#accordion-sub-3b" href="#sub3c-collapse4" aria-expanded="false" aria-controls="sub3c-collapse4">REUNIONES DEL CONSEJO DE CALIFICACIÓN</a></h4></div><div id="sub3c-collapse4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading4"><div class="panel-body"> <div class="box-mercado"><h2>Aviso de Reunión</h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div><div class="box-mercado"><h2>Actas del Consejo de Calificación</h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div></div></div></div><div class="panel "><div class="panel-heading" role="tab" id="sub3c-heading5"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" data-parent="#accordion-sub-3b" href="#sub3c-collapse5" aria-expanded="false" aria-controls="sub3c-collapse5">ORGANIZACIÓN INTERNA</a></h4></div><div id="sub3c-collapse5" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading5"><div class="panel-body"><div class="box-mercado"><h2>Política de Conservación de la Documentación </h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div><div class="box-mercado"><h2>Sistemas Informáticos</h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div><div class="box-mercado"><h2>Mecanismos de Control Interno</h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div><div class="box-mercado"><h2>Manuales de procedimientos internos</h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div><div class="box-mercado"><h2>Tercerización de actividades</h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div> </div></div></div><div class="panel "><div class="panel-heading" role="tab" id="sub3c-heading6"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" data-parent="#accordion-sub-3b" href="#sub3c-collapse6" aria-expanded="false" aria-controls="sub3c-collapse6">CUMPLIMIENTO REGULATORIO</a></h4></div><div id="sub3c-collapse6" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading6"><div class="panel-body"> <div class="box-mercado"><h2>Informe especial del Oficial de Cumplimiento Regulatorio</h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div><div class="box-mercado"><h2>datos completos del encargado de funcion relaciones con el público </h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div></div></div></div><div class="panel "><div class="panel-heading" role="tab" id="sub3c-heading7"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" data-parent="#accordion-sub-3b" href="#sub3c-collapse7" aria-expanded="false" aria-controls="sub3c-collapse7">METODOLOGÍAS DE CALIFICACIÓN</a></h4></div><div id="sub3c-collapse7" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading7"><div class="panel-body"> <div class="box-mercado"><h2>Solicitud de Registración</h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div><div class="box-mercado"><h2>Modificación de Metodologías</h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div></div></div></div><div class="panel "><div class="panel-heading" role="tab" id="sub3c-heading8"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" data-parent="#accordion-sub-3b" href="#sub3c-collapse8" aria-expanded="false" aria-controls="sub3c-collapse8">INFORMES DE CALIFICACIÓN PRIVADO</a></h4></div><div id="sub3c-collapse8" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading8"><div class="panel-body"> <div class="box-mercado"><h2>Dictamen</h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div><div class="box-mercado"><h2>Anexo</h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div></div></div></div><div class="panel "><div class="panel-heading" role="tab" id="sub3c-heading9"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" data-parent="#accordion-sub-3b" href="#sub3c-collapse9" aria-expanded="false" aria-controls="sub3c-collapse9">CONVENIOS</a></h4></div><div id="sub3c-collapse9" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading9"><div class="panel-body"> <div class="box-mercado"><h2>Convenios de calificación de riesgo</h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div><div class="box-mercado"><h2>Convenios con ACR del exterior</h2><a href="#" class="btn-pdf"><img src="~/Content/assets/img/pdf-descarga.png"></a></div></div></div></div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel">
+                                <div class="panel-heading" role="tab" id="publicas-heading2">
+                                    <h4 class="panel-title"><a class="collapsed" data-toggle="collapse" data-parent="#accordion-publicas" href="#publicas-collapse2" aria-expanded="false" aria-controls="publicas-collapse2">CARFE ACR UP - UNIVERSIDAD NACIONAL DE SAN MARTÍN</a></h4>
+                                </div>
+                                <div id="publicas-collapse2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading2">
+                                    <div class="panel-body"></div>
+                                </div>
+                            </div>
+                            <div class="panel">
+                                <div class="panel-heading" role="tab" id="publicas-heading3">
+                                    <h4 class="panel-title"><a class="collapsed" data-toggle="collapse" data-parent="#accordion-publicas" href="#publicas-collapse3" aria-expanded="false" aria-controls="publicas-collapse3">   UNTREF ACR UP -UNIVERSIDAD NACIONAL DE TRES DE FEBRERO</a></h4>
+                                </div>
+                                <div id="publicas-collapse3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading3">
+                                    <div class="panel-body"></div>
+                                </div>
+                            </div>
+                            <div class="panel">
+                                <div class="panel-heading" role="tab" id="publicas-heading4">
+                                    <h4 class="panel-title"><a class="collapsed" data-toggle="collapse" data-parent="#accordion-publicas" href="#publicas-collapse4" aria-expanded="false" aria-controls="publicas-collapse4">UNICEN ACR UP – UNIVERSIDAD NACIONAL DEL CENTRO DE LA PROVINCIA DE BUENOS AIRES</a></h4>
+                                </div>
+                                <div id="publicas-collapse4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading4">
+                                    <div class="panel-body"></div>
+                                </div>
+                            </div>
+                            <div class="panel">
+                                <div class="panel-heading" role="tab" id="publicas-heading5">
+                                    <h4 class="panel-title"><a class="collapsed" data-toggle="collapse" data-parent="#accordion-publicas" href="#publicas-collapse5" aria-expanded="false" aria-controls="publicas-collapse5">PROR</a></h4>
+                                </div>
+                                <div id="publicas-collapse5" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading5">
+                                    <div class="panel-body"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <h2>ÚLTIMAS CALIFICACIONES RECIBIDAS POR INSTRUMENTO</h2>
+                        <div class="table-responsive">
+
+                            <table class="calificaciones">
+                                <thead>
+                                    <tr>
+                                        <th>FECHA</th>
+                                        <th>Emisor del título</th>
+                                        <th>Tipo de Título</th>
+                                        <th>Calificación</th>
+                                        <th>Calificadora</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>03 AGO 2017 15:44</td>
+                                        <td>Provincia de Misiones</td>
+                                        <td>Título Público</td>
+                                        <td>Baa3.ar</td>
+                                        <td>Evaluadora Latinoamericana S.A.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>03 AGO 2017 15:44</td>
+                                        <td>Provincia de Misiones</td>
+                                        <td>Título Público</td>
+                                        <td>Baa3.ar</td>
+                                        <td>Evaluadora Latinoamericana S.A.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+@Html.Partial("_Nav_int_Institucional")
+
+

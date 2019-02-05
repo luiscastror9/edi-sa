@@ -1,0 +1,190 @@
+﻿
+@{
+    ViewBag.Title = "Contacto";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container-fluid int" id="content-contacto">
+    <div class="caption-int">
+        <h1>Ofrecemos <br>soluciones<br>innovadoras</h1>
+        <p>en el comercio nacional <br>e internacional de granos, <br>oleaginosas y subproductos <br>de valor agregado.</p>
+    </div>
+
+
+    <div class=" wow fadeInRight" data-wow-delay="0" data-wow-duration="2s" id="content">
+        <div class="row height-100">
+            <div class="col-submenu wow fadeInRight" data-wow-delay="1.5s" data-wow-duration=".5s">
+                <h3>Contacto</h3>
+                <ul class="submenu">
+                    <li>
+                        <a href="#">Extranet</a>
+                    </li>
+                    <li>
+                        <a href="#">Proveedores y clientes</a>
+                    </li>
+                    <li>
+                        <a href="#">Registración</a>
+                    </li>
+                </ul>
+
+
+                <div class="row footer-int">
+                    <div class="col-md-12">
+                        <img class="mapa img-responsive" src="~/Content/assets/img/mapa.png">
+                        <p class="datos">
+                            <strong>#UbicaciónCofcoIntlArg</strong><br>
+                            Francisco Narciso de Laprida 3175,<br>
+                            Villa Martelli<br>
+                            Edificio NODUS Business District<br>
+                            (B1603AAD) Buenos Aires, Argentina<br>
+                            54 11 4468 – 8000
+                        </p>
+                    </div>
+                    <div class="col-md-12">
+                        <ul class="social">
+                            <li>
+                                <a href="#"><span class="fa-stack fa-lg"><i aria-hidden="true" class="fa fa-circle-thin fa-stack-2x"></i> <i class="fa fa-facebook fa-stack-1x"></i></span></a>
+                            </li>
+                            <li>
+                                <a href="#"><span class="fa-stack fa-lg"><i aria-hidden="true" class="fa fa-circle-thin fa-stack-2x"></i> <i class="fa fa-twitter fa-stack-1x"></i></span></a>
+                            </li>
+                            <li>
+                                <a href="#"><span class="fa-stack fa-lg"><i aria-hidden="true" class="fa fa-circle-thin fa-stack-2x"></i> <i class="fa fa-youtube-play fa-stack-1x"></i></span></a>
+                            </li>
+                            <li>
+                                <a href="#"><span class="fa-stack fa-lg"><i aria-hidden="true" class="fa fa-circle-thin fa-stack-2x"></i> <i class="fa fa-linkedin fa-stack-1x"></i></span></a>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <div class="col-md-12">
+                        <img src="~/Content/assets/img/data-fiscal.png" class="data-fiscal">
+                        <a href="#" class="reservas-legales">Reservas Legales</a>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-content" id="contacto">
+                <div class="row  display-flex">
+                    <div class="col-subcontent  wow fadeInRight" data-wow-delay="1s" data-wow-duration=".5s"></div>
+                    <div class="col-content wow fadeInRight" data-wow-delay=".5s" data-wow-duration=".5s">
+
+                        <h2>#ContactoConCofcoIntlArg</h2>
+                        <p><strong>Podés contactarte con nosotros completando el siguiente formulario, detallando tu consulta o sugerencia. En breve te responderemos.</strong></p>
+                        @using (Html.BeginForm("Contacto", "Home", FormMethod.Post, new { name = "createContacto", id = "createContacto", enctype = "multipart/form-data" }))
+                        {
+                            <div class="form-group">
+                                <div class="col-md-6">
+                                    <input class="form-control" id="nombre" placeholder="Nombre*" type="text">
+                                </div>
+                                <div class="col-md-6">
+                                    <input class="form-control" id="apellido" placeholder="Apellido*" type="text">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-6">
+                                    <input class="form-control" id="direccion" placeholder="Dirección*" type="text">
+                                </div>
+                                <div class="col-md-6">
+                                 @Html.DropDownList("provincia", ViewBag.provincia as List<SelectListItem>, "Provincia", new
+                               {
+                                   @id = "provincia",
+                                   @class = "form-control"
+                               })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-6">
+                                    <input class="form-control" id="codigo_postal" placeholder="Código Postal" type="text">
+                                </div>
+                                <div class="col-md-6">
+                                   @Html.DropDownList("localidad", new SelectList(string.Empty), "Localidad", new
+                              {
+                                  @id = "localidad",
+                                  @class = "form-control"
+                              })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-6">
+                                    <input class="form-control" id="email" placeholder="Email*" type="text">
+                                </div>
+                                <div class="col-md-6">
+                                    <input class="form-control" id="telefono" placeholder="Teléfono*" type="text">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-6">
+                                    <input class="form-control" id="ocupacion" placeholder="Ocupación" type="text">
+                                </div>
+                                <div class="col-md-6">
+                                    <input class="form-control" id="sexo" placeholder="Sexo" type="text">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-12">
+                                    <textarea class="form-control" id="consulta" placeholder="Consulta"></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-6">
+                                    <input id="informacion" name="catalogo" type="checkbox"> <label for="catalogo">Desea recibir información vía e-mail</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <input id="catalogo" name="catalogo" type="checkbox"> <label for="catalogo">Solicito el envío del catálogo en papel</label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-12">
+                                    <button class="btn formulario">Enviar</button>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-12 legales">
+                                    <p>Legales: Los datos son recabados con la finalidad de integrarlos a la base de datos de Nidera S.A. y sus vinculadas. Nidera S.A. no se responsabiliza por aquellos datos o documentación falsa y/o inexacta aportados por sus titulares. Asimismo se le informa que el archivo de los mismos será informático, y puede ser consultado por el titular de los mismos en las oficinas de Av. Paseo Colon 505, piso 4°, CABA, Argentina, o al teléfono (011) 4346-8000, previa acreditación de su identidad. Ante la solicitud fehaciente de acceso a los datos por parte del titular, Nidera S.A. dará cumplimiento con el requerimiento dentro del plazo de 10 días corridos y, en cumplimiento con la Ley 25.326, estos datos podrán ser rectificados y/o suprimidos. Los datos requeridos en el presente son de carácter obligatorio para todo aquel cuya intención sea formar parte de la base de datos de Nidera S.A., ya que de no informarlos y/o ser completos, se verá imposibilitado el ingreso a la base. Para cualquier consulta al respecto podrán comunicarse al teléfono (011) 4346-8183 El titular de los datos personales tiene la facultad de ejercer el derecho de acceso a los mismos en forma gratuita a intervalos no inferiores a seis meses, salvo que se acredite un interés legítimo al efecto conforme lo establecido en el artículo 14, inciso 3 de la Ley Nº 25.326. La DIRECCIÓN NACIONAL DE PROTECCIÓN DE DATOS PERSONALES, Órgano de Control de la Ley Nº 25.326, tiene la atribución de atender las denuncias y reclamos que se interpongan con relación al incumplimiento de las normas sobre protección de datos personales.</p>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-12">
+                                    <input id="legales" name="legales" type="checkbox"> <label for="legales">Acepto condiciones legales</label>
+                                </div>
+                            </div>
+
+                        }
+                        <div class="sep"></div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+@Html.Raw(TempData["msg"])
+<script type = "text/javascript" >
+    jQuery(document).ready(function ()
+    {
+
+        jQuery("#provincia").change(function()
+        {
+            var SelecedVal = jQuery(this).val();
+            jQuery("#localidad").html('');
+            jQuery("#localidad").append(jQuery("<option></option>").attr("value", '')
+                .text('Localidad'));
+            if (SelecedVal != '')
+            {
+
+                jQuery.get('/Home/Getlocalidad/',
+                {
+                    "id": SelecedVal
+                }).success(function(data)
+                {
+                    jQuery.each(data, function(index, item)
+                    {
+                        jQuery("#localidad").append(jQuery("<option></option>").attr("value", item.localidad)
+                            .text(item.localidad));
+                    });
+
+                })
+            }
+        });
+    })
+ </script>  

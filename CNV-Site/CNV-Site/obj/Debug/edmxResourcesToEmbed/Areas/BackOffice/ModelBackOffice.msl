@@ -1,0 +1,230 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ModelBOStoreContainer" CdmEntityContainer="EntitiesBO">
+    <EntitySetMapping Name="CategoriasNotes">
+      <EntityTypeMapping TypeName="ModelBO.CategoriasNotes">
+        <MappingFragment StoreEntitySet="CategoriasNotes">
+          <ScalarProperty Name="IdCategoriasNotes" ColumnName="IdCategoriasNotes" />
+          <ScalarProperty Name="descCategoriasNotes" ColumnName="descCategoriasNotes" />
+          <ScalarProperty Name="create_datetime" ColumnName="create_datetime" />
+          <ScalarProperty Name="update_datetime" ColumnName="update_datetime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Notes">
+      <EntityTypeMapping TypeName="ModelBO.Notes">
+        <MappingFragment StoreEntitySet="Notes">
+          <ScalarProperty Name="imgSliderNote" ColumnName="imgSliderNote" />
+          <ScalarProperty Name="idCategoriasNote" ColumnName="idCategoriasNote" />
+          <ScalarProperty Name="ActiveNote" ColumnName="ActiveNote" />
+          <ScalarProperty Name="IdNote" ColumnName="IdNote" />
+          <ScalarProperty Name="titleNote" ColumnName="titleNote" />
+          <ScalarProperty Name="bodyNote" ColumnName="bodyNote" />
+          <ScalarProperty Name="imgNote" ColumnName="imgNote" />
+          <ScalarProperty Name="tagsNote" ColumnName="tagsNote" />
+          <ScalarProperty Name="create_datetime" ColumnName="create_datetime" />
+          <ScalarProperty Name="update_datetime" ColumnName="update_datetime" />
+          <ScalarProperty Name="authorNote" ColumnName="authorNote" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SettingsIntegrationNotes">
+      <EntityTypeMapping TypeName="ModelBO.SettingsIntegrationNotes">
+        <MappingFragment StoreEntitySet="SettingsIntegrationNotes">
+          <ScalarProperty Name="ActiveSettingsIntegrationNotes" ColumnName="ActiveSettingsIntegrationNotes" />
+          <ScalarProperty Name="IdSettingsIntegrationNotes" ColumnName="IdSettingsIntegrationNotes" />
+          <ScalarProperty Name="descSettingsIntegrationNotes" ColumnName="descSettingsIntegrationNotes" />
+          <ScalarProperty Name="keySettingsIntegrationNotes" ColumnName="keySettingsIntegrationNotes" />
+          <ScalarProperty Name="valueSettingsIntegrationNotes" ColumnName="valueSettingsIntegrationNotes" />
+          <ScalarProperty Name="create_datetime" ColumnName="create_datetime" />
+          <ScalarProperty Name="update_datetime" ColumnName="update_datetime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ImagesSliderNotes">
+      <EntityTypeMapping TypeName="ModelBO.ImagesSliderNotes">
+        <MappingFragment StoreEntitySet="ImagesSliderNotes">
+          <ScalarProperty Name="activeImagesSliderNotes" ColumnName="activeImagesSliderNotes" />
+          <ScalarProperty Name="nameImagesSliderNotes" ColumnName="nameImagesSliderNotes" />
+          <ScalarProperty Name="update_datetime" ColumnName="update_datetime" />
+          <ScalarProperty Name="create_datetime" ColumnName="create_datetime" />
+          <ScalarProperty Name="urlImagesSliderNotes" ColumnName="urlImagesSliderNotes" />
+          <ScalarProperty Name="descImagesSliderNotes" ColumnName="descImagesSliderNotes" />
+          <ScalarProperty Name="IdImagesSliderNotes" ColumnName="IdImagesSliderNotes" />
+          <ScalarProperty Name="IdSliderNotes" ColumnName="IdSliderNotes" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SliderHome">
+      <EntityTypeMapping TypeName="ModelBO.SliderHome">
+        <MappingFragment StoreEntitySet="SliderHome">
+          <ScalarProperty Name="nameSlideHome" ColumnName="nameSlideHome" />
+          <ScalarProperty Name="update_datetime" ColumnName="update_datetime" />
+          <ScalarProperty Name="create_datetime" ColumnName="create_datetime" />
+          <ScalarProperty Name="activeSlideHome" ColumnName="activeSlideHome" />
+          <ScalarProperty Name="urlImgSlideHome" ColumnName="urlImgSlideHome" />
+          <ScalarProperty Name="urlSlideHome" ColumnName="urlSlideHome" />
+          <ScalarProperty Name="descSlideHome" ColumnName="descSlideHome" />
+          <ScalarProperty Name="IdSlideHome" ColumnName="IdSlideHome" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Consultas">
+      <EntityTypeMapping TypeName="ModelBO.Consultas">
+        <MappingFragment StoreEntitySet="Consultas">
+          <ScalarProperty Name="telefonoConsulta" ColumnName="telefonoConsulta" />
+          <ScalarProperty Name="cpConsulta" ColumnName="cpConsulta" />
+          <ScalarProperty Name="residenciaConsulta" ColumnName="residenciaConsulta" />
+          <ScalarProperty Name="domicilioConsulta" ColumnName="domicilioConsulta" />
+          <ScalarProperty Name="cuitConsulta" ColumnName="cuitConsulta" />
+          <ScalarProperty Name="update_datetime" ColumnName="update_datetime" />
+          <ScalarProperty Name="create_datetime" ColumnName="create_datetime" />
+          <ScalarProperty Name="contenidoConsulta" ColumnName="contenidoConsulta" />
+          <ScalarProperty Name="EmailConsulta" ColumnName="EmailConsulta" />
+          <ScalarProperty Name="NombreConsulta" ColumnName="NombreConsulta" />
+          <ScalarProperty Name="IdConsulta" ColumnName="IdConsulta" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RespuestaConsultas">
+      <EntityTypeMapping TypeName="ModelBO.RespuestaConsultas">
+        <MappingFragment StoreEntitySet="RespuestaConsultas">
+          <ScalarProperty Name="update_datetime" ColumnName="update_datetime" />
+          <ScalarProperty Name="create_datetime" ColumnName="create_datetime" />
+          <ScalarProperty Name="contenidoConsulta" ColumnName="contenidoConsulta" />
+          <ScalarProperty Name="NombreRespuestaConsultas" ColumnName="NombreRespuestaConsultas" />
+          <ScalarProperty Name="IdConsulta" ColumnName="IdConsulta" />
+          <ScalarProperty Name="IdRespuestaConsultas" ColumnName="IdRespuestaConsultas" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SliderNotes">
+      <EntityTypeMapping TypeName="ModelBO.SliderNotes">
+        <MappingFragment StoreEntitySet="SliderNotes">
+          <ScalarProperty Name="update_datetime" ColumnName="update_datetime" />
+          <ScalarProperty Name="create_datetime" ColumnName="create_datetime" />
+          <ScalarProperty Name="descSliderNotes" ColumnName="descSliderNotes" />
+          <ScalarProperty Name="IdSliderNotes" ColumnName="IdSliderNotes" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_Delete_CategoriasNotes_id" FunctionName="ModelBO.Store.sp_Delete_CategoriasNotes_id" />
+    <FunctionImportMapping FunctionImportName="sp_Delete_Consultas_id" FunctionName="ModelBO.Store.sp_Delete_Consultas_id" />
+    <FunctionImportMapping FunctionImportName="sp_Delete_ImagesSliderNotes_id" FunctionName="ModelBO.Store.sp_Delete_ImagesSliderNotes_id" />
+    <FunctionImportMapping FunctionImportName="sp_Delete_Notes_id" FunctionName="ModelBO.Store.sp_Delete_Notes_id" />
+    <FunctionImportMapping FunctionImportName="sp_Delete_RespuestaConsultas_id" FunctionName="ModelBO.Store.sp_Delete_RespuestaConsultas_id" />
+    <FunctionImportMapping FunctionImportName="sp_Delete_SettingsIntegrationNotes_id" FunctionName="ModelBO.Store.sp_Delete_SettingsIntegrationNotes_id" />
+    <FunctionImportMapping FunctionImportName="sp_Delete_SliderHome_id" FunctionName="ModelBO.Store.sp_Delete_SliderHome_id" />
+    <FunctionImportMapping FunctionImportName="sp_Delete_SliderNotes_id" FunctionName="ModelBO.Store.sp_Delete_SliderNotes_id" />
+    <FunctionImportMapping FunctionImportName="sp_Insert_CategoriasNotes" FunctionName="ModelBO.Store.sp_Insert_CategoriasNotes" />
+    <FunctionImportMapping FunctionImportName="sp_Insert_Consultas" FunctionName="ModelBO.Store.sp_Insert_Consultas" />
+    <FunctionImportMapping FunctionImportName="sp_Insert_ImagesSliderNotes" FunctionName="ModelBO.Store.sp_Insert_ImagesSliderNotes" />
+    <FunctionImportMapping FunctionImportName="sp_Insert_Notes" FunctionName="ModelBO.Store.sp_Insert_Notes" />
+    <FunctionImportMapping FunctionImportName="sp_Insert_RespuestaConsultas" FunctionName="ModelBO.Store.sp_Insert_RespuestaConsultas" />
+    <FunctionImportMapping FunctionImportName="sp_Insert_SettingsIntegrationNotes" FunctionName="ModelBO.Store.sp_Insert_SettingsIntegrationNotes" />
+    <FunctionImportMapping FunctionImportName="sp_Insert_SliderHome" FunctionName="ModelBO.Store.sp_Insert_SliderHome" />
+    <FunctionImportMapping FunctionImportName="sp_Insert_SliderNotes" FunctionName="ModelBO.Store.sp_Insert_SliderNotes" />
+    <FunctionImportMapping FunctionImportName="sp_Select_CategoriasNotes" FunctionName="ModelBO.Store.sp_Select_CategoriasNotes">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ModelBO.sp_Select_CategoriasNotes_Result">
+          <ScalarProperty Name="IdCategoriasNotes" ColumnName="IdCategoriasNotes" />
+          <ScalarProperty Name="descCategoriasNotes" ColumnName="descCategoriasNotes" />
+          <ScalarProperty Name="create_datetime" ColumnName="create_datetime" />
+          <ScalarProperty Name="update_datetime" ColumnName="update_datetime" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_Select_Consultas" FunctionName="ModelBO.Store.sp_Select_Consultas">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ModelBO.sp_Select_Consultas_Result">
+          <ScalarProperty Name="IdConsulta" ColumnName="IdConsulta" />
+          <ScalarProperty Name="NombreConsulta" ColumnName="NombreConsulta" />
+          <ScalarProperty Name="EmailConsulta" ColumnName="EmailConsulta" />
+          <ScalarProperty Name="contenidoConsulta" ColumnName="contenidoConsulta" />
+          <ScalarProperty Name="create_datetime" ColumnName="create_datetime" />
+          <ScalarProperty Name="update_datetime" ColumnName="update_datetime" />
+          <ScalarProperty Name="cuitConsulta" ColumnName="cuitConsulta" />
+          <ScalarProperty Name="domicilioConsulta" ColumnName="domicilioConsulta" />
+          <ScalarProperty Name="residenciaConsulta" ColumnName="residenciaConsulta" />
+          <ScalarProperty Name="cpConsulta" ColumnName="cpConsulta" />
+          <ScalarProperty Name="telefonoConsulta" ColumnName="telefonoConsulta" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_Select_ImagesSliderNotes" FunctionName="ModelBO.Store.sp_Select_ImagesSliderNotes">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ModelBO.sp_Select_ImagesSliderNotes_Result">
+          <ScalarProperty Name="IdImagesSliderNotes" ColumnName="IdImagesSliderNotes" />
+          <ScalarProperty Name="IdSliderNotes" ColumnName="IdSliderNotes" />
+          <ScalarProperty Name="nameImagesSliderNotes" ColumnName="nameImagesSliderNotes" />
+          <ScalarProperty Name="descImagesSliderNotes" ColumnName="descImagesSliderNotes" />
+          <ScalarProperty Name="urlImagesSliderNotes" ColumnName="urlImagesSliderNotes" />
+          <ScalarProperty Name="activeImagesSliderNotes" ColumnName="activeImagesSliderNotes" />
+          <ScalarProperty Name="create_datetime" ColumnName="create_datetime" />
+          <ScalarProperty Name="update_datetime" ColumnName="update_datetime" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_Select_Notes" FunctionName="ModelBO.Store.sp_Select_Notes">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ModelBO.sp_Select_Notes_Result">
+          <ScalarProperty Name="IdNote" ColumnName="IdNote" />
+          <ScalarProperty Name="titleNote" ColumnName="titleNote" />
+          <ScalarProperty Name="bodyNote" ColumnName="bodyNote" />
+          <ScalarProperty Name="imgNote" ColumnName="imgNote" />
+          <ScalarProperty Name="tagsNote" ColumnName="tagsNote" />
+          <ScalarProperty Name="authorNote" ColumnName="authorNote" />
+          <ScalarProperty Name="ActiveNote" ColumnName="ActiveNote" />
+          <ScalarProperty Name="idCategoriasNote" ColumnName="idCategoriasNote" />
+          <ScalarProperty Name="create_datetime" ColumnName="create_datetime" />
+          <ScalarProperty Name="update_datetime" ColumnName="update_datetime" />
+          <ScalarProperty Name="imgSliderNote" ColumnName="imgSliderNote" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_Select_SettingsIntegrationNotes" FunctionName="ModelBO.Store.sp_Select_SettingsIntegrationNotes">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ModelBO.sp_Select_SettingsIntegrationNotes_Result">
+          <ScalarProperty Name="IdSettingsIntegrationNotes" ColumnName="IdSettingsIntegrationNotes" />
+          <ScalarProperty Name="descSettingsIntegrationNotes" ColumnName="descSettingsIntegrationNotes" />
+          <ScalarProperty Name="keySettingsIntegrationNotes" ColumnName="keySettingsIntegrationNotes" />
+          <ScalarProperty Name="valueSettingsIntegrationNotes" ColumnName="valueSettingsIntegrationNotes" />
+          <ScalarProperty Name="create_datetime" ColumnName="create_datetime" />
+          <ScalarProperty Name="update_datetime" ColumnName="update_datetime" />
+          <ScalarProperty Name="ActiveSettingsIntegrationNotes" ColumnName="ActiveSettingsIntegrationNotes" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_Select_SliderHome" FunctionName="ModelBO.Store.sp_Select_SliderHome">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ModelBO.sp_Select_SliderHome_Result">
+          <ScalarProperty Name="IdSlideHome" ColumnName="IdSlideHome" />
+          <ScalarProperty Name="descSlideHome" ColumnName="descSlideHome" />
+          <ScalarProperty Name="urlSlideHome" ColumnName="urlSlideHome" />
+          <ScalarProperty Name="urlImgSlideHome" ColumnName="urlImgSlideHome" />
+          <ScalarProperty Name="activeSlideHome" ColumnName="activeSlideHome" />
+          <ScalarProperty Name="create_datetime" ColumnName="create_datetime" />
+          <ScalarProperty Name="update_datetime" ColumnName="update_datetime" />
+          <ScalarProperty Name="nameSlideHome" ColumnName="nameSlideHome" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_Select_SliderNotes" FunctionName="ModelBO.Store.sp_Select_SliderNotes">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ModelBO.sp_Select_SliderNotes_Result">
+          <ScalarProperty Name="IdSliderNotes" ColumnName="IdSliderNotes" />
+          <ScalarProperty Name="descSliderNotes" ColumnName="descSliderNotes" />
+          <ScalarProperty Name="create_datetime" ColumnName="create_datetime" />
+          <ScalarProperty Name="update_datetime" ColumnName="update_datetime" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_Update_Consultas_id" FunctionName="ModelBO.Store.sp_Update_Consultas_id" />
+    <FunctionImportMapping FunctionImportName="sp_Update_ImagesSliderNotes_id" FunctionName="ModelBO.Store.sp_Update_ImagesSliderNotes_id" />
+    <FunctionImportMapping FunctionImportName="sp_Update_Notes_id" FunctionName="ModelBO.Store.sp_Update_Notes_id" />
+    <FunctionImportMapping FunctionImportName="sp_Update_RespuestaConsultas_id" FunctionName="ModelBO.Store.sp_Update_RespuestaConsultas_id" />
+    <FunctionImportMapping FunctionImportName="sp_Update_SettingsIntegrationNotes_id" FunctionName="ModelBO.Store.sp_Update_SettingsIntegrationNotes_id" />
+    <FunctionImportMapping FunctionImportName="sp_Update_SliderHome_id" FunctionName="ModelBO.Store.sp_Update_SliderHome_id" />
+    <FunctionImportMapping FunctionImportName="sp_Update_SliderNotes_id" FunctionName="ModelBO.Store.sp_Update_SliderNotes_id" />
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,232 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>\\desasrv19\d$\inetpub\wwwroot\IntranetNewM54</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="ApplicationInsights.config">
+      <publishTime>09/13/2017 16:49:52</publishTime>
+    </File>
+    <File Include="App_Data/ASPNETDB.MDF">
+      <publishTime>09/13/2017 16:51:07</publishTime>
+    </File>
+    <File Include="App_Data/aspnetdb_log.ldf">
+      <publishTime>09/13/2017 16:51:07</publishTime>
+    </File>
+    <File Include="assets/css/easy-autocomplete.min.css">
+      <publishTime>09/19/2017 20:32:22</publishTime>
+    </File>
+    <File Include="assets/css/reset.css">
+      <publishTime>08/18/2017 14:01:00</publishTime>
+    </File>
+    <File Include="assets/css/style.css">
+      <publishTime>09/20/2017 15:15:00</publishTime>
+    </File>
+    <File Include="assets/images/acceso1.png">
+      <publishTime>08/18/2017 14:01:00</publishTime>
+    </File>
+    <File Include="assets/images/acceso1_hover.png">
+      <publishTime>08/18/2017 14:01:00</publishTime>
+    </File>
+    <File Include="assets/images/acceso2.png">
+      <publishTime>08/18/2017 14:01:00</publishTime>
+    </File>
+    <File Include="assets/images/acceso2_hover.png">
+      <publishTime>08/18/2017 14:01:00</publishTime>
+    </File>
+    <File Include="assets/images/bot_buscar.png">
+      <publishTime>08/18/2017 14:01:00</publishTime>
+    </File>
+    <File Include="assets/images/circlemask.png">
+      <publishTime>09/13/2017 16:51:07</publishTime>
+    </File>
+    <File Include="assets/images/header-bg.jpg">
+      <publishTime>08/18/2017 17:41:00</publishTime>
+    </File>
+    <File Include="assets/images/logo_cnv.png">
+      <publishTime>08/18/2017 14:01:00</publishTime>
+    </File>
+    <File Include="assets/images/logo_cnv_footer.png">
+      <publishTime>08/18/2017 14:01:00</publishTime>
+    </File>
+    <File Include="assets/images/marco_foto.png">
+      <publishTime>08/18/2017 14:01:00</publishTime>
+    </File>
+    <File Include="assets/images/profile.png">
+      <publishTime>08/18/2017 14:37:00</publishTime>
+    </File>
+    <File Include="assets/images/profile1.png">
+      <publishTime>08/18/2017 14:01:00</publishTime>
+    </File>
+    <File Include="assets/images/profile2.jpg">
+      <publishTime>08/18/2017 15:52:00</publishTime>
+    </File>
+    <File Include="assets/js/jquery.easy-autocomplete.min.js">
+      <publishTime>09/19/2017 19:51:37</publishTime>
+    </File>
+    <File Include="assets/js/jquery.min.js">
+      <publishTime>08/17/2017 17:38:00</publishTime>
+    </File>
+    <File Include="assets/js/scripts.js">
+      <publishTime>09/20/2017 15:19:00</publishTime>
+    </File>
+    <File Include="bin/ApplicationInsights.config">
+      <publishTime>09/13/2017 16:49:52</publishTime>
+    </File>
+    <File Include="bin/Intranet.dll">
+      <publishTime>09/29/2017 12:40:12</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.Agent.Intercept.dll">
+      <publishTime>09/13/2017 16:23:40</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.DependencyCollector.dll">
+      <publishTime>09/13/2017 16:23:40</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.PerfCounterCollector.dll">
+      <publishTime>09/13/2017 16:23:40</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.ServerTelemetryChannel.dll">
+      <publishTime>09/13/2017 16:23:41</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.Web.dll">
+      <publishTime>09/13/2017 16:23:42</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.WindowsServer.dll">
+      <publishTime>09/13/2017 16:23:41</publishTime>
+    </File>
+    <File Include="bin/Microsoft.ApplicationInsights.dll">
+      <publishTime>09/13/2017 16:23:39</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.FriendlyUrls.dll">
+      <publishTime>09/13/2017 16:56:23</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>09/13/2017 16:56:21</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.exe">
+      <publishTime>09/13/2017 16:23:35</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.Build.Tasks.CodeAnalysis.dll">
+      <publishTime>09/13/2017 16:23:35</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.dll">
+      <publishTime>09/13/2017 16:23:35</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.dll">
+      <publishTime>09/13/2017 16:23:35</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.VisualBasic.dll">
+      <publishTime>09/13/2017 16:23:35</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CSharp.Core.targets">
+      <publishTime>09/13/2017 16:23:35</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.VisualBasic.Core.targets">
+      <publishTime>09/13/2017 16:23:35</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Collections.Immutable.dll">
+      <publishTime>09/13/2017 16:23:35</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Reflection.Metadata.dll">
+      <publishTime>09/13/2017 16:23:35</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.exe">
+      <publishTime>09/13/2017 16:23:35</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe">
+      <publishTime>09/13/2017 16:23:35</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe.config">
+      <publishTime>09/13/2017 16:23:35</publishTime>
+    </File>
+    <File Include="Default.aspx">
+      <publishTime>09/28/2017 17:22:59</publishTime>
+    </File>
+    <File Include="fotos/123.jpg">
+      <publishTime>09/13/2017 16:51:09</publishTime>
+    </File>
+    <File Include="fotos/20141881591.jpg">
+      <publishTime>09/13/2017 16:51:09</publishTime>
+    </File>
+    <File Include="fotos/20143696244.jpg">
+      <publishTime>09/13/2017 16:51:09</publishTime>
+    </File>
+    <File Include="fotos/20187956324.jpg">
+      <publishTime>09/13/2017 16:51:09</publishTime>
+    </File>
+    <File Include="fotos/20215442285.jpg">
+      <publishTime>09/13/2017 16:51:09</publishTime>
+    </File>
+    <File Include="fotos/20223614982.jpg">
+      <publishTime>09/13/2017 16:51:09</publishTime>
+    </File>
+    <File Include="fotos/20233765180.jpg">
+      <publishTime>09/13/2017 16:51:09</publishTime>
+    </File>
+    <File Include="fotos/20250240377.jpg">
+      <publishTime>09/13/2017 16:51:09</publishTime>
+    </File>
+    <File Include="fotos/20252607200.jpg">
+      <publishTime>09/13/2017 16:51:09</publishTime>
+    </File>
+    <File Include="fotos/20257725317.jpg">
+      <publishTime>09/13/2017 16:51:09</publishTime>
+    </File>
+    <File Include="fotos/20259020434.jpg">
+      <publishTime>09/13/2017 16:51:09</publishTime>
+    </File>
+    <File Include="fotos/20261839122.jpg">
+      <publishTime>09/13/2017 16:51:09</publishTime>
+    </File>
+    <File Include="fotos/20266905832.jpg">
+      <publishTime>09/13/2017 16:51:09</publishTime>
+    </File>
+    <File Include="fotos/20271932619.jpg">
+      <publishTime>09/13/2017 16:51:09</publishTime>
+    </File>
+    <File Include="fotos/20273325973.jpg">
+      <publishTime>09/13/2017 16:51:09</publishTime>
+    </File>
+    <File Include="fotos/20277271746.jpg">
+      <publishTime>09/13/2017 16:51:09</publishTime>
+    </File>
+    <File Include="fotos/20292493151.jpg">
+      <publishTime>09/13/2017 16:51:09</publishTime>
+    </File>
+    <File Include="fotos/20297157605.jpg">
+      <publishTime>09/13/2017 16:51:09</publishTime>
+    </File>
+    <File Include="fotos/20298036526.jpg">
+      <publishTime>09/13/2017 16:51:09</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>09/13/2017 16:51:09</publishTime>
+    </File>
+    <File Include="Handlers/PersonalHandler.ashx">
+      <publishTime>09/19/2017 19:52:19</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>09/29/2017 12:38:53</publishTime>
+    </File>
+    <File Include="scripts/ai.0.15.0-build58334.js">
+      <publishTime>09/13/2017 16:49:52</publishTime>
+    </File>
+    <File Include="scripts/ai.0.15.0-build58334.min.js">
+      <publishTime>09/13/2017 16:49:52</publishTime>
+    </File>
+    <File Include="Site.Mobile.Master">
+      <publishTime>09/13/2017 16:56:24</publishTime>
+    </File>
+    <File Include="ViewSwitcher.ascx">
+      <publishTime>09/13/2017 16:56:24</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>09/28/2017 17:42:01</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,885 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="ModelBO.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="CategoriasNotes">
+          <Key>
+            <PropertyRef Name="IdCategoriasNotes" />
+          </Key>
+          <Property Name="IdCategoriasNotes" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="descCategoriasNotes" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="create_datetime" Type="datetime" Nullable="false" />
+          <Property Name="update_datetime" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Consultas">
+          <Key>
+            <PropertyRef Name="IdConsulta" />
+          </Key>
+          <Property Name="IdConsulta" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NombreConsulta" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="EmailConsulta" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="contenidoConsulta" Type="text" Nullable="false" />
+          <Property Name="create_datetime" Type="datetime" Nullable="false" />
+          <Property Name="update_datetime" Type="datetime" />
+          <Property Name="cuitConsulta" Type="nvarchar" MaxLength="20" />
+          <Property Name="domicilioConsulta" Type="nvarchar(max)" />
+          <Property Name="residenciaConsulta" Type="nvarchar(max)" />
+          <Property Name="cpConsulta" Type="nvarchar" MaxLength="6" />
+          <Property Name="telefonoConsulta" Type="nvarchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="ImagesSliderNotes">
+          <Key>
+            <PropertyRef Name="IdImagesSliderNotes" />
+          </Key>
+          <Property Name="IdImagesSliderNotes" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdSliderNotes" Type="int" Nullable="false" />
+          <Property Name="nameImagesSliderNotes" Type="nvarchar(max)" />
+          <Property Name="descImagesSliderNotes" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="urlImagesSliderNotes" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="activeImagesSliderNotes" Type="bit" Nullable="false" />
+          <Property Name="create_datetime" Type="datetime" Nullable="false" />
+          <Property Name="update_datetime" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Notes">
+          <Key>
+            <PropertyRef Name="IdNote" />
+          </Key>
+          <Property Name="IdNote" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="titleNote" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="bodyNote" Type="text" Nullable="false" />
+          <Property Name="imgNote" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="tagsNote" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="authorNote" Type="varchar(max)" />
+          <Property Name="ActiveNote" Type="bit" Nullable="false" />
+          <Property Name="idCategoriasNote" Type="int" Nullable="false" />
+          <Property Name="create_datetime" Type="datetime" Nullable="false" />
+          <Property Name="update_datetime" Type="datetime" />
+          <Property Name="imgSliderNote" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="RespuestaConsultas">
+          <Key>
+            <PropertyRef Name="IdRespuestaConsultas" />
+          </Key>
+          <Property Name="IdRespuestaConsultas" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdConsulta" Type="int" Nullable="false" />
+          <Property Name="NombreRespuestaConsultas" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="contenidoConsulta" Type="text" Nullable="false" />
+          <Property Name="create_datetime" Type="datetime" Nullable="false" />
+          <Property Name="update_datetime" Type="datetime" />
+        </EntityType>
+        <EntityType Name="SettingsIntegrationNotes">
+          <Key>
+            <PropertyRef Name="IdSettingsIntegrationNotes" />
+          </Key>
+          <Property Name="IdSettingsIntegrationNotes" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="descSettingsIntegrationNotes" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="keySettingsIntegrationNotes" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="valueSettingsIntegrationNotes" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="create_datetime" Type="datetime" Nullable="false" />
+          <Property Name="update_datetime" Type="datetime" />
+          <Property Name="ActiveSettingsIntegrationNotes" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SliderHome">
+          <Key>
+            <PropertyRef Name="IdSlideHome" />
+          </Key>
+          <Property Name="IdSlideHome" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="descSlideHome" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="urlSlideHome" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="urlImgSlideHome" Type="text" Nullable="false" />
+          <Property Name="activeSlideHome" Type="bit" Nullable="false" />
+          <Property Name="create_datetime" Type="datetime" Nullable="false" />
+          <Property Name="update_datetime" Type="datetime" />
+          <Property Name="nameSlideHome" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="SliderNotes">
+          <Key>
+            <PropertyRef Name="IdSliderNotes" />
+          </Key>
+          <Property Name="IdSliderNotes" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="descSliderNotes" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="create_datetime" Type="datetime" Nullable="false" />
+          <Property Name="update_datetime" Type="datetime" />
+        </EntityType>
+        <Function Name="sp_Delete_CategoriasNotes_id" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IdCategoriasNotes" Type="int" Mode="In" />
+          <Parameter Name="descCategoriasNotes" Type="nvarchar(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_Delete_Consultas_id" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IdConsulta" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_Delete_ImagesSliderNotes_id" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IdImagesSliderNotes" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_Delete_Notes_id" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IdNote" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_Delete_RespuestaConsultas_id" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IdRespuestaConsultas" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_Delete_SettingsIntegrationNotes_id" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IdSettingsIntegrationNotes" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_Delete_SliderHome_id" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IdSliderHome" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_Delete_SliderNotes_id" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IdCategoriasNotes" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_Insert_CategoriasNotes" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="descCategoriasNotes" Type="nvarchar(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_Insert_Consultas" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="NombreConsulta" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="EmailConsulta" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="contenidoConsulta" Type="text" Mode="In" />
+          <Parameter Name="cuitConsulta" Type="nvarchar" Mode="In" />
+          <Parameter Name="domicilioConsulta" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="residenciaConsulta" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="cpConsulta" Type="nvarchar" Mode="In" />
+          <Parameter Name="telefonoConsulta" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="sp_Insert_ImagesSliderNotes" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IdSliderNotes" Type="int" Mode="In" />
+          <Parameter Name="nameImagesSliderNotes" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="descImagesSliderNotes" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="activeImagesSliderNotes" Type="bit" Mode="In" />
+          <Parameter Name="urlImagesSliderNotes" Type="nvarchar(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_Insert_Notes" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="titleNote" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="bodyNote" Type="text" Mode="In" />
+          <Parameter Name="imgNote" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="tagsNote" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="authorNote" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="ActiveNote" Type="bit" Mode="In" />
+          <Parameter Name="idCategoriasNote" Type="int" Mode="In" />
+          <Parameter Name="imgSliderNote" Type="nvarchar(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_Insert_RespuestaConsultas" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IdConsulta" Type="int" Mode="In" />
+          <Parameter Name="NombreRespuestaConsultas" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="contenidoConsulta" Type="text" Mode="In" />
+        </Function>
+        <Function Name="sp_Insert_SettingsIntegrationNotes" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="descSettingsIntegrationNotes" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="keySettingsIntegrationNotes" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="valueSettingsIntegrationNotes" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="ActiveSettingsIntegrationNotes" Type="bit" Mode="In" />
+        </Function>
+        <Function Name="sp_Insert_SliderHome" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="descSliderHome" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="urlSliderHome" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="urlImgSliderHome" Type="text" Mode="In" />
+          <Parameter Name="nameSliderHome" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="activeSliderHome" Type="bit" Mode="In" />
+        </Function>
+        <Function Name="sp_Insert_SliderNotes" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="descSliderNotes" Type="nvarchar(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_Select_CategoriasNotes" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="option" Type="int" Mode="In" />
+          <Parameter Name="IdCategoriasNotes" Type="int" Mode="In" />
+          <Parameter Name="descCategoriasNotes" Type="nvarchar(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_Select_Consultas" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="option" Type="int" Mode="In" />
+          <Parameter Name="IdConsulta" Type="int" Mode="In" />
+          <Parameter Name="NombreConsulta" Type="nvarchar(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_Select_ImagesSliderNotes" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="option" Type="int" Mode="In" />
+          <Parameter Name="IdImagesSliderNotes" Type="int" Mode="In" />
+          <Parameter Name="IdSliderNotes" Type="int" Mode="In" />
+          <Parameter Name="nameImagesSliderNotes" Type="nvarchar(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_Select_Notes" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="option" Type="int" Mode="In" />
+          <Parameter Name="IdNote" Type="int" Mode="In" />
+          <Parameter Name="titleNote" Type="nvarchar(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_Select_SettingsIntegrationNotes" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="option" Type="int" Mode="In" />
+          <Parameter Name="IdSettingsIntegrationNotes" Type="int" Mode="In" />
+          <Parameter Name="descSettingsIntegrationNotes" Type="nvarchar(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_Select_SliderHome" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="option" Type="int" Mode="In" />
+          <Parameter Name="IdSlideHome" Type="int" Mode="In" />
+          <Parameter Name="descSlideHome" Type="nvarchar(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_Select_SliderNotes" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="option" Type="int" Mode="In" />
+          <Parameter Name="IdSliderNotes" Type="int" Mode="In" />
+          <Parameter Name="descSliderNotes" Type="nvarchar(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_Update_Consultas_id" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IdConsulta" Type="int" Mode="In" />
+          <Parameter Name="NombreConsulta" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="EmailConsulta" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="contenidoConsulta" Type="text" Mode="In" />
+          <Parameter Name="cuitConsulta" Type="nvarchar" Mode="In" />
+          <Parameter Name="domicilioConsulta" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="residenciaConsulta" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="cpConsulta" Type="nvarchar" Mode="In" />
+          <Parameter Name="telefonoConsulta" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="sp_Update_ImagesSliderNotes_id" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IdSliderNotes" Type="int" Mode="In" />
+          <Parameter Name="IdImagesSliderNotes" Type="int" Mode="In" />
+          <Parameter Name="nameImagesSliderNotes" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="descImagesSliderNotes" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="activeImagesSliderNotes" Type="bit" Mode="In" />
+          <Parameter Name="urlImagesSliderNotes" Type="nvarchar(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_Update_Notes_id" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IdNote" Type="int" Mode="In" />
+          <Parameter Name="titleNote" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="bodyNote" Type="text" Mode="In" />
+          <Parameter Name="imgNote" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="tagsNote" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="authorNote" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="ActiveNote" Type="bit" Mode="In" />
+          <Parameter Name="idCategoriasNote" Type="int" Mode="In" />
+          <Parameter Name="imgSliderNote" Type="nvarchar(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_Update_RespuestaConsultas_id" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IdRespuestaConsultas" Type="int" Mode="In" />
+          <Parameter Name="IdConsulta" Type="int" Mode="In" />
+          <Parameter Name="NombreRespuestaConsultas" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="contenidoConsulta" Type="text" Mode="In" />
+        </Function>
+        <Function Name="sp_Update_SettingsIntegrationNotes_id" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IdSettingsIntegrationNotes" Type="int" Mode="In" />
+          <Parameter Name="descSettingsIntegrationNotes" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="keySettingsIntegrationNotes" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="valueSettingsIntegrationNotes" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="ActiveSettingsIntegrationNotes" Type="bit" Mode="In" />
+        </Function>
+        <Function Name="sp_Update_SliderHome_id" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IdSliderHome" Type="int" Mode="In" />
+          <Parameter Name="descSliderHome" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="urlSliderHome" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="urlImgSliderHome" Type="text" Mode="In" />
+          <Parameter Name="nameSliderHome" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="activeSliderHome" Type="bit" Mode="In" />
+        </Function>
+        <Function Name="sp_Update_SliderNotes_id" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IdSliderNotes" Type="int" Mode="In" />
+          <Parameter Name="descSliderNotes" Type="nvarchar(max)" Mode="In" />
+        </Function>
+        <EntityContainer Name="ModelBOStoreContainer">
+          <EntitySet Name="CategoriasNotes" EntityType="Self.CategoriasNotes" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Consultas" EntityType="Self.Consultas" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ImagesSliderNotes" EntityType="Self.ImagesSliderNotes" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Notes" EntityType="Self.Notes" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="RespuestaConsultas" EntityType="Self.RespuestaConsultas" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SettingsIntegrationNotes" EntityType="Self.SettingsIntegrationNotes" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SliderHome" EntityType="Self.SliderHome" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SliderNotes" EntityType="Self.SliderNotes" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ModelBO" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="CategoriasNotes">
+          <Key>
+            <PropertyRef Name="IdCategoriasNotes" />
+          </Key>
+          <Property Name="IdCategoriasNotes" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="descCategoriasNotes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="create_datetime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="update_datetime" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="Notes">
+          <Key>
+            <PropertyRef Name="IdNote" />
+          </Key>
+          <Property Name="IdNote" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="titleNote" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="bodyNote" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="imgNote" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="tagsNote" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="create_datetime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="update_datetime" Type="DateTime" Precision="3" />
+          <Property Name="authorNote" Type="String" Unicode="false" FixedLength="false" MaxLength="Max" />
+          <Property Name="ActiveNote" Type="Boolean" Nullable="false" />
+          <Property Name="idCategoriasNote" Type="Int32" Nullable="false" />
+          <Property Name="imgSliderNote" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="SettingsIntegrationNotes">
+          <Key>
+            <PropertyRef Name="IdSettingsIntegrationNotes" />
+          </Key>
+          <Property Name="IdSettingsIntegrationNotes" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="descSettingsIntegrationNotes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="keySettingsIntegrationNotes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="valueSettingsIntegrationNotes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="create_datetime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="update_datetime" Type="DateTime" Precision="3" />
+          <Property Name="ActiveSettingsIntegrationNotes" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="EntitiesBO" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="CategoriasNotes" EntityType="Self.CategoriasNotes" />
+          <EntitySet Name="Notes" EntityType="Self.Notes" />
+          <EntitySet Name="SettingsIntegrationNotes" EntityType="Self.SettingsIntegrationNotes" />
+          <EntitySet Name="ImagesSliderNotes" EntityType="ModelBO.ImagesSliderNotes" />
+          <EntitySet Name="SliderHome" EntityType="ModelBO.SliderHome" />
+          <EntitySet Name="Consultas" EntityType="ModelBO.Consultas" />
+          <EntitySet Name="RespuestaConsultas" EntityType="ModelBO.RespuestaConsultas" />
+          <EntitySet Name="SliderNotes" EntityType="ModelBO.SliderNotes" />
+          <FunctionImport Name="sp_Delete_CategoriasNotes_id">
+            <Parameter Name="IdCategoriasNotes" Mode="In" Type="Int32" />
+            <Parameter Name="descCategoriasNotes" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_Delete_Consultas_id">
+            <Parameter Name="IdConsulta" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_Delete_ImagesSliderNotes_id">
+            <Parameter Name="IdImagesSliderNotes" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_Delete_Notes_id">
+            <Parameter Name="IdNote" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_Delete_RespuestaConsultas_id">
+            <Parameter Name="IdRespuestaConsultas" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_Delete_SettingsIntegrationNotes_id">
+            <Parameter Name="IdSettingsIntegrationNotes" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_Delete_SliderHome_id">
+            <Parameter Name="IdSliderHome" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_Delete_SliderNotes_id">
+            <Parameter Name="IdCategoriasNotes" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_Insert_CategoriasNotes">
+            <Parameter Name="descCategoriasNotes" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_Insert_Consultas">
+            <Parameter Name="NombreConsulta" Mode="In" Type="String" />
+            <Parameter Name="EmailConsulta" Mode="In" Type="String" />
+            <Parameter Name="contenidoConsulta" Mode="In" Type="String" />
+            <Parameter Name="cuitConsulta" Mode="In" Type="String" />
+            <Parameter Name="domicilioConsulta" Mode="In" Type="String" />
+            <Parameter Name="residenciaConsulta" Mode="In" Type="String" />
+            <Parameter Name="cpConsulta" Mode="In" Type="String" />
+            <Parameter Name="telefonoConsulta" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_Insert_ImagesSliderNotes">
+            <Parameter Name="IdSliderNotes" Mode="In" Type="Int32" />
+            <Parameter Name="nameImagesSliderNotes" Mode="In" Type="String" />
+            <Parameter Name="descImagesSliderNotes" Mode="In" Type="String" />
+            <Parameter Name="activeImagesSliderNotes" Mode="In" Type="Boolean" />
+            <Parameter Name="urlImagesSliderNotes" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_Insert_Notes">
+            <Parameter Name="titleNote" Mode="In" Type="String" />
+            <Parameter Name="bodyNote" Mode="In" Type="String" />
+            <Parameter Name="imgNote" Mode="In" Type="String" />
+            <Parameter Name="tagsNote" Mode="In" Type="String" />
+            <Parameter Name="authorNote" Mode="In" Type="String" />
+            <Parameter Name="ActiveNote" Mode="In" Type="Boolean" />
+            <Parameter Name="idCategoriasNote" Mode="In" Type="Int32" />
+            <Parameter Name="imgSliderNote" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_Insert_RespuestaConsultas">
+            <Parameter Name="IdConsulta" Mode="In" Type="Int32" />
+            <Parameter Name="NombreRespuestaConsultas" Mode="In" Type="String" />
+            <Parameter Name="contenidoConsulta" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_Insert_SettingsIntegrationNotes">
+            <Parameter Name="descSettingsIntegrationNotes" Mode="In" Type="String" />
+            <Parameter Name="keySettingsIntegrationNotes" Mode="In" Type="String" />
+            <Parameter Name="valueSettingsIntegrationNotes" Mode="In" Type="String" />
+            <Parameter Name="ActiveSettingsIntegrationNotes" Mode="In" Type="Boolean" />
+          </FunctionImport>
+          <FunctionImport Name="sp_Insert_SliderHome">
+            <Parameter Name="descSliderHome" Mode="In" Type="String" />
+            <Parameter Name="urlSliderHome" Mode="In" Type="String" />
+            <Parameter Name="urlImgSliderHome" Mode="In" Type="String" />
+            <Parameter Name="nameSliderHome" Mode="In" Type="String" />
+            <Parameter Name="activeSliderHome" Mode="In" Type="Boolean" />
+          </FunctionImport>
+          <FunctionImport Name="sp_Insert_SliderNotes">
+            <Parameter Name="descSliderNotes" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_Select_CategoriasNotes" ReturnType="Collection(ModelBO.sp_Select_CategoriasNotes_Result)">
+            <Parameter Name="option" Mode="In" Type="Int32" />
+            <Parameter Name="IdCategoriasNotes" Mode="In" Type="Int32" />
+            <Parameter Name="descCategoriasNotes" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_Select_Consultas" ReturnType="Collection(ModelBO.sp_Select_Consultas_Result)">
+            <Parameter Name="option" Mode="In" Type="Int32" />
+            <Parameter Name="IdConsulta" Mode="In" Type="Int32" />
+            <Parameter Name="NombreConsulta" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_Select_ImagesSliderNotes" ReturnType="Collection(ModelBO.sp_Select_ImagesSliderNotes_Result)">
+            <Parameter Name="option" Mode="In" Type="Int32" />
+            <Parameter Name="IdImagesSliderNotes" Mode="In" Type="Int32" />
+            <Parameter Name="IdSliderNotes" Mode="In" Type="Int32" />
+            <Parameter Name="nameImagesSliderNotes" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_Select_Notes" ReturnType="Collection(ModelBO.sp_Select_Notes_Result)">
+            <Parameter Name="option" Mode="In" Type="Int32" />
+            <Parameter Name="IdNote" Mode="In" Type="Int32" />
+            <Parameter Name="titleNote" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_Select_SettingsIntegrationNotes" ReturnType="Collection(ModelBO.sp_Select_SettingsIntegrationNotes_Result)">
+            <Parameter Name="option" Mode="In" Type="Int32" />
+            <Parameter Name="IdSettingsIntegrationNotes" Mode="In" Type="Int32" />
+            <Parameter Name="descSettingsIntegrationNotes" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_Select_SliderHome" ReturnType="Collection(ModelBO.sp_Select_SliderHome_Result)">
+            <Parameter Name="option" Mode="In" Type="Int32" />
+            <Parameter Name="IdSlideHome" Mode="In" Type="Int32" />
+            <Parameter Name="descSlideHome" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_Select_SliderNotes" ReturnType="Collection(ModelBO.sp_Select_SliderNotes_Result)">
+            <Parameter Name="option" Mode="In" Type="Int32" />
+            <Parameter Name="IdSliderNotes" Mode="In" Type="Int32" />
+            <Parameter Name="descSliderNotes" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_Update_Consultas_id">
+            <Parameter Name="IdConsulta" Mode="In" Type="Int32" />
+            <Parameter Name="NombreConsulta" Mode="In" Type="String" />
+            <Parameter Name="EmailConsulta" Mode="In" Type="String" />
+            <Parameter Name="contenidoConsulta" Mode="In" Type="String" />
+            <Parameter Name="cuitConsulta" Mode="In" Type="String" />
+            <Parameter Name="domicilioConsulta" Mode="In" Type="String" />
+            <Parameter Name="residenciaConsulta" Mode="In" Type="String" />
+            <Parameter Name="cpConsulta" Mode="In" Type="String" />
+            <Parameter Name="telefonoConsulta" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_Update_ImagesSliderNotes_id">
+            <Parameter Name="IdSliderNotes" Mode="In" Type="Int32" />
+            <Parameter Name="IdImagesSliderNotes" Mode="In" Type="Int32" />
+            <Parameter Name="nameImagesSliderNotes" Mode="In" Type="String" />
+            <Parameter Name="descImagesSliderNotes" Mode="In" Type="String" />
+            <Parameter Name="activeImagesSliderNotes" Mode="In" Type="Boolean" />
+            <Parameter Name="urlImagesSliderNotes" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_Update_Notes_id">
+            <Parameter Name="IdNote" Mode="In" Type="Int32" />
+            <Parameter Name="titleNote" Mode="In" Type="String" />
+            <Parameter Name="bodyNote" Mode="In" Type="String" />
+            <Parameter Name="imgNote" Mode="In" Type="String" />
+            <Parameter Name="tagsNote" Mode="In" Type="String" />
+            <Parameter Name="authorNote" Mode="In" Type="String" />
+            <Parameter Name="ActiveNote" Mode="In" Type="Boolean" />
+            <Parameter Name="idCategoriasNote" Mode="In" Type="Int32" />
+            <Parameter Name="imgSliderNote" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_Update_RespuestaConsultas_id">
+            <Parameter Name="IdRespuestaConsultas" Mode="In" Type="Int32" />
+            <Parameter Name="IdConsulta" Mode="In" Type="Int32" />
+            <Parameter Name="NombreRespuestaConsultas" Mode="In" Type="String" />
+            <Parameter Name="contenidoConsulta" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_Update_SettingsIntegrationNotes_id">
+            <Parameter Name="IdSettingsIntegrationNotes" Mode="In" Type="Int32" />
+            <Parameter Name="descSettingsIntegrationNotes" Mode="In" Type="String" />
+            <Parameter Name="keySettingsIntegrationNotes" Mode="In" Type="String" />
+            <Parameter Name="valueSettingsIntegrationNotes" Mode="In" Type="String" />
+            <Parameter Name="ActiveSettingsIntegrationNotes" Mode="In" Type="Boolean" />
+          </FunctionImport>
+          <FunctionImport Name="sp_Update_SliderHome_id">
+            <Parameter Name="IdSliderHome" Mode="In" Type="Int32" />
+            <Parameter Name="descSliderHome" Mode="In" Type="String" />
+            <Parameter Name="urlSliderHome" Mode="In" Type="String" />
+            <Parameter Name="urlImgSliderHome" Mode="In" Type="String" />
+            <Parameter Name="nameSliderHome" Mode="In" Type="String" />
+            <Parameter Name="activeSliderHome" Mode="In" Type="Boolean" />
+          </FunctionImport>
+          <FunctionImport Name="sp_Update_SliderNotes_id">
+            <Parameter Name="IdSliderNotes" Mode="In" Type="Int32" />
+            <Parameter Name="descSliderNotes" Mode="In" Type="String" />
+          </FunctionImport>
+        </EntityContainer>
+        <EntityType Name="ImagesSliderNotes">
+          <Key>
+            <PropertyRef Name="IdImagesSliderNotes" />
+          </Key>
+          <Property Name="IdSliderNotes" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="None" />
+          <Property Name="IdImagesSliderNotes" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="descImagesSliderNotes" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="urlImagesSliderNotes" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="create_datetime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="update_datetime" Type="DateTime" Precision="3" />
+          <Property Name="nameImagesSliderNotes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="activeImagesSliderNotes" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SliderHome">
+          <Key>
+            <PropertyRef Name="IdSlideHome" />
+          </Key>
+          <Property Name="IdSlideHome" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="descSlideHome" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="urlSlideHome" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="urlImgSlideHome" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="activeSlideHome" Type="Boolean" Nullable="false" />
+          <Property Name="create_datetime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="update_datetime" Type="DateTime" Precision="3" />
+          <Property Name="nameSlideHome" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Consultas">
+          <Key>
+            <PropertyRef Name="IdConsulta" />
+          </Key>
+          <Property Name="IdConsulta" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NombreConsulta" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="EmailConsulta" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="contenidoConsulta" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="create_datetime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="update_datetime" Type="DateTime" Precision="3" />
+          <Property Name="cuitConsulta" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="domicilioConsulta" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="residenciaConsulta" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="cpConsulta" Type="String" MaxLength="6" FixedLength="false" Unicode="true" />
+          <Property Name="telefonoConsulta" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="RespuestaConsultas">
+          <Key>
+            <PropertyRef Name="IdRespuestaConsultas" />
+          </Key>
+          <Property Name="IdRespuestaConsultas" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdConsulta" Type="Int32" Nullable="false" />
+          <Property Name="NombreRespuestaConsultas" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="contenidoConsulta" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="create_datetime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="update_datetime" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="SliderNotes">
+          <Key>
+            <PropertyRef Name="IdSliderNotes" />
+          </Key>
+          <Property Name="IdSliderNotes" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="descSliderNotes" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="create_datetime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="update_datetime" Type="DateTime" Precision="3" />
+        </EntityType>
+        <ComplexType Name="sp_Select_CategoriasNotes_Result">
+          <Property Type="Int32" Name="IdCategoriasNotes" Nullable="false" />
+          <Property Type="String" Name="descCategoriasNotes" Nullable="false" />
+          <Property Type="DateTime" Name="create_datetime" Nullable="false" Precision="23" />
+          <Property Type="DateTime" Name="update_datetime" Nullable="true" Precision="23" />
+        </ComplexType>
+        <ComplexType Name="sp_Select_Consultas_Result">
+          <Property Type="Int32" Name="IdConsulta" Nullable="false" />
+          <Property Type="String" Name="NombreConsulta" Nullable="false" />
+          <Property Type="String" Name="EmailConsulta" Nullable="false" />
+          <Property Type="String" Name="contenidoConsulta" Nullable="false" MaxLength="Max" />
+          <Property Type="DateTime" Name="create_datetime" Nullable="false" Precision="23" />
+          <Property Type="DateTime" Name="update_datetime" Nullable="true" Precision="23" />
+          <Property Type="String" Name="cuitConsulta" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="domicilioConsulta" Nullable="true" />
+          <Property Type="String" Name="residenciaConsulta" Nullable="true" />
+          <Property Type="String" Name="cpConsulta" Nullable="true" MaxLength="6" />
+          <Property Type="String" Name="telefonoConsulta" Nullable="true" MaxLength="20" />
+        </ComplexType>
+        <ComplexType Name="sp_Select_ImagesSliderNotes_Result">
+          <Property Type="Int32" Name="IdImagesSliderNotes" Nullable="false" />
+          <Property Type="Int32" Name="IdSliderNotes" Nullable="false" />
+          <Property Type="String" Name="nameImagesSliderNotes" Nullable="true" />
+          <Property Type="String" Name="descImagesSliderNotes" Nullable="false" />
+          <Property Type="String" Name="urlImagesSliderNotes" Nullable="false" />
+          <Property Type="Boolean" Name="activeImagesSliderNotes" Nullable="false" />
+          <Property Type="DateTime" Name="create_datetime" Nullable="false" Precision="23" />
+          <Property Type="DateTime" Name="update_datetime" Nullable="true" Precision="23" />
+        </ComplexType>
+        <ComplexType Name="sp_Select_Notes_Result">
+          <Property Type="Int32" Name="IdNote" Nullable="false" />
+          <Property Type="String" Name="titleNote" Nullable="false" />
+          <Property Type="String" Name="bodyNote" Nullable="false" MaxLength="Max" />
+          <Property Type="String" Name="imgNote" Nullable="false" />
+          <Property Type="String" Name="tagsNote" Nullable="false" />
+          <Property Type="String" Name="authorNote" Nullable="true" />
+          <Property Type="Boolean" Name="ActiveNote" Nullable="false" />
+          <Property Type="Int32" Name="idCategoriasNote" Nullable="false" />
+          <Property Type="DateTime" Name="create_datetime" Nullable="false" Precision="23" />
+          <Property Type="DateTime" Name="update_datetime" Nullable="true" Precision="23" />
+          <Property Type="String" Name="imgSliderNote" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="sp_Select_SettingsIntegrationNotes_Result">
+          <Property Type="Int32" Name="IdSettingsIntegrationNotes" Nullable="false" />
+          <Property Type="String" Name="descSettingsIntegrationNotes" Nullable="false" />
+          <Property Type="String" Name="keySettingsIntegrationNotes" Nullable="false" />
+          <Property Type="String" Name="valueSettingsIntegrationNotes" Nullable="false" />
+          <Property Type="DateTime" Name="create_datetime" Nullable="false" Precision="23" />
+          <Property Type="DateTime" Name="update_datetime" Nullable="true" Precision="23" />
+          <Property Type="Boolean" Name="ActiveSettingsIntegrationNotes" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="sp_Select_SliderHome_Result">
+          <Property Type="Int32" Name="IdSlideHome" Nullable="false" />
+          <Property Type="String" Name="descSlideHome" Nullable="false" />
+          <Property Type="String" Name="urlSlideHome" Nullable="false" />
+          <Property Type="String" Name="urlImgSlideHome" Nullable="false" MaxLength="Max" />
+          <Property Type="Boolean" Name="activeSlideHome" Nullable="false" />
+          <Property Type="DateTime" Name="create_datetime" Nullable="false" Precision="23" />
+          <Property Type="DateTime" Name="update_datetime" Nullable="true" Precision="23" />
+          <Property Type="String" Name="nameSlideHome" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="sp_Select_SliderNotes_Result">
+          <Property Type="Int32" Name="IdSliderNotes" Nullable="false" />
+          <Property Type="String" Name="descSliderNotes" Nullable="false" />
+          <Property Type="DateTime" Name="create_datetime" Nullable="false" Precision="23" />
+          <Property Type="DateTime" Name="update_datetime" Nullable="true" Precision="23" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ModelBOStoreContainer" CdmEntityContainer="EntitiesBO">
+          <EntitySetMapping Name="CategoriasNotes">
+            <EntityTypeMapping TypeName="ModelBO.CategoriasNotes">
+              <MappingFragment StoreEntitySet="CategoriasNotes">
+                <ScalarProperty Name="IdCategoriasNotes" ColumnName="IdCategoriasNotes" />
+                <ScalarProperty Name="descCategoriasNotes" ColumnName="descCategoriasNotes" />
+                <ScalarProperty Name="create_datetime" ColumnName="create_datetime" />
+                <ScalarProperty Name="update_datetime" ColumnName="update_datetime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Notes">
+            <EntityTypeMapping TypeName="ModelBO.Notes">
+              <MappingFragment StoreEntitySet="Notes">
+                <ScalarProperty Name="imgSliderNote" ColumnName="imgSliderNote" />
+                <ScalarProperty Name="idCategoriasNote" ColumnName="idCategoriasNote" />
+                <ScalarProperty Name="ActiveNote" ColumnName="ActiveNote" />
+                <ScalarProperty Name="IdNote" ColumnName="IdNote" />
+                <ScalarProperty Name="titleNote" ColumnName="titleNote" />
+                <ScalarProperty Name="bodyNote" ColumnName="bodyNote" />
+                <ScalarProperty Name="imgNote" ColumnName="imgNote" />
+                <ScalarProperty Name="tagsNote" ColumnName="tagsNote" />
+                <ScalarProperty Name="create_datetime" ColumnName="create_datetime" />
+                <ScalarProperty Name="update_datetime" ColumnName="update_datetime" />
+                <ScalarProperty Name="authorNote" ColumnName="authorNote" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SettingsIntegrationNotes">
+            <EntityTypeMapping TypeName="ModelBO.SettingsIntegrationNotes">
+              <MappingFragment StoreEntitySet="SettingsIntegrationNotes">
+                <ScalarProperty Name="ActiveSettingsIntegrationNotes" ColumnName="ActiveSettingsIntegrationNotes" />
+                <ScalarProperty Name="IdSettingsIntegrationNotes" ColumnName="IdSettingsIntegrationNotes" />
+                <ScalarProperty Name="descSettingsIntegrationNotes" ColumnName="descSettingsIntegrationNotes" />
+                <ScalarProperty Name="keySettingsIntegrationNotes" ColumnName="keySettingsIntegrationNotes" />
+                <ScalarProperty Name="valueSettingsIntegrationNotes" ColumnName="valueSettingsIntegrationNotes" />
+                <ScalarProperty Name="create_datetime" ColumnName="create_datetime" />
+                <ScalarProperty Name="update_datetime" ColumnName="update_datetime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ImagesSliderNotes">
+            <EntityTypeMapping TypeName="ModelBO.ImagesSliderNotes">
+              <MappingFragment StoreEntitySet="ImagesSliderNotes">
+                <ScalarProperty Name="activeImagesSliderNotes" ColumnName="activeImagesSliderNotes" />
+                <ScalarProperty Name="nameImagesSliderNotes" ColumnName="nameImagesSliderNotes" />
+                <ScalarProperty Name="update_datetime" ColumnName="update_datetime" />
+                <ScalarProperty Name="create_datetime" ColumnName="create_datetime" />
+                <ScalarProperty Name="urlImagesSliderNotes" ColumnName="urlImagesSliderNotes" />
+                <ScalarProperty Name="descImagesSliderNotes" ColumnName="descImagesSliderNotes" />
+                <ScalarProperty Name="IdImagesSliderNotes" ColumnName="IdImagesSliderNotes" />
+                <ScalarProperty Name="IdSliderNotes" ColumnName="IdSliderNotes" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SliderHome">
+            <EntityTypeMapping TypeName="ModelBO.SliderHome">
+              <MappingFragment StoreEntitySet="SliderHome">
+                <ScalarProperty Name="nameSlideHome" ColumnName="nameSlideHome" />
+                <ScalarProperty Name="update_datetime" ColumnName="update_datetime" />
+                <ScalarProperty Name="create_datetime" ColumnName="create_datetime" />
+                <ScalarProperty Name="activeSlideHome" ColumnName="activeSlideHome" />
+                <ScalarProperty Name="urlImgSlideHome" ColumnName="urlImgSlideHome" />
+                <ScalarProperty Name="urlSlideHome" ColumnName="urlSlideHome" />
+                <ScalarProperty Name="descSlideHome" ColumnName="descSlideHome" />
+                <ScalarProperty Name="IdSlideHome" ColumnName="IdSlideHome" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Consultas">
+            <EntityTypeMapping TypeName="ModelBO.Consultas">
+              <MappingFragment StoreEntitySet="Consultas">
+                <ScalarProperty Name="telefonoConsulta" ColumnName="telefonoConsulta" />
+                <ScalarProperty Name="cpConsulta" ColumnName="cpConsulta" />
+                <ScalarProperty Name="residenciaConsulta" ColumnName="residenciaConsulta" />
+                <ScalarProperty Name="domicilioConsulta" ColumnName="domicilioConsulta" />
+                <ScalarProperty Name="cuitConsulta" ColumnName="cuitConsulta" />
+                <ScalarProperty Name="update_datetime" ColumnName="update_datetime" />
+                <ScalarProperty Name="create_datetime" ColumnName="create_datetime" />
+                <ScalarProperty Name="contenidoConsulta" ColumnName="contenidoConsulta" />
+                <ScalarProperty Name="EmailConsulta" ColumnName="EmailConsulta" />
+                <ScalarProperty Name="NombreConsulta" ColumnName="NombreConsulta" />
+                <ScalarProperty Name="IdConsulta" ColumnName="IdConsulta" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="RespuestaConsultas">
+            <EntityTypeMapping TypeName="ModelBO.RespuestaConsultas">
+              <MappingFragment StoreEntitySet="RespuestaConsultas">
+                <ScalarProperty Name="update_datetime" ColumnName="update_datetime" />
+                <ScalarProperty Name="create_datetime" ColumnName="create_datetime" />
+                <ScalarProperty Name="contenidoConsulta" ColumnName="contenidoConsulta" />
+                <ScalarProperty Name="NombreRespuestaConsultas" ColumnName="NombreRespuestaConsultas" />
+                <ScalarProperty Name="IdConsulta" ColumnName="IdConsulta" />
+                <ScalarProperty Name="IdRespuestaConsultas" ColumnName="IdRespuestaConsultas" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SliderNotes">
+            <EntityTypeMapping TypeName="ModelBO.SliderNotes">
+              <MappingFragment StoreEntitySet="SliderNotes">
+                <ScalarProperty Name="update_datetime" ColumnName="update_datetime" />
+                <ScalarProperty Name="create_datetime" ColumnName="create_datetime" />
+                <ScalarProperty Name="descSliderNotes" ColumnName="descSliderNotes" />
+                <ScalarProperty Name="IdSliderNotes" ColumnName="IdSliderNotes" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="sp_Delete_CategoriasNotes_id" FunctionName="ModelBO.Store.sp_Delete_CategoriasNotes_id" />
+          <FunctionImportMapping FunctionImportName="sp_Delete_Consultas_id" FunctionName="ModelBO.Store.sp_Delete_Consultas_id" />
+          <FunctionImportMapping FunctionImportName="sp_Delete_ImagesSliderNotes_id" FunctionName="ModelBO.Store.sp_Delete_ImagesSliderNotes_id" />
+          <FunctionImportMapping FunctionImportName="sp_Delete_Notes_id" FunctionName="ModelBO.Store.sp_Delete_Notes_id" />
+          <FunctionImportMapping FunctionImportName="sp_Delete_RespuestaConsultas_id" FunctionName="ModelBO.Store.sp_Delete_RespuestaConsultas_id" />
+          <FunctionImportMapping FunctionImportName="sp_Delete_SettingsIntegrationNotes_id" FunctionName="ModelBO.Store.sp_Delete_SettingsIntegrationNotes_id" />
+          <FunctionImportMapping FunctionImportName="sp_Delete_SliderHome_id" FunctionName="ModelBO.Store.sp_Delete_SliderHome_id" />
+          <FunctionImportMapping FunctionImportName="sp_Delete_SliderNotes_id" FunctionName="ModelBO.Store.sp_Delete_SliderNotes_id" />
+          <FunctionImportMapping FunctionImportName="sp_Insert_CategoriasNotes" FunctionName="ModelBO.Store.sp_Insert_CategoriasNotes" />
+          <FunctionImportMapping FunctionImportName="sp_Insert_Consultas" FunctionName="ModelBO.Store.sp_Insert_Consultas" />
+          <FunctionImportMapping FunctionImportName="sp_Insert_ImagesSliderNotes" FunctionName="ModelBO.Store.sp_Insert_ImagesSliderNotes" />
+          <FunctionImportMapping FunctionImportName="sp_Insert_Notes" FunctionName="ModelBO.Store.sp_Insert_Notes" />
+          <FunctionImportMapping FunctionImportName="sp_Insert_RespuestaConsultas" FunctionName="ModelBO.Store.sp_Insert_RespuestaConsultas" />
+          <FunctionImportMapping FunctionImportName="sp_Insert_SettingsIntegrationNotes" FunctionName="ModelBO.Store.sp_Insert_SettingsIntegrationNotes" />
+          <FunctionImportMapping FunctionImportName="sp_Insert_SliderHome" FunctionName="ModelBO.Store.sp_Insert_SliderHome" />
+          <FunctionImportMapping FunctionImportName="sp_Insert_SliderNotes" FunctionName="ModelBO.Store.sp_Insert_SliderNotes" />
+          <FunctionImportMapping FunctionImportName="sp_Select_CategoriasNotes" FunctionName="ModelBO.Store.sp_Select_CategoriasNotes">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ModelBO.sp_Select_CategoriasNotes_Result">
+                <ScalarProperty Name="IdCategoriasNotes" ColumnName="IdCategoriasNotes" />
+                <ScalarProperty Name="descCategoriasNotes" ColumnName="descCategoriasNotes" />
+                <ScalarProperty Name="create_datetime" ColumnName="create_datetime" />
+                <ScalarProperty Name="update_datetime" ColumnName="update_datetime" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_Select_Consultas" FunctionName="ModelBO.Store.sp_Select_Consultas">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ModelBO.sp_Select_Consultas_Result">
+                <ScalarProperty Name="IdConsulta" ColumnName="IdConsulta" />
+                <ScalarProperty Name="NombreConsulta" ColumnName="NombreConsulta" />
+                <ScalarProperty Name="EmailConsulta" ColumnName="EmailConsulta" />
+                <ScalarProperty Name="contenidoConsulta" ColumnName="contenidoConsulta" />
+                <ScalarProperty Name="create_datetime" ColumnName="create_datetime" />
+                <ScalarProperty Name="update_datetime" ColumnName="update_datetime" />
+                <ScalarProperty Name="cuitConsulta" ColumnName="cuitConsulta" />
+                <ScalarProperty Name="domicilioConsulta" ColumnName="domicilioConsulta" />
+                <ScalarProperty Name="residenciaConsulta" ColumnName="residenciaConsulta" />
+                <ScalarProperty Name="cpConsulta" ColumnName="cpConsulta" />
+                <ScalarProperty Name="telefonoConsulta" ColumnName="telefonoConsulta" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_Select_ImagesSliderNotes" FunctionName="ModelBO.Store.sp_Select_ImagesSliderNotes">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ModelBO.sp_Select_ImagesSliderNotes_Result">
+                <ScalarProperty Name="IdImagesSliderNotes" ColumnName="IdImagesSliderNotes" />
+                <ScalarProperty Name="IdSliderNotes" ColumnName="IdSliderNotes" />
+                <ScalarProperty Name="nameImagesSliderNotes" ColumnName="nameImagesSliderNotes" />
+                <ScalarProperty Name="descImagesSliderNotes" ColumnName="descImagesSliderNotes" />
+                <ScalarProperty Name="urlImagesSliderNotes" ColumnName="urlImagesSliderNotes" />
+                <ScalarProperty Name="activeImagesSliderNotes" ColumnName="activeImagesSliderNotes" />
+                <ScalarProperty Name="create_datetime" ColumnName="create_datetime" />
+                <ScalarProperty Name="update_datetime" ColumnName="update_datetime" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_Select_Notes" FunctionName="ModelBO.Store.sp_Select_Notes">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ModelBO.sp_Select_Notes_Result">
+                <ScalarProperty Name="IdNote" ColumnName="IdNote" />
+                <ScalarProperty Name="titleNote" ColumnName="titleNote" />
+                <ScalarProperty Name="bodyNote" ColumnName="bodyNote" />
+                <ScalarProperty Name="imgNote" ColumnName="imgNote" />
+                <ScalarProperty Name="tagsNote" ColumnName="tagsNote" />
+                <ScalarProperty Name="authorNote" ColumnName="authorNote" />
+                <ScalarProperty Name="ActiveNote" ColumnName="ActiveNote" />
+                <ScalarProperty Name="idCategoriasNote" ColumnName="idCategoriasNote" />
+                <ScalarProperty Name="create_datetime" ColumnName="create_datetime" />
+                <ScalarProperty Name="update_datetime" ColumnName="update_datetime" />
+                <ScalarProperty Name="imgSliderNote" ColumnName="imgSliderNote" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_Select_SettingsIntegrationNotes" FunctionName="ModelBO.Store.sp_Select_SettingsIntegrationNotes">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ModelBO.sp_Select_SettingsIntegrationNotes_Result">
+                <ScalarProperty Name="IdSettingsIntegrationNotes" ColumnName="IdSettingsIntegrationNotes" />
+                <ScalarProperty Name="descSettingsIntegrationNotes" ColumnName="descSettingsIntegrationNotes" />
+                <ScalarProperty Name="keySettingsIntegrationNotes" ColumnName="keySettingsIntegrationNotes" />
+                <ScalarProperty Name="valueSettingsIntegrationNotes" ColumnName="valueSettingsIntegrationNotes" />
+                <ScalarProperty Name="create_datetime" ColumnName="create_datetime" />
+                <ScalarProperty Name="update_datetime" ColumnName="update_datetime" />
+                <ScalarProperty Name="ActiveSettingsIntegrationNotes" ColumnName="ActiveSettingsIntegrationNotes" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_Select_SliderHome" FunctionName="ModelBO.Store.sp_Select_SliderHome">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ModelBO.sp_Select_SliderHome_Result">
+                <ScalarProperty Name="IdSlideHome" ColumnName="IdSlideHome" />
+                <ScalarProperty Name="descSlideHome" ColumnName="descSlideHome" />
+                <ScalarProperty Name="urlSlideHome" ColumnName="urlSlideHome" />
+                <ScalarProperty Name="urlImgSlideHome" ColumnName="urlImgSlideHome" />
+                <ScalarProperty Name="activeSlideHome" ColumnName="activeSlideHome" />
+                <ScalarProperty Name="create_datetime" ColumnName="create_datetime" />
+                <ScalarProperty Name="update_datetime" ColumnName="update_datetime" />
+                <ScalarProperty Name="nameSlideHome" ColumnName="nameSlideHome" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_Select_SliderNotes" FunctionName="ModelBO.Store.sp_Select_SliderNotes">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ModelBO.sp_Select_SliderNotes_Result">
+                <ScalarProperty Name="IdSliderNotes" ColumnName="IdSliderNotes" />
+                <ScalarProperty Name="descSliderNotes" ColumnName="descSliderNotes" />
+                <ScalarProperty Name="create_datetime" ColumnName="create_datetime" />
+                <ScalarProperty Name="update_datetime" ColumnName="update_datetime" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_Update_Consultas_id" FunctionName="ModelBO.Store.sp_Update_Consultas_id" />
+          <FunctionImportMapping FunctionImportName="sp_Update_ImagesSliderNotes_id" FunctionName="ModelBO.Store.sp_Update_ImagesSliderNotes_id" />
+          <FunctionImportMapping FunctionImportName="sp_Update_Notes_id" FunctionName="ModelBO.Store.sp_Update_Notes_id" />
+          <FunctionImportMapping FunctionImportName="sp_Update_RespuestaConsultas_id" FunctionName="ModelBO.Store.sp_Update_RespuestaConsultas_id" />
+          <FunctionImportMapping FunctionImportName="sp_Update_SettingsIntegrationNotes_id" FunctionName="ModelBO.Store.sp_Update_SettingsIntegrationNotes_id" />
+          <FunctionImportMapping FunctionImportName="sp_Update_SliderHome_id" FunctionName="ModelBO.Store.sp_Update_SliderHome_id" />
+          <FunctionImportMapping FunctionImportName="sp_Update_SliderNotes_id" FunctionName="ModelBO.Store.sp_Update_SliderNotes_id" />
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

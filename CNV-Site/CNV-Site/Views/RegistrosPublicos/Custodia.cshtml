@@ -1,0 +1,50 @@
+﻿
+@{
+    ViewBag.Title = "Custodia";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link type="text/css" href="~/Content/assets/css/registros-publicos.css" rel="stylesheet">
+
+<section id="title-int" class="registros-publicos">
+    <div class="container-fluid no-padding">
+        <h1>Registros Públicos</h1>
+        <p>
+            Encontrá aquí información pública sobre agentes intermediarios  e
+            infraestructura del mercado de capitales, autorizados y registrados en CNV.
+        </p>
+    </div>
+</section>
+<section id="content">
+
+    <div class="container">
+
+        <div class="panel-group wrap accordion" id="accordionb" role="tablist" aria-multiselectable="true">
+            <div class="panel">
+                <div class="panel-heading" role="tab" id="headingb1">
+                    <h4 class="panel-title center-title"><a href="@Url.Action("Index", "RegistrosPublicos")" class="btn-blue back"><i class="fa fa-caret-left"></i> VOLVER</a> <a role="button" data-toggle="collapse" data-parent="#accordionb" href="#collapseb1" aria-expanded="true" aria-controls="collapseb1" class=""> <strong>AGENTES DE CUSTODIA, REGISTRO Y PAGO</strong></a> </h4>
+                </div>
+                <div id="collapseb1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading1" aria-expanded="true" style="">
+                    <div class="panel-body  bg-gray">
+
+                        <p>
+                            Son entidades autorizadas a prestar el servicio de registración en un sistema electrónico de representación de valores negociables mediante anotaciones en cuenta. Además pueden prestar los servicios de custodia y transferencia de valores negociables y pago de dichos valores
+                        </p>
+
+                        <div class="box-mercado"><div class="pic-mercado"><img src="~/Content/assets/img/pic-mercado.jpg"></div><h2>BYMA (Bolsas y Mercados Argentinos S. A.)</h2><a href="registros-publicos-a-ver-mas.html" class="btn-blue">VER MÁS</a></div>
+                        <div class="box-mercado"><div class="pic-mercado"><img src="~/Content/assets/img/pic-mercado.jpg"></div><h2>BYMA (Bolsas y Mercados Argentinos S. A.)</h2><a href="registros-publicos-a-ver-mas.html" class="btn-blue">VER MÁS</a></div>
+                        <div class="box-mercado"><div class="pic-mercado"><img src="~/Content/assets/img/pic-mercado.jpg"></div><h2>BYMA (Bolsas y Mercados Argentinos S. A.)</h2><a href="registros-publicos-a-ver-mas.html" class="btn-blue">VER MÁS</a></div>
+                        <div class="sep"></div>
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</section>
+
+
+@Html.Partial("_Nav_int_Institucional")
+

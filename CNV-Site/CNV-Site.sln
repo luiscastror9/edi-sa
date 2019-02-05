@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2008
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CNV-Site", "CNV-Site\CNV-Site.csproj", "{4B03D85D-440A-4E79-B46D-5B0803F16A6B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4B03D85D-440A-4E79-B46D-5B0803F16A6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B03D85D-440A-4E79-B46D-5B0803F16A6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B03D85D-440A-4E79-B46D-5B0803F16A6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B03D85D-440A-4E79-B46D-5B0803F16A6B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B372E1E1-7343-43D4-9A22-D6F9BCB176F4}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 1
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://mas54-cnv.visualstudio.com/
+		SccProjectUniqueName0 = CNV-Site\\CNV-Site.csproj
+		SccProjectName0 = CNV-Site
+		SccAuxPath0 = https://mas54-cnv.visualstudio.com
+		SccLocalPath0 = CNV-Site
+		SccProvider0 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+	EndGlobalSection
+	GlobalSection(Performance) = preSolution
+		HasPerformanceSessions = true
+	EndGlobalSection
+EndGlobal

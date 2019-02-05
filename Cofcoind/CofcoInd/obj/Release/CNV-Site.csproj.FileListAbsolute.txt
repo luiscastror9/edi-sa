@@ -1,0 +1,194 @@
+D:\CNV\CNV-Site\CNV-Site\obj\Release\CNV-Site.csproj.CoreCompileInputs.cache
+D:\CNV\CNV-Site\CNV-Site\bin\roslyn\csc.exe
+D:\CNV\CNV-Site\CNV-Site\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\CNV\CNV-Site\CNV-Site\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\CNV\CNV-Site\CNV-Site\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\CNV\CNV-Site\CNV-Site\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\CNV\CNV-Site\CNV-Site\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\CNV\CNV-Site\CNV-Site\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\CNV\CNV-Site\CNV-Site\bin\roslyn\System.Collections.Immutable.dll
+D:\CNV\CNV-Site\CNV-Site\bin\roslyn\System.Reflection.Metadata.dll
+D:\CNV\CNV-Site\CNV-Site\bin\roslyn\vbc.exe
+D:\CNV\CNV-Site\CNV-Site\bin\roslyn\VBCSCompiler.exe
+D:\CNV\CNV-Site\CNV-Site\bin\roslyn\VBCSCompiler.exe.config
+D:\CNV\CNV-Site\CNV-Site\bin\CNV-Site.dll.config
+D:\CNV\CNV-Site\CNV-Site\bin\CNV-Site.dll
+D:\CNV\CNV-Site\CNV-Site\bin\CNV-Site.pdb
+D:\CNV\CNV-Site\CNV-Site\bin\AdminLte.dll
+D:\CNV\CNV-Site\CNV-Site\bin\AntiXssLibrary.dll
+D:\CNV\CNV-Site\CNV-Site\bin\Antlr3.Runtime.dll
+D:\CNV\CNV-Site\CNV-Site\bin\EntityFramework.dll
+D:\CNV\CNV-Site\CNV-Site\bin\EntityFramework.SqlServer.dll
+D:\CNV\CNV-Site\CNV-Site\bin\FlickrNet.dll
+D:\CNV\CNV-Site\CNV-Site\bin\HtmlSanitizationLibrary.dll
+D:\CNV\CNV-Site\CNV-Site\bin\Logger.dll
+D:\CNV\CNV-Site\CNV-Site\bin\Microsoft.AspNet.Identity.Core.dll
+D:\CNV\CNV-Site\CNV-Site\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\CNV\CNV-Site\CNV-Site\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\CNV\CNV-Site\CNV-Site\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\CNV\CNV-Site\CNV-Site\bin\Microsoft.Owin.dll
+D:\CNV\CNV-Site\CNV-Site\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\CNV\CNV-Site\CNV-Site\bin\Microsoft.Owin.Security.Cookies.dll
+D:\CNV\CNV-Site\CNV-Site\bin\Microsoft.Owin.Security.dll
+D:\CNV\CNV-Site\CNV-Site\bin\Microsoft.Owin.Security.Facebook.dll
+D:\CNV\CNV-Site\CNV-Site\bin\Microsoft.Owin.Security.Google.dll
+D:\CNV\CNV-Site\CNV-Site\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\CNV\CNV-Site\CNV-Site\bin\Microsoft.Owin.Security.OAuth.dll
+D:\CNV\CNV-Site\CNV-Site\bin\Microsoft.Owin.Security.Twitter.dll
+D:\CNV\CNV-Site\CNV-Site\bin\Microsoft.Web.Infrastructure.dll
+D:\CNV\CNV-Site\CNV-Site\bin\MongoDB.Bson.dll
+D:\CNV\CNV-Site\CNV-Site\bin\MongoDB.Driver.dll
+D:\CNV\CNV-Site\CNV-Site\bin\Newtonsoft.Json.dll
+D:\CNV\CNV-Site\CNV-Site\bin\Owin.dll
+D:\CNV\CNV-Site\CNV-Site\bin\RestSharp.dll
+D:\CNV\CNV-Site\CNV-Site\bin\SimpleInjector.dll
+D:\CNV\CNV-Site\CNV-Site\bin\SimpleInjector.Integration.Web.dll
+D:\CNV\CNV-Site\CNV-Site\bin\SimpleInjector.Integration.Web.Mvc.dll
+D:\CNV\CNV-Site\CNV-Site\bin\System.Web.Helpers.dll
+D:\CNV\CNV-Site\CNV-Site\bin\System.Web.Mvc.dll
+D:\CNV\CNV-Site\CNV-Site\bin\System.Web.Optimization.dll
+D:\CNV\CNV-Site\CNV-Site\bin\System.Web.Razor.dll
+D:\CNV\CNV-Site\CNV-Site\bin\System.Web.WebPages.Deployment.dll
+D:\CNV\CNV-Site\CNV-Site\bin\System.Web.WebPages.dll
+D:\CNV\CNV-Site\CNV-Site\bin\System.Web.WebPages.Razor.dll
+D:\CNV\CNV-Site\CNV-Site\bin\WebGrease.dll
+D:\CNV\CNV-Site\CNV-Site\bin\AdminLte.pdb
+D:\CNV\CNV-Site\CNV-Site\bin\AdminLte.xml
+D:\CNV\CNV-Site\CNV-Site\bin\AntiXssLibrary.xml
+D:\CNV\CNV-Site\CNV-Site\bin\HtmlSanitizationLibrary.xml
+D:\CNV\CNV-Site\CNV-Site\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\CNV\CNV-Site\CNV-Site\bin\MongoDB.Bson.xml
+D:\CNV\CNV-Site\CNV-Site\bin\MongoDB.Driver.xml
+D:\CNV\CNV-Site\CNV-Site\bin\RestSharp.xml
+D:\CNV\CNV-Site\CNV-Site\bin\SimpleInjector.xml
+D:\CNV\CNV-Site\CNV-Site\bin\SimpleInjector.Integration.Web.xml
+D:\CNV\CNV-Site\CNV-Site\bin\SimpleInjector.Integration.Web.Mvc.xml
+D:\CNV\CNV-Site\CNV-Site\bin\System.Web.Helpers.xml
+D:\CNV\CNV-Site\CNV-Site\bin\System.Web.Mvc.xml
+D:\CNV\CNV-Site\CNV-Site\bin\System.Web.Optimization.xml
+D:\CNV\CNV-Site\CNV-Site\bin\System.Web.Razor.xml
+D:\CNV\CNV-Site\CNV-Site\bin\System.Web.WebPages.xml
+D:\CNV\CNV-Site\CNV-Site\bin\System.Web.WebPages.Deployment.xml
+D:\CNV\CNV-Site\CNV-Site\bin\System.Web.WebPages.Razor.xml
+D:\CNV\CNV-Site\CNV-Site\bin\Antlr3.Runtime.pdb
+D:\CNV\CNV-Site\CNV-Site\bin\Newtonsoft.Json.xml
+D:\CNV\CNV-Site\CNV-Site\bin\EntityFramework.xml
+D:\CNV\CNV-Site\CNV-Site\bin\EntityFramework.SqlServer.xml
+D:\CNV\CNV-Site\CNV-Site\bin\Microsoft.AspNet.Identity.Core.xml
+D:\CNV\CNV-Site\CNV-Site\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\CNV\CNV-Site\CNV-Site\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\CNV\CNV-Site\CNV-Site\bin\Microsoft.Owin.xml
+D:\CNV\CNV-Site\CNV-Site\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\CNV\CNV-Site\CNV-Site\bin\Microsoft.Owin.Security.xml
+D:\CNV\CNV-Site\CNV-Site\bin\Microsoft.Owin.Security.Facebook.xml
+D:\CNV\CNV-Site\CNV-Site\bin\Microsoft.Owin.Security.Cookies.xml
+D:\CNV\CNV-Site\CNV-Site\bin\Microsoft.Owin.Security.OAuth.xml
+D:\CNV\CNV-Site\CNV-Site\bin\Microsoft.Owin.Security.Google.xml
+D:\CNV\CNV-Site\CNV-Site\bin\Microsoft.Owin.Security.Twitter.xml
+D:\CNV\CNV-Site\CNV-Site\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\CNV\CNV-Site\CNV-Site\obj\Release\CNV-Site.csprojResolveAssemblyReference.cache
+D:\CNV\CNV-Site\CNV-Site\obj\Release\CNV-Site.dll
+D:\CNV\CNV-Site\CNV-Site\obj\Release\CNV-Site.pdb
+G:\Resp Luis C Equipo SOfttek\CNV\CNV-Site\CNV-Site\bin\roslyn\csc.exe
+G:\Resp Luis C Equipo SOfttek\CNV\CNV-Site\CNV-Site\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+G:\Resp Luis C Equipo SOfttek\CNV\CNV-Site\CNV-Site\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+G:\Resp Luis C Equipo SOfttek\CNV\CNV-Site\CNV-Site\bin\roslyn\Microsoft.CodeAnalysis.dll
+G:\Resp Luis C Equipo SOfttek\CNV\CNV-Site\CNV-Site\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+G:\Resp Luis C Equipo SOfttek\CNV\CNV-Site\CNV-Site\bin\roslyn\Microsoft.CSharp.Core.targets
+G:\Resp Luis C Equipo SOfttek\CNV\CNV-Site\CNV-Site\bin\roslyn\Microsoft.VisualBasic.Core.targets
+G:\Resp Luis C Equipo SOfttek\CNV\CNV-Site\CNV-Site\bin\roslyn\System.Collections.Immutable.dll
+G:\Resp Luis C Equipo SOfttek\CNV\CNV-Site\CNV-Site\bin\roslyn\System.Reflection.Metadata.dll
+G:\Resp Luis C Equipo SOfttek\CNV\CNV-Site\CNV-Site\bin\roslyn\vbc.exe
+G:\Resp Luis C Equipo SOfttek\CNV\CNV-Site\CNV-Site\bin\roslyn\VBCSCompiler.exe
+G:\Resp Luis C Equipo SOfttek\CNV\CNV-Site\CNV-Site\bin\roslyn\VBCSCompiler.exe.config
+G:\Resp Luis C Equipo SOfttek\CNV\CNV-Site\CNV-Site\bin\CNV-Site.dll.config
+G:\Resp Luis C Equipo SOfttek\CNV\CNV-Site\CNV-Site\bin\CNV-Site.dll
+G:\Resp Luis C Equipo SOfttek\CNV\CNV-Site\CNV-Site\bin\CNV-Site.pdb
+G:\Resp Luis C Equipo SOfttek\CNV\CNV-Site\CNV-Site\bin\AdminLte.dll
+G:\Resp Luis C Equipo SOfttek\CNV\CNV-Site\CNV-Site\bin\AntiXssLibrary.dll
+G:\Resp Luis C Equipo SOfttek\CNV\CNV-Site\CNV-Site\bin\Antlr3.Runtime.dll
+G:\Resp Luis C Equipo SOfttek\CNV\CNV-Site\CNV-Site\bin\EntityFramework.dll
+G:\Resp Luis C Equipo SOfttek\CNV\CNV-Site\CNV-Site\bin\EntityFramework.SqlServer.dll
+G:\Resp Luis C Equipo SOfttek\CNV\CNV-Site\CNV-Site\bin\FlickrNet.dll
+G:\Resp Luis C Equipo SOfttek\CNV\CNV-Site\CNV-Site\bin\HtmlSanitizationLibrary.dll
+G:\Resp Luis C Equipo SOfttek\CNV\CNV-Site\CNV-Site\bin\Logger.dll
+G:\Resp Luis C Equipo SOfttek\CNV\CNV-Site\CNV-Site\bin\Microsoft.AspNet.Identity.Core.dll
+G:\Resp Luis C Equipo SOfttek\CNV\CNV-Site\CNV-Site\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+G:\Resp Luis C Equipo SOfttek\CNV\CNV-Site\CNV-Site\bin\Microsoft.AspNet.Identity.Owin.dll
+G:\Resp Luis C Equipo SOfttek\CNV\CNV-Site\CNV-Site\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+G:\Resp Luis C Equipo SOfttek\CNV\CNV-Site\CNV-Site\bin\Microsoft.IdentityModel.Clients.ActiveDirectory.dll
+G:\Resp Luis C Equipo SOfttek\CNV\CNV-Site\CNV-Site\bin\Microsoft.Owin.dll
+G:\Resp Luis C Equipo SOfttek\CNV\CNV-Site\CNV-Site\bin\Microsoft.Owin.Host.SystemWeb.dll
+G:\Resp Luis C Equipo SOfttek\CNV\CNV-Site\CNV-Site\bin\Microsoft.Owin.Security.Cookies.dll
+G:\Resp Luis C Equipo SOfttek\CNV\CNV-Site\CNV-Site\bin\Microsoft.Owin.Security.dll
+G:\Resp Luis C Equipo SOfttek\CNV\CNV-Site\CNV-Site\bin\Microsoft.Owin.Security.Facebook.dll
+G:\Resp Luis C Equipo SOfttek\CNV\CNV-Site\CNV-Site\bin\Microsoft.Owin.Security.Google.dll
+G:\Resp Luis C Equipo SOfttek\CNV\CNV-Site\CNV-Site\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+G:\Resp Luis C Equipo SOfttek\CNV\CNV-Site\CNV-Site\bin\Microsoft.Owin.Security.OAuth.dll
+G:\Resp Luis C Equipo SOfttek\CNV\CNV-Site\CNV-Site\bin\Microsoft.Owin.Security.Twitter.dll
+G:\Resp Luis C Equipo SOfttek\CNV\CNV-Site\CNV-Site\bin\Microsoft.Web.Infrastructure.dll
+G:\Resp Luis C Equipo SOfttek\CNV\CNV-Site\CNV-Site\bin\MongoDB.Bson.dll
+G:\Resp Luis C Equipo SOfttek\CNV\CNV-Site\CNV-Site\bin\MongoDB.Driver.dll
+G:\Resp Luis C Equipo SOfttek\CNV\CNV-Site\CNV-Site\bin\MvcSiteMapProvider.dll
+G:\Resp Luis C Equipo SOfttek\CNV\CNV-Site\CNV-Site\bin\MvcSiteMapProvider.WebActivator.dll
+G:\Resp Luis C Equipo SOfttek\CNV\CNV-Site\CNV-Site\bin\Newtonsoft.Json.dll
+G:\Resp Luis C Equipo SOfttek\CNV\CNV-Site\CNV-Site\bin\Owin.dll
+G:\Resp Luis C Equipo SOfttek\CNV\CNV-Site\CNV-Site\bin\RestSharp.dll
+G:\Resp Luis C Equipo SOfttek\CNV\CNV-Site\CNV-Site\bin\SimpleInjector.dll
+G:\Resp Luis C Equipo SOfttek\CNV\CNV-Site\CNV-Site\bin\SimpleInjector.Integration.Web.dll
+G:\Resp Luis C Equipo SOfttek\CNV\CNV-Site\CNV-Site\bin\SimpleInjector.Integration.Web.Mvc.dll
+G:\Resp Luis C Equipo SOfttek\CNV\CNV-Site\CNV-Site\bin\System.DirectoryServices.dll
+G:\Resp Luis C Equipo SOfttek\CNV\CNV-Site\CNV-Site\bin\System.Web.Helpers.dll
+G:\Resp Luis C Equipo SOfttek\CNV\CNV-Site\CNV-Site\bin\System.Web.Mvc.dll
+G:\Resp Luis C Equipo SOfttek\CNV\CNV-Site\CNV-Site\bin\System.Web.Optimization.dll
+G:\Resp Luis C Equipo SOfttek\CNV\CNV-Site\CNV-Site\bin\System.Web.Razor.dll
+G:\Resp Luis C Equipo SOfttek\CNV\CNV-Site\CNV-Site\bin\System.Web.WebPages.Deployment.dll
+G:\Resp Luis C Equipo SOfttek\CNV\CNV-Site\CNV-Site\bin\System.Web.WebPages.dll
+G:\Resp Luis C Equipo SOfttek\CNV\CNV-Site\CNV-Site\bin\System.Web.WebPages.Razor.dll
+G:\Resp Luis C Equipo SOfttek\CNV\CNV-Site\CNV-Site\bin\WebActivatorEx.dll
+G:\Resp Luis C Equipo SOfttek\CNV\CNV-Site\CNV-Site\bin\WebGrease.dll
+G:\Resp Luis C Equipo SOfttek\CNV\CNV-Site\CNV-Site\bin\AdminLte.pdb
+G:\Resp Luis C Equipo SOfttek\CNV\CNV-Site\CNV-Site\bin\AdminLte.xml
+G:\Resp Luis C Equipo SOfttek\CNV\CNV-Site\CNV-Site\bin\AntiXssLibrary.xml
+G:\Resp Luis C Equipo SOfttek\CNV\CNV-Site\CNV-Site\bin\HtmlSanitizationLibrary.xml
+G:\Resp Luis C Equipo SOfttek\CNV\CNV-Site\CNV-Site\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+G:\Resp Luis C Equipo SOfttek\CNV\CNV-Site\CNV-Site\bin\Microsoft.IdentityModel.Clients.ActiveDirectory.xml
+G:\Resp Luis C Equipo SOfttek\CNV\CNV-Site\CNV-Site\bin\MongoDB.Bson.xml
+G:\Resp Luis C Equipo SOfttek\CNV\CNV-Site\CNV-Site\bin\MongoDB.Driver.xml
+G:\Resp Luis C Equipo SOfttek\CNV\CNV-Site\CNV-Site\bin\MvcSiteMapProvider.xml
+G:\Resp Luis C Equipo SOfttek\CNV\CNV-Site\CNV-Site\bin\MvcSiteMapProvider.WebActivator.xml
+G:\Resp Luis C Equipo SOfttek\CNV\CNV-Site\CNV-Site\bin\RestSharp.xml
+G:\Resp Luis C Equipo SOfttek\CNV\CNV-Site\CNV-Site\bin\SimpleInjector.xml
+G:\Resp Luis C Equipo SOfttek\CNV\CNV-Site\CNV-Site\bin\SimpleInjector.Integration.Web.xml
+G:\Resp Luis C Equipo SOfttek\CNV\CNV-Site\CNV-Site\bin\SimpleInjector.Integration.Web.Mvc.xml
+G:\Resp Luis C Equipo SOfttek\CNV\CNV-Site\CNV-Site\bin\System.Web.Helpers.xml
+G:\Resp Luis C Equipo SOfttek\CNV\CNV-Site\CNV-Site\bin\System.Web.Mvc.xml
+G:\Resp Luis C Equipo SOfttek\CNV\CNV-Site\CNV-Site\bin\System.Web.Optimization.xml
+G:\Resp Luis C Equipo SOfttek\CNV\CNV-Site\CNV-Site\bin\System.Web.Razor.xml
+G:\Resp Luis C Equipo SOfttek\CNV\CNV-Site\CNV-Site\bin\System.Web.WebPages.xml
+G:\Resp Luis C Equipo SOfttek\CNV\CNV-Site\CNV-Site\bin\System.Web.WebPages.Deployment.xml
+G:\Resp Luis C Equipo SOfttek\CNV\CNV-Site\CNV-Site\bin\System.Web.WebPages.Razor.xml
+G:\Resp Luis C Equipo SOfttek\CNV\CNV-Site\CNV-Site\bin\Antlr3.Runtime.pdb
+G:\Resp Luis C Equipo SOfttek\CNV\CNV-Site\CNV-Site\bin\Newtonsoft.Json.xml
+G:\Resp Luis C Equipo SOfttek\CNV\CNV-Site\CNV-Site\bin\EntityFramework.xml
+G:\Resp Luis C Equipo SOfttek\CNV\CNV-Site\CNV-Site\bin\EntityFramework.SqlServer.xml
+G:\Resp Luis C Equipo SOfttek\CNV\CNV-Site\CNV-Site\bin\Microsoft.AspNet.Identity.Core.xml
+G:\Resp Luis C Equipo SOfttek\CNV\CNV-Site\CNV-Site\bin\Microsoft.AspNet.Identity.Owin.xml
+G:\Resp Luis C Equipo SOfttek\CNV\CNV-Site\CNV-Site\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+G:\Resp Luis C Equipo SOfttek\CNV\CNV-Site\CNV-Site\bin\Microsoft.Owin.xml
+G:\Resp Luis C Equipo SOfttek\CNV\CNV-Site\CNV-Site\bin\Microsoft.Owin.Host.SystemWeb.xml
+G:\Resp Luis C Equipo SOfttek\CNV\CNV-Site\CNV-Site\bin\Microsoft.Owin.Security.xml
+G:\Resp Luis C Equipo SOfttek\CNV\CNV-Site\CNV-Site\bin\Microsoft.Owin.Security.Facebook.xml
+G:\Resp Luis C Equipo SOfttek\CNV\CNV-Site\CNV-Site\bin\Microsoft.Owin.Security.Cookies.xml
+G:\Resp Luis C Equipo SOfttek\CNV\CNV-Site\CNV-Site\bin\Microsoft.Owin.Security.OAuth.xml
+G:\Resp Luis C Equipo SOfttek\CNV\CNV-Site\CNV-Site\bin\Microsoft.Owin.Security.Google.xml
+G:\Resp Luis C Equipo SOfttek\CNV\CNV-Site\CNV-Site\bin\Microsoft.Owin.Security.Twitter.xml
+G:\Resp Luis C Equipo SOfttek\CNV\CNV-Site\CNV-Site\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+G:\Resp Luis C Equipo SOfttek\CNV\CNV-Site\CNV-Site\obj\Release\CNV-Site.csprojResolveAssemblyReference.cache
+G:\Resp Luis C Equipo SOfttek\CNV\CNV-Site\CNV-Site\obj\Release\CNV-Site.dll
+G:\Resp Luis C Equipo SOfttek\CNV\CNV-Site\CNV-Site\obj\Release\CNV-Site.pdb
+G:\Resp Luis C Equipo SOfttek\CNV\CNV-Site\CNV-Site\bin\SimpleMvcSitemap.dll
+G:\Resp Luis C Equipo SOfttek\CNV\CNV-Site\CNV-Site\bin\SimpleMvcSitemap.xml
+G:\Resp Luis C Equipo SOfttek\CNV\CNV-Site\CNV-Site\bin\System.Data.Entity.Repository.dll
+G:\Resp Luis C Equipo SOfttek\CNV\CNV-Site\CNV-Site\bin\Microsoft.Web.Administration.dll
+G:\Resp Luis C Equipo SOfttek\CNV\CNV-Site\CNV-Site\obj\Release\CNV-Site.csproj.CoreCompileInputs.cache

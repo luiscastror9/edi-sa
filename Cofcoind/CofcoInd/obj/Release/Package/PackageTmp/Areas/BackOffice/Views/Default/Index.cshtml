@@ -1,0 +1,22 @@
+﻿
+@{
+    Layout = "~/Areas/BackOffice/Views/Shared/_AdminLteLayout.cshtml";
+}
+
+@{
+  
+    ViewBag.Title = "CNV BackOffice";
+    ViewBag.TitleSmall = "Version 1.0";
+
+
+    ViewBag.Breadcrumb = new Breadcrumb(new Crumb[] {
+        new Crumb("Dashboard", "", "fa-dashboard")
+    });
+}
+
+
+@section scripts {
+    @*NOTE: These should NOT be used in a production situation
+        They do contains useful snippets on how to setup charts*@
+    <script src="~/Scripts/AdminLTE/pages/dashboard2.js"></script>
+}

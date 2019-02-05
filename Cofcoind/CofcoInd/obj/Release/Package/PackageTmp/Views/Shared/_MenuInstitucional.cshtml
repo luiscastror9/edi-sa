@@ -1,0 +1,36 @@
+﻿@{string route = ViewContext.RouteData.Values["action"].ToString();
+    string Active = "";
+    string ActiveB = "";
+    string ActiveC = "";
+    string ActiveD = "";
+    string ActiveE = "";
+    switch (route)
+    {
+        case "Index":
+            Active = "active";
+            break;
+        case "Institucionalb":
+            ActiveB = "active";
+            break;
+
+        case "Institucionalc":
+            ActiveC = "active";
+            break;
+
+        case "Institucionald":
+            ActiveD = "active";
+            break;
+
+        case "Institucionale":
+            ActiveE = "active";
+            break;
+
+    }
+    }
+<ul class="nav-content">
+    <li><a class="@Active" href="@Url.Action("Index", "Institucional")"><span>¿QUÉ ES LA CNV?</span></a></li>
+    <li><a class="@ActiveB"   href="@Url.Action("Institucionalb", "Institucional")"><span>¿A QUIENES REGULAMOS?</span></a></li>
+    <li><a class="@ActiveC"   href="@Url.Action("Institucionalc", "Institucional")"><span>AUTORIDADES</span></a></li>
+    <li><a class="@ActiveD"   href="@Url.Action("Institucionald", "Institucional")"><span>ORGANIGRAMA</span></a></li>
+    <li><a class="@ActiveE"   href="@Url.Action("Institucionale", "Institucional")"><span>ACTIVIDAD INTERNACIONAL</span></a></li>
+</ul>

@@ -1,0 +1,180 @@
+﻿@model CNV_Site.Models.ViewModelFideicomisosFinancieros
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link type="text/css" href="~/Content/assets/css/fideicomisos-financieros.css" rel="stylesheet">
+
+<!-- Modal -->
+<style>
+    .ui-autocomplete-loading {
+        background: white url("/Content/assets/img/ui-anim_basic_16x16.gif") right center no-repeat;
+    }
+</style>
+<link rel="stylesheet" href="~/AdminLTE/plugins/jquery-ui/jquery-ui.css">
+
+
+<section id="title-int" class="fideicomisos-financieros">
+    <div class="container-fluid no-padding">
+        <h1>Fideicomisos Financieros</h1>
+        <p>Es un instrumento de financiamiento que integra el denominado proceso de titulización de activos o securitización. <a id="ver-mas" href="javascript:void(0);"><u>VER MÁS</u></a> <span id="ver-mas-contenido">El fideicomiso financiero es una alternativa a la que recurren las empresas u organizaciones para obtener financiación, segregando de su patrimonio un número determinado de activos cuyo producido estará destinado al pago de los servicios de los valores fiduciarios emitidos, constituyendo a su vez dichos activos la garantía básica del cumplimiento de las obligaciones de pago asumidas.</span></p>
+    </div>
+</section>
+<section id="content">
+    <div class="container padding-50">
+        <h2 class="title">Últimas Colocaciones</h2>
+        <div class="table-responsive">
+            <table class="table">
+                <thead class="celeste">
+                    <tr>
+                        <th>
+                            FECHA DE
+                            LANZAMIENTO
+                        </th>
+                        <th>
+                            DENOMINACIÓN
+                        </th>
+                        <th>
+                            SERIE/ FF.
+                            INDIVIDUAL
+                        </th>
+                        <th>
+                            FIDUCIARIO
+                            FINANCIERO
+                        </th>
+                        <th>
+                            FIDUCIANTE/S
+                        </th>
+                        <th>
+                            ACTIVO
+                            FIDEICOMITIDO
+                        </th>
+                        <th>PROSPECTO</th>
+                        <th>AVISO DE SUSCRIPCIÓN</th>
+                        <th>RESULTADO DE COLOCACIÓN</th>
+                    </tr>
+                </thead>
+                <tbody class="azul">
+                
+                    @foreach(CNV_Site.Models.UltimasColocacionesFideicomisosFinancieros UCFF in Model.UCFF)
+                    { 
+                    <tr>
+                        <td>@UCFF.fechaColocacion</td>
+                        <td>@UCFF.denominacion</td>
+                        <td>@UCFF.tipo</td>
+                        
+                        <td>@UCFF.fiduciario</td>
+                        <td>
+                          @string.Join(",", @UCFF.fiduciantes)
+                        </td>
+                        <td>
+                            @UCFF.activosFideicomiso
+                        </td>
+                            <td>
+                        @foreach (CNV_Site.Models.DocumentoFF DFF in UCFF.documentos)
+                        {if (DFF.nombreDocumento == "Prospecto")
+                        {<a href="@DFF.url" target="_blank"><img src="~/Content/assets/img/pdf-blanco.png"></a>}
+                        }</td>
+
+                            <td>@foreach (CNV_Site.Models.DocumentoFF DFF in UCFF.documentos)
+                            {if (DFF.nombreDocumento == "Avisos de Suscripción y Prórrogas")
+                            { <a href="@DFF.url" target="_blank"><img src="~/Content/assets/img/pdf-blanco.png"></a>}
+                        }</td>
+                            <td>
+                        @foreach (CNV_Site.Models.DocumentoFF DFF in UCFF.documentos)
+                        {if (DFF.nombreDocumento == "Resultados de Colocación")
+                            {<a href="@DFF.url" target="_blank"><img src="~/Content/assets/img/pdf-blanco.png"></a>}
+                        }</td>
+
+                       
+                    
+                    </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="container-fluid bg-fideicomisos-financieros">
+        <div class="container">
+            <div class="col-lg-10 col-lg-offset-1">
+                <h2>Buscador de Fideicomisos Financieros</h2>
+                <p>Utilizá el buscador para consultar prospectos y suplementos de prospectos correspondientes a programas, series y fideicomisos financieros autorizados por CNV</p>
+                <div class="sep-white"></div>
+                <h3>Seleccioná el Fideicomiso Financiero de tu interés:</h3>
+               @using (Html.BeginForm("Busqueda", "FideicomisosFinancieros", FormMethod.Post, new { name = "FideicomisosFinancierosBuscar", id = "FideicomisosFinancierosBuscar", enctype = "multipart/form-data" }))
+               {
+                <div class="form-group">
+
+                    <select id="tipoBFF" class="form-control">
+                        <option value="0">Seleccione el Tipo de Busqueda</option>    
+                    <option value="1">Denominación del Fideicomiso</option>
+                        <option value="2">Denominación del Programa</option>
+                        <option value="3">Denominación del Fiduciario</option>
+                    </select> <div class="select_arrow"> </div>
+                </div>
+                <div id="DIVdenominacionFF" class="form-group hidden">
+                    <div class="col-sm-11">
+                        <div class="ui-widget">
+                            <input id="denominacionFF" name="denominacionFF" type="text" class="form-control" placeholder="Buscá por denominación del Fideicomiso">
+                        </div>
+                </div>
+                        <div class="col-sm-1"><a href="#"><i class="fa fa-question-circle" aria-hidden="true"></i></a></div>
+                    </div>
+                    <div id="DIVprogramaFF" class="form-group hidden">
+                        <div class="col-sm-11">
+                            <div class="ui-widget">
+                                <input id="programaFF" name="programaFF" type="text" class="form-control" placeholder="Buscá por denominación del Programa">
+                            </div>
+                        </div>
+                        <div class="col-sm-1"><a href="#"><i class="fa fa-question-circle" aria-hidden="true"></i></a></div>
+                    </div>
+                    <div id="DIVfiduciarioFF" class="form-group hidden">
+                        <div class="col-sm-11">
+                            <div class="ui-widget">
+                                <input id="fiduciarioFF" name="fiduciarioFF" type="text" class="form-control" placeholder="Buscá por denominación del Fiduciario">
+                            </div>
+                        </div>
+                        <div class="col-sm-1"><a href="#"><i class="fa fa-question-circle" aria-hidden="true"></i></a></div>
+                    </div>
+                    <button id="btnFFBuscar" class="btn-blue hidden">BUSCAR</button>
+               }
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+
+    jQuery("#tipoBFF").on('change', function () {
+        var opt = jQuery('#tipoBFF').val();
+        if (opt == 1)
+        {
+            jQuery('#DIVdenominacionFF').removeClass("hidden");
+            jQuery('#DIVprogramaFF').removeClass("hidden").addClass("hidden");
+            jQuery('#DIVfiduciarioFF').removeClass("hidden").addClass("hidden");
+
+
+        }
+        if (opt == 2) {
+            jQuery('#DIVprogramaFF').removeClass("hidden");
+            jQuery('#DIVdenominacionFF').removeClass("hidden").addClass("hidden");
+            jQuery('#DIVfiduciarioFF').removeClass("hidden").addClass("hidden");
+
+        }
+        if (opt == 3) {
+            jQuery('#DIVfiduciarioFF').removeClass("hidden");
+            jQuery('#DIVdenominacionFF').removeClass("hidden").addClass("hidden");
+            jQuery('#DIVprogramaFF').removeClass("hidden").addClass("hidden");
+
+        }
+        jQuery('#btnFFBuscar').removeClass("hidden");
+            });
+
+</script>
+
+
+@Html.Raw(TempData["msg"])
+
+@Html.Partial("_Nav_int_Institucional")
+<script type="text/javascript" src="~/Content/assets/js/main.js"></script>

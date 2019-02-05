@@ -1,0 +1,234 @@
+@charset "UTF-8";
+/* CSS Document */
+
+#title-int.institucional {
+	background: url(../img/shadow-top.png), url(../img/shadow-bottom.png), url(../img/bg-header-institucional.jpg);
+    background-repeat: repeat-x,repeat-x,no-repeat;
+    background-position: top center,bottom center,center right;
+    background-size: 100%,100%,cover;
+}
+.resena-historica {
+	position: relative;
+	float: left;
+	width: 100%;
+	list-style: none;
+}
+.resena-historica li {
+	position: relative;
+	float: left;
+	width: 100%;
+	font-size: 16px;
+	color: #0066cc;
+	padding-bottom: 30px;
+	padding-left: 50px;
+	background: url(../img/bg-resena.png), url(../img/bg2-resena.png);
+	background-repeat: no-repeat, repeat-y;
+	background-position: left top, 14px top;
+}
+.resena-historica li .fecha {
+	font-size: 18px;
+	position: relative;
+	float: left;
+	width: 7%;
+	min-width: 50px;
+	font-weight: bold;
+}
+.resena-historica li p {
+	position: relative;
+	float: left;
+	width: 93%;
+}
+.resena-historica li:last-child {
+	background: url(../img/bg-resena.png), none;
+	background-repeat: no-repeat;
+	background-position: left top
+}
+.btn-saber-mas:link ,.btn-saber-mas:active,.btn-saber-mas:visited,.btn-saber-mas:focus{
+	
+	background: #0066cc;
+	color: white;
+	padding: 10px;
+	text-align: center;
+	position: relative;
+	float: left;
+	clear: both;
+	text-decoration: none;
+}
+.btn-saber-mas.btn-:hover,.btn-saber-mas.on {
+	background: #ededed;
+	color: #0066cc;
+	text-decoration: none;
+}
+.btn-saber-mas.btn-comite:link ,.btn-saber-mas.btn-comite:active,.btn-saber-mas.btn-comite:visited,.btn-saber-mas.btn-comite:focus{
+	    margin-left: 0;
+    background: #34a5d4;
+    color: white;
+    padding: 10px;
+    text-align: left;
+    position: relative;
+    float: left;
+    clear: both;
+    text-decoration: none;
+    margin-bottom: 10px;
+    width: 100%;
+    margin-top: 10px;
+}
+.btn-saber-mas.btn-comite:hover,.btn-saber-mas.btn-comite.on {
+	background: #34a5d4;
+	color: white;
+	text-decoration: none;
+}
+.btn-saber-mas .fa{margin-left:5px;}
+.btn-blue-int,.btn-blue-int:link ,.btn-blue-int:active,.btn-blue-int:visited,.btn-blue-int:focus{
+	margin-left: 0;
+	background: #34a5d4;
+	color: white;
+	padding: 10px;
+	text-align: center;
+	position: relative;
+	float: left;
+	clear: both;
+	text-decoration: none;
+}
+.btn-blue-int:hover,.btn-blue-int.on {
+	background: #34a5d4;
+	color: white;
+	text-decoration: none;
+}
+.btn-saber-mas .fa{margin-left:5px;}
+.txt-saber-mas {
+	position: relative;
+	float: left;
+	padding: 15px;
+	
+	background: #ededed;
+	display: none;
+}
+div.btn-blue-int{padding-left:20px;padding-right: 20px;}
+.txt-saber-mas.comite {
+	position: relative;
+	float: left;
+	padding: 15px;
+	margin-left: 0;
+	background: #ededed;
+	display: none;
+	    width: 100%;
+}
+#table-colaboracion{width:100%;color:#0066cc;}
+#table-colaboracion td{padding:10px;}
+.txt-saber-mas p {
+	width: 100%!important;
+}
+.autoridades h2{font-size:24px; color:#0066cc;font-weight:bold;margin:0;    margin-bottom: 5px!important;}
+.autoridades h3{font-size:18px; color:#0066cc;font-weight:bold;margin: 0 0 10px}
+.autoridades img{margin-top:0!important;margin-bottom: 0!important;}
+.autoridades .row{margin-bottom:20px;}
+.autoridades p{text-align:justify;line-height: 20px;}
+.autoridades .staff-right h2,.autoridades .staff-right h3{text-align:right;}
+.actividades{background:#ededed; padding: 20px; position: relative;float: left;}
+.actividades .center{margin: 20px auto;}
+.actividad{margin-bottom: 30px;}
+.actividad .inner-box{background:#fff;position: relative; display:block;padding: 20px;    float: left;width:100%}
+.actividad img{margin:20px auto!important;}
+.tab-left{padding-left:50px;}
+.data{display:none;}
+.participacion{margin:10px 0; padding: 0; list-style: none;position: relative; float:left;}
+.participacion li{background: #34a5d4;
+	text-align: center;
+	color: white;
+	text-decoration: none;
+	border-radius: 0;
+	display: block;
+	margin: 0 10px 20px;
+	min-width: 290px;
+	line-height: 60px;
+	font-size: 16px;
+	
+	padding: 0 20px;}
+.organigrama{}
+.organigrama .org{background:#001e62; color:white;position:relative;min-height: 50px; text-align: center; margin: auto; width:100%;max-width: 360px;margin-bottom:5px;}
+.bg-linea{background:url(../img/bg-span.png) 0 25px no-repeat;}
+.bg-linea2{background:url(../img/bg-span2.png) center left no-repeat;}
+.bg-linea3{background:url(../img/bg-span2.png) center right no-repeat;}
+
+.organigrama .org.derecha{float:right;}
+.organigrama .org span{position:absolute; top:50%; transform:translateY(-50%); width:100%; text-align: center;    left: 0;font-size: 13px;
+    padding: 10px;}
+.gerencias .org{background:#001e62; color:white;position:relative;min-height: 90px; text-align: center; margin: 5px; width:13%;min-width: 145px;margin-bottom:5px;position:relative; float:left; }
+.gerencias .org span{position:absolute; top:50%; transform:translateY(-50%); width:100%; text-align: center;    left: 0;font-size: 13px;
+    padding: 10px;}
+.invisible{display:none;}
+@media (max-width: 991px) {
+	.bg-linea {
+    background: url(../img/bg-spanb.png) 0 25px no-repeat;
+}
+	.gerencias .org {
+    background: #001e62;
+    color: white;
+    position: relative;
+    min-height: 60px;
+    text-align: center;
+    margin: 2.5%;
+    width: 13%;
+    min-width: 45%;
+    margin-bottom: 5px;
+    position: relative;
+    float: left;
+}
+	.gerencias .org span {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    text-align: center;
+    left: 0;
+    font-size: 10px;
+    padding: 10px;
+}
+	.organigrama .org span {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    text-align: center;
+    left: 0;
+    font-size: 10px;
+    padding: 10px;
+}
+	.participacion li {
+    background: #34a5d4;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    border-radius: 0;
+    display: block;
+    margin: 20px 0;
+    line-height: 20px;
+    font-size: 12px;
+    padding: 10px;
+    min-width: initial;
+    width: 100%;
+}
+	.btn-ver-mas {
+
+		    font-size: 12px!important;
+}
+.actividades {
+    background: #ededed;
+    padding: 0px;
+    position: relative;
+    float: left;
+}
+
+.actividad {
+    margin-bottom: 0px;
+    padding: 5px;
+}
+.resena-historica {
+    position: relative;
+    float: left;
+    width: 100%;
+    list-style: none;
+    padding: 0;
+}
+}

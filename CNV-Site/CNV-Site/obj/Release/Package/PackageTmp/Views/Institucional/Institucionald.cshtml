@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewBag.Title = "Institucional";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<section id="title-int" class="institucional">
+    <div class="container-fluid no-padding">
+        <h1>Institucional</h1>
+    </div>
+</section>
+
+<section id="content" class="autoridades">
+    <div class="container">
+
+
+        @Html.Partial("_MenuInstitucional")
+
+        <div class="col-sm-12">
+            <img src="~/Content/assets/img/organi_img.jpg" class="img-responsive">
+        </div>
+
+
+    </div>
+</section>
+@Html.Partial("_Nav_int_Institucional")

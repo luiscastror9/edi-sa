@@ -1,0 +1,268 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ModelBO.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="CategoriasNotes">
+    <Key>
+      <PropertyRef Name="IdCategoriasNotes" />
+    </Key>
+    <Property Name="IdCategoriasNotes" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="descCategoriasNotes" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="create_datetime" Type="datetime" Nullable="false" />
+    <Property Name="update_datetime" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Consultas">
+    <Key>
+      <PropertyRef Name="IdConsulta" />
+    </Key>
+    <Property Name="IdConsulta" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NombreConsulta" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="EmailConsulta" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="contenidoConsulta" Type="text" Nullable="false" />
+    <Property Name="create_datetime" Type="datetime" Nullable="false" />
+    <Property Name="update_datetime" Type="datetime" />
+    <Property Name="cuitConsulta" Type="nvarchar" MaxLength="20" />
+    <Property Name="domicilioConsulta" Type="nvarchar(max)" />
+    <Property Name="residenciaConsulta" Type="nvarchar(max)" />
+    <Property Name="cpConsulta" Type="nvarchar" MaxLength="6" />
+    <Property Name="telefonoConsulta" Type="nvarchar" MaxLength="20" />
+    <Property Name="ocupacionConsulta" Type="nvarchar(max)" />
+    <Property Name="sexoConsulta" Type="nvarchar(max)" />
+    <Property Name="provinciaConsulta" Type="nvarchar(max)" />
+    <Property Name="localidadConsulta" Type="nvarchar(max)" />
+    <Property Name="apellidoConsulta" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="localidades">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="id_privincia" Type="int" Nullable="false" />
+    <Property Name="localidad" Type="varchar" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Notes">
+    <Key>
+      <PropertyRef Name="IdNote" />
+    </Key>
+    <Property Name="IdNote" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="titleNote" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="bodyNote" Type="text" Nullable="false" />
+    <Property Name="imgNote" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="tagsNote" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="authorNote" Type="varchar(max)" />
+    <Property Name="ActiveNote" Type="bit" Nullable="false" />
+    <Property Name="idCategoriasNote" Type="int" Nullable="false" />
+    <Property Name="create_datetime" Type="datetime" Nullable="false" />
+    <Property Name="update_datetime" Type="datetime" />
+    <Property Name="imgSliderNote" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="provincias">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="provincia" Type="varchar" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RespuestaConsultas">
+    <Key>
+      <PropertyRef Name="IdRespuestaConsultas" />
+    </Key>
+    <Property Name="IdRespuestaConsultas" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdConsulta" Type="int" Nullable="false" />
+    <Property Name="NombreRespuestaConsultas" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="contenidoConsulta" Type="text" Nullable="false" />
+    <Property Name="create_datetime" Type="datetime" Nullable="false" />
+    <Property Name="update_datetime" Type="datetime" />
+  </EntityType>
+  <EntityType Name="SettingsIntegrationNotes">
+    <Key>
+      <PropertyRef Name="IdSettingsIntegrationNotes" />
+    </Key>
+    <Property Name="IdSettingsIntegrationNotes" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="descSettingsIntegrationNotes" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="keySettingsIntegrationNotes" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="valueSettingsIntegrationNotes" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="create_datetime" Type="datetime" Nullable="false" />
+    <Property Name="update_datetime" Type="datetime" />
+    <Property Name="ActiveSettingsIntegrationNotes" Type="bit" Nullable="false" />
+  </EntityType>
+  <Function Name="sp_Delete_CategoriasNotes_id" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdCategoriasNotes" Type="int" Mode="In" />
+    <Parameter Name="descCategoriasNotes" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_Delete_Consultas_id" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdConsulta" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_Delete_ImagesSliderNotes_id" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdImagesSliderNotes" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_Delete_Notes_id" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdNote" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_Delete_RespuestaConsultas_id" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdRespuestaConsultas" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_Delete_SettingsIntegrationNotes_id" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdSettingsIntegrationNotes" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_Delete_SliderHome_id" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdSliderHome" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_Delete_SliderNotes_id" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdCategoriasNotes" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_Insert_CategoriasNotes" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="descCategoriasNotes" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_Insert_Consultas" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="NombreConsulta" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="EmailConsulta" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="contenidoConsulta" Type="text" Mode="In" />
+    <Parameter Name="cuitConsulta" Type="nvarchar" Mode="In" />
+    <Parameter Name="domicilioConsulta" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="residenciaConsulta" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="cpConsulta" Type="nvarchar" Mode="In" />
+    <Parameter Name="telefonoConsulta" Type="nvarchar" Mode="In" />
+    <Parameter Name="ocupacionConsulta" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="sexoConsulta" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="provinciaConsulta" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="localidadConsulta" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="apellidoConsulta" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_Insert_ImagesSliderNotes" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdSliderNotes" Type="int" Mode="In" />
+    <Parameter Name="nameImagesSliderNotes" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="descImagesSliderNotes" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="activeImagesSliderNotes" Type="bit" Mode="In" />
+    <Parameter Name="urlImagesSliderNotes" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_Insert_Notes" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="titleNote" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="bodyNote" Type="text" Mode="In" />
+    <Parameter Name="imgNote" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="tagsNote" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="authorNote" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="ActiveNote" Type="bit" Mode="In" />
+    <Parameter Name="idCategoriasNote" Type="int" Mode="In" />
+    <Parameter Name="imgSliderNote" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_Insert_RespuestaConsultas" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdConsulta" Type="int" Mode="In" />
+    <Parameter Name="NombreRespuestaConsultas" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="contenidoConsulta" Type="text" Mode="In" />
+  </Function>
+  <Function Name="sp_Insert_SettingsIntegrationNotes" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="descSettingsIntegrationNotes" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="keySettingsIntegrationNotes" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="valueSettingsIntegrationNotes" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="ActiveSettingsIntegrationNotes" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="sp_Insert_SliderHome" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="descSliderHome" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="urlSliderHome" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="urlImgSliderHome" Type="text" Mode="In" />
+    <Parameter Name="nameSliderHome" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="activeSliderHome" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="sp_Insert_SliderNotes" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="descSliderNotes" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_Select_CategoriasNotes" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="option" Type="int" Mode="In" />
+    <Parameter Name="IdCategoriasNotes" Type="int" Mode="In" />
+    <Parameter Name="descCategoriasNotes" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_Select_Consultas" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="option" Type="int" Mode="In" />
+    <Parameter Name="IdConsulta" Type="int" Mode="In" />
+    <Parameter Name="NombreConsulta" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_Select_ImagesSliderNotes" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="option" Type="int" Mode="In" />
+    <Parameter Name="IdImagesSliderNotes" Type="int" Mode="In" />
+    <Parameter Name="IdSliderNotes" Type="int" Mode="In" />
+    <Parameter Name="nameImagesSliderNotes" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_Select_Notes" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="option" Type="int" Mode="In" />
+    <Parameter Name="IdNote" Type="int" Mode="In" />
+    <Parameter Name="titleNote" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_Select_SettingsIntegrationNotes" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="option" Type="int" Mode="In" />
+    <Parameter Name="IdSettingsIntegrationNotes" Type="int" Mode="In" />
+    <Parameter Name="descSettingsIntegrationNotes" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_Select_SliderHome" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="option" Type="int" Mode="In" />
+    <Parameter Name="IdSlideHome" Type="int" Mode="In" />
+    <Parameter Name="descSlideHome" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_Select_SliderNotes" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="option" Type="int" Mode="In" />
+    <Parameter Name="IdSliderNotes" Type="int" Mode="In" />
+    <Parameter Name="descSliderNotes" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_Update_Consultas_id" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdConsulta" Type="int" Mode="In" />
+    <Parameter Name="NombreConsulta" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="EmailConsulta" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="contenidoConsulta" Type="text" Mode="In" />
+    <Parameter Name="cuitConsulta" Type="nvarchar" Mode="In" />
+    <Parameter Name="domicilioConsulta" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="residenciaConsulta" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="cpConsulta" Type="nvarchar" Mode="In" />
+    <Parameter Name="telefonoConsulta" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_Update_ImagesSliderNotes_id" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdSliderNotes" Type="int" Mode="In" />
+    <Parameter Name="IdImagesSliderNotes" Type="int" Mode="In" />
+    <Parameter Name="nameImagesSliderNotes" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="descImagesSliderNotes" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="activeImagesSliderNotes" Type="bit" Mode="In" />
+    <Parameter Name="urlImagesSliderNotes" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_Update_Notes_id" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdNote" Type="int" Mode="In" />
+    <Parameter Name="titleNote" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="bodyNote" Type="text" Mode="In" />
+    <Parameter Name="imgNote" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="tagsNote" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="authorNote" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="ActiveNote" Type="bit" Mode="In" />
+    <Parameter Name="idCategoriasNote" Type="int" Mode="In" />
+    <Parameter Name="imgSliderNote" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_Update_RespuestaConsultas_id" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdRespuestaConsultas" Type="int" Mode="In" />
+    <Parameter Name="IdConsulta" Type="int" Mode="In" />
+    <Parameter Name="NombreRespuestaConsultas" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="contenidoConsulta" Type="text" Mode="In" />
+  </Function>
+  <Function Name="sp_Update_SettingsIntegrationNotes_id" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdSettingsIntegrationNotes" Type="int" Mode="In" />
+    <Parameter Name="descSettingsIntegrationNotes" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="keySettingsIntegrationNotes" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="valueSettingsIntegrationNotes" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="ActiveSettingsIntegrationNotes" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="sp_Update_SliderHome_id" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdSliderHome" Type="int" Mode="In" />
+    <Parameter Name="descSliderHome" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="urlSliderHome" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="urlImgSliderHome" Type="text" Mode="In" />
+    <Parameter Name="nameSliderHome" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="activeSliderHome" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="sp_Update_SliderNotes_id" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdSliderNotes" Type="int" Mode="In" />
+    <Parameter Name="descSliderNotes" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <EntityContainer Name="ModelBOStoreContainer">
+    <EntitySet Name="CategoriasNotes" EntityType="Self.CategoriasNotes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Consultas" EntityType="Self.Consultas" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="localidades" EntityType="Self.localidades" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Notes" EntityType="Self.Notes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="provincias" EntityType="Self.provincias" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RespuestaConsultas" EntityType="Self.RespuestaConsultas" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SettingsIntegrationNotes" EntityType="Self.SettingsIntegrationNotes" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,349 @@
+@charset "UTF-8";
+/* CSS Document */
+
+#intro {
+	padding-top: 40px;
+	background: white;
+}
+#intro .container {
+	padding: 80px 0 45px;
+}
+#slider-novedades {
+	height:558px;
+}
+#slider-novedades .no-padding,#slider-servicios .no-padding{padding-left:0!important; padding-right: 0!important;}
+#slider-novedades .carousel-indicators li {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 1px;
+    text-indent: -999px;
+    cursor: pointer;
+    background-color: #000\9;
+    background-color: #0066cc;
+    border: 1px solid #0066cc;
+    border-radius: 0;
+}
+#slider-novedades .carousel-indicators li.active {border-color:white; background:transparent;}
+.left .fa{position:absolute;top:50%; transform: translateY(-50%);left:25%}
+.right .fa{position:absolute;top:50%; transform: translateY(-50%);right:25%}
+#slider-novedades .item {
+	height: 558px;
+	background-size: cover!important;
+	background-position: center!important;
+	background-repeat: no-repeat!important;
+}
+#slider-servicios {
+	height: 400px;
+}
+#slider-servicios .carousel-indicators li{background:#083770;border:#083770;}
+#slider-servicios .carousel-indicators li.active{background:white;border:white;}
+
+#slider-servicios .item {
+	height: 400px;
+	background-size: cover!important;
+	background-position: center!important;
+	background-repeat: no-repeat!important;
+}
+.caption {
+	    padding: 120px 150px 50px;
+    width: 80%;
+    position: absolute;
+    z-index: 2;
+    top: 20px;
+    left: 50%;
+    transform: translateX( -50%);
+    background: rgba(0,72,140,.6);
+}
+.caption h1 {
+	color: white;
+	font-size: 30px;
+	text-align: left;
+	font-weight: 100;
+}
+.caption h2 {
+	color: white;
+	font-size: 16px;
+	text-align: left;
+	font-weight: 100;
+}
+.caption .btn-leer-mas {
+	background: #ffc600;
+	padding: 10px 20px;
+	text-align: center;
+	color: white;
+	text-decoration: none;
+	border-radius: 0;
+	display: block;
+	margin: 40px auto 20px;
+	width: 120px;
+	float:left;
+}
+.caption .btn-leer-mas:hover {
+	color: #0066cc;
+	
+	background: white;
+
+}
+.nav-novedades-fixed {
+	position: absolute;
+	top: 20px;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 2;
+}
+.bg-servicios {
+	background: url(../img/bg-home.jpg) center;
+	background-size: cover;
+}
+
+#servicios h1.title {
+	font-size: 35px;
+	text-align: center;
+	color: #101d61;
+	margin: 45px auto;
+	font-weight: normal;
+}
+.servicio {
+	min-height: 210px;
+	padding: 0;
+	cursor:pointer;
+}
+.servicio:hover > .label{
+	background: rgba(255,255,255,.95);
+	}
+.servicio.gray:first-child {
+	border-right: solid 2px white;
+}
+.servicio .label {
+	min-height: 210px;
+	padding: 0;
+	background: rgba(255,255,255,.60);
+}
+.servicio .icon {
+	min-height: 210px;
+	padding: 0;
+	background: white;
+}
+.servicio.gray .label {
+	background: #ebe9ea;
+}
+.servicio.gray .icon {
+	background: #ebe9ea;
+}
+.servicio .label-icon {
+	position: absolute;
+	width: 100%;
+	top: 50%;
+	-moz-transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+.servicio .label-icon p,.servicio .label-icon .fa{opacity:0; font-size: 14px;height: 0;margin-bottom: 0;    color: #101d61;
+    text-align: center;}
+.servicio .label-icon .fa{font-size:20px;    color: #101d61;
+    margin: auto;
+    display: block;text-align: center;}
+.servicio:hover  .label-icon{-moz-transform: translateY(-55%);
+	-webkit-transform: translateY(-55%);
+	-o-transform: translateY(-55%);
+	-ms-transform: translateY(-55%);
+	transform: translateY(-55%);}
+.servicio:hover .label-icon p,.servicio:hover .label-icon .fa{ opacity:1;height: 20px;}
+.servicio .label-icon img {
+	margin: auto;
+	display: block;
+	padding: 15px;
+}
+.servicio .label-icon h1 {
+	width: 80%;
+	text-align: center;
+	font-size: 25px;
+	margin: 0 auto;
+	white-space: pre-line;
+	color: #101d61;
+	padding: 0;
+}
+.servicio-proteccion-al-inversor.servicio .label-icon h1 ,.servicio-proteccion-al-inversor.servicio .label-icon p,.servicio-proteccion-al-inversor.servicio .label-icon .fa{color:white;}
+.servicio-para-profesionales.servicio .label-icon h1 ,.servicio-para-profesionales.servicio .label-icon p,.servicio-para-profesionales.servicio .label-icon .fa{color:white;}
+.servicio-registros-publicos.servicio .label-icon h1 ,.servicio-registros-publicos.servicio .label-icon p,.servicio-registros-publicos.servicio .label-icon .fa{color:white;}
+.servicio.gray .label-icon h1 {
+	width: 90%;
+	text-align: center;
+	font-size: 21px;
+	margin: auto;
+	white-space: pre-line;
+	color: #808184;
+	font-weight: normal;
+}
+.servicio.gray .label-icon .fa {
+	font-size: 25px;
+	padding: 5px;
+	color: #808184;
+}
+.filter-home {
+    position: absolute;
+    z-index: 2;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    /* width: 100%; */
+    text-align: center;
+    display: table;
+}
+.filter-home .btn-blue{cursor:pointer;  background: #fff;
+    text-align: center;
+    color: #001e62;
+    text-decoration: none;
+    border-radius: 0;
+    display: inline-block;
+    margin: 10px;
+    width: 290px;
+    line-height: 60px;
+    font-size: 16px;
+    position: relative;
+    padding: 0;}
+.filter-home .btn-blue.active{background:#00a9e0;color:#fff;}
+#carousel-novedades{display:none;background: url(../img/bg-novedades.jpg); background-size:cover;}
+#carousel-hechos-relevantes {
+	display: none;
+	background: url(../img/bg-slider-hechos-relevantes.jpg);
+    height: 558px;
+    background-size: cover!important;
+    background-position: center!important;
+    background-repeat: no-repeat!important;
+	    position: relative;
+    float: left;
+    padding: 15px;
+	    width: 100%;
+}
+.visible{display:block!important;}
+
+#slider-novedades .content{    width: 100%;
+    max-width: 900px;
+    position: absolute;
+    left: 50%;
+    top: 120px;
+    transform: translateX(-50%);}
+#slider-novedades th{background:#0066cc;}
+#slider-novedades td{    padding: 0 15px;color: #0066cc; border-bottom: solid 2px #0066cc;}
+#carousel-hechos-relevantes .btn-leer-mas {
+    background: #0066cc;
+    padding: 10px 20px;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    border-radius: 0;
+    display: block;
+    margin: 40px auto 20px;
+    width: 120px;
+}
+
+@media (max-width: 991px) {
+	#carousel-hechos-relevantes {
+    display: none;
+    background: url(../img/bg-slider-hechos-relevantes.jpg);
+    height: 538px;
+    background-size: cover!important;
+    background-position: center!important;
+    background-repeat: no-repeat!important;
+    position: relative;
+    float: left;
+    padding: 15px;
+    width: 100%;
+}
+	#carousel-novedades {
+    display: none;
+    height: 360px;
+    position: relative;
+    float: left;
+    width: 100%;
+}
+	.filter-home .btn-blue {
+		position:absolute;
+       margin: 5px;
+    width: 150px;
+    line-height: 40px;
+    font-size: 12px;
+    position: relative;
+    float: none;
+}
+	.filter-home {
+    position: absolute;
+    z-index: 2;
+      top: 20px; 
+    left: initial;
+    transform:initial;
+    /* width: 100%; */
+    text-align: center;
+    display: table;
+		width:100%;
+}
+#slider-novedades .content{width:100%; max-width: 900px;
+position:relative;left:initial; top:initial; transform: initial;padding-top: 100px;}
+	#slider-novedades .table-responsive{width:100%; max-width: 900px;
+position:relative; }
+.servicio.gray:first-child {
+	border-right: none;
+	border-bottom:solid 1px white;
+	    margin-bottom: 2px;
+		
+}
+	
+.nav-intro {
+	padding: 20px 0;
+	position: relative;
+	float: none;
+	display: table;
+	margin: auto;
+}
+#intro .container {
+    padding: 40px 0 10px;
+}
+.nav-intro li a {
+    height: 25px;
+    border-radius: 45px;
+    background: #0266cc;
+    color: white;
+    position: relative;
+    display: block;
+    min-width: 25px;
+    line-height: 25px;
+    text-align: center;
+    font-size: 15px;
+}
+.nav-intro li img {
+    width: 100px;
+}
+.caption h1 {
+    color: white;
+    font-size: 24px;
+    text-align: center;
+    font-weight: 100;
+}
+#slider-novedades {
+        min-height: 360px;
+	    height: auto;
+}
+#slider-novedades .item {
+    height: 360px;
+}
+.servicio .label-icon h1 {
+    width: 80%;
+    text-align: center;
+    font-size: 16px;
+    margin: 0 auto;
+    white-space: pre-line;
+    color: white;
+    padding: 0;
+}
+#servicios h1.title {
+    font-size: 24px;
+    text-align: center;
+    color: #0066cc;
+    margin: 45px auto;
+    font-weight: normal;
+}
+}

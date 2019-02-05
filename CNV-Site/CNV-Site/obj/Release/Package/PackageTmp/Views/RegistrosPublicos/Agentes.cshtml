@@ -1,0 +1,138 @@
+﻿
+@{
+    ViewBag.Title = "Busqueda";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link type="text/css" href="~/Content/assets/css/registros-publicos.css" rel="stylesheet">
+
+<section id="title-int" class="registros-publicos">
+    <div class="container-fluid no-padding">
+        <h1>Registros Públicos</h1>
+        <p>
+            Encontrá aquí información pública sobre agentes intermediarios  e
+            infraestructura del mercado de capitales, autorizados y registrados en CNV.
+        </p>
+    </div>
+</section>
+<section id="content">
+
+    <div class="container">
+
+        <div class="panel-group wrap accordion" id="accordionb" role="tablist" aria-multiselectable="true">
+            <div class="panel">
+                <div class="panel-heading" role="tab" id="headingb1">
+                    <h4 class="panel-title center-title"> <a href="@Url.Action("Index", "RegistrosPublicos")" class="btn-blue back"><i class="fa fa-caret-left"></i> VOLVER</a><a role="button" data-toggle="collapse" data-parent="#accordionb" href="#collapseb1" aria-expanded="true" aria-controls="collapseb1" class=""> <strong>AGENTES</strong></a> </h4>
+                </div>
+                <div id="collapseb1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading1" aria-expanded="true" style="">
+                    <div class="panel-body  bg-gray">
+                        <h2>¿Qué es un Agente?</h2>
+                        <p>
+                            Personas físicas y/o jurídicas autorizadas por la CNV e inscritas dentro de sus registros, para abarcar las actividades de negociación, colocación, distribución y corretaje de valores negociables.
+                        </p>
+                        <div id="buscador-sumarios" class="col-md-10 col-md-offset-1 col-sm-12 col-sm-offset-0">
+
+                            <form class="form-horizontal">
+                                <div class="form-group">
+
+                                    <div class="col-md-8 col-md-offset-4 col-sm-12">
+                                        <h2>Buscador de Agentes</h2>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="anio" class="col-md-4 control-label">APELLIDO O RAZÓN SOCIAL:</label>
+                                    <div class="col-md-8 col-sm-12">
+                                        <input type="text" class="form-control" id="nombre">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="select1" class="col-md-4 control-label">TIPO DE AGENTE:</label>
+                                    <div class="col-md-8 col-sm-12">
+                                        <select class="form-control" id="select1">
+                                            <option>Seleccione un tipo de agente</option>
+                                            <option>AGENTES ASESORES DE MERCADOS CAPITALES</option>
+                                            <option>AGENTES DE CORRETAJE DE VALORES NEGOCIABLES</option>
+                                            <option>AGENTES PRODUCTORES</option>
+                                            <option>AGENTES DE NEGOCIACIÓN</option>
+                                            <option>AGENTE ASESOR GLOBAL DE INVERSIÓN</option>
+                                            <option>AGENTES DE LIQUIDACIÓN Y COMPENSACIÓN - INTEGRAL</option>
+                                            <option>AGENTES DE LIQUIDACIÓN Y COMPENSACIÓN - PROPIO</option>
+                                        </select>
+                                        <div class="select_arrow"> </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="matricula" class="col-md-4 control-label">N° DE MATRÍCULA:</label>
+                                    <div class="col-md-8 col-sm-12">
+                                        <input type="text" class="form-control" id="matricula">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="cuit" class="col-md-4 control-label">N° DE CUIT:</label>
+                                    <div class="col-md-8 col-sm-12">
+                                        <input type="text" class="form-control" id="cuit">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="col-md-8 col-md-offset-4">
+                                        <input type="submit" class="btn btn-blue" value="BUSCAR">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                        @if (ViewData["Results"] == "true")
+                        {
+                        <h2>RESULTADOS DE BÚSQUEDA</h2>
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>TIPO DE PERSONA</th>
+                                        <th>APELLIDO - RAZÓN SOCIAL</th>
+                                        <th>NOMBRE</th>
+                                        <th>TIPO DE AGENTE</th>
+                                        <th>CUIT</th>
+                                        <th>MATRÍCULA</th>
+
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>26.831</td>
+                                        <td>18898</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+
+                                        <td><a href="registros-publicos-a-ver-mas.html" class="btn-celeste">VER MÁS</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>26.831</td>
+                                        <td>18898</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+
+                                        <td><a href="registros-publicos-a-ver-mas.html" class="btn-celeste">VER MÁS</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        }
+
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</section>
+@Html.Partial("_Nav_int_Institucional")

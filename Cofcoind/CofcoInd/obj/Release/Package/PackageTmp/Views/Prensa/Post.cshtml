@@ -1,0 +1,38 @@
+﻿@model CNV_Site.Areas.BackOffice.Models.Note
+@{
+    ViewBag.Title = "Post";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link type="text/css" href="~/Content/assets/css/prensa.css" rel="stylesheet">
+<meta name="keywords" content="@Model.tagsNote">
+ 
+<section id="title-int" class="prensa">
+    <div class="container-fluid no-padding">
+        <h1>Prensa</h1>
+        <p>Bienvenidos a la sección de Prensa de la CNV</p>
+    </div>
+</section>
+<section id="content">
+    <div class="container-fluid bg-prensa">
+        <div class="container post">
+
+            <div class="col-sm-6">
+                <div class="fecha">@Model.create_datetime.ToShortDateString()</div>
+                <h1>
+                   @Model.titleNote
+                </h1>
+                <p>@Html.Raw(Model.bodyNote)</p>
+                <a href="@Url.Action("Index", "Prensa")" class="btn-volver"><i class="fa fa-caret-left" aria-hidden="true"></i> VOLVER</a>
+            </div>
+            <div class="col-sm-6">
+                <img src="~/Content/Upload/@Model.imgNote" class="img-responsive">
+            </div>
+        </div>
+
+    </div>
+</section>
+@Html.Partial("_Menu_int_Prensa")
+
+@Html.Partial("_Nav_int_Institucional")
+
+

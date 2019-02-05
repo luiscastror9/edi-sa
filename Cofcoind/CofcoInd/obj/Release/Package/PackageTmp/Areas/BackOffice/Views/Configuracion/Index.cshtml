@@ -1,0 +1,55 @@
+﻿
+@{
+    ViewBag.Title = "Configuracion de integraciones ";
+    Layout = "~/Areas/BackOffice/Views/Shared/_AdminLteLayout.cshtml";
+}
+
+
+ @{
+
+
+
+     ViewBag.Breadcrumb = new Breadcrumb(new Crumb[] {
+        new Crumb("Configuracion", "", "fa-dashboard")
+    });
+}
+
+<div class="row">
+
+    <section class="col-lg-12 ">
+        <div class="box-default ">
+            <div class="box  box-success ">
+                <div class="box-header">
+                    <i class="fa fa-fw fa-bullseye"></i>
+                    <h3 class="box-title">Configuraciones</h3>
+                    <div class="box-tools pull-right" data-toggle="tooltip" title="Configuracion">
+
+                    </div>
+
+                </div>
+
+
+                <div class="box-body" id="maestro-box">
+
+
+                    <div class="form-group">
+                        @*<input id="btnNewConfiguracion" type="button" value="Nuevo" class="btn btn-info btn-infolink" style="color:white" />*@
+                        <table id="ConfiguracionData" class="table table-bordered table-striped" style="color:#999"></table>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+    </section>
+
+</div>
+
+
+
+@section scripts {
+    @*NOTE: These should NOT be used in a production situation
+        They do contains useful snippets on how to setup charts*@
+    <script src="~/Areas/BackOffice/Scripts/Configuracion.js"></script>
+}

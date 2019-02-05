@@ -1,0 +1,64 @@
+﻿@{string controller = ViewContext.RouteData.Values["controller"].ToString();
+    string Cereales = "";
+    string Aceites = "";
+    string Agroquimicos = "";
+    string Harinas = "";
+    string Financiamiento = "";
+    string Fertilizantes = "";
+
+    switch (controller)
+    {
+        case "Cereales":
+            Cereales = "active";
+            break;
+        case "Aceites":
+            Aceites = "active";
+            break;
+
+        case "Agroquimicos":
+            Agroquimicos = "active";
+            break;
+
+        case "Harinas":
+            Harinas = "active";
+            break;
+
+        case "Fertilizantes":
+            Fertilizantes = "active";
+            break;
+        case "Financiamiento":
+            Financiamiento = "active";
+            break;
+
+    }
+}
+
+<div class="col-submenu wow fadeInRight" data-wow-delay="1.5s" data-wow-duration=".5s">
+    <h3>Negocios</h3>
+    <ul class="submenu">
+        <li class="@Cereales">
+            <a href="@Url.Action("Index", "Cereales")">Cereales y Oleaginosas</a>
+        </li>
+        <li class="@Aceites">
+            <a href="@Url.Action("Index", "Aceites")">Aceites refinados</a>
+        </li>
+        <li class="@Harinas">
+            <a href="@Url.Action("Index", "Harinas")">Harinas y Biodiesel</a>
+        </li>
+        <li class="@Agroquimicos">
+            <a href="@Url.Action("Index", "Agroquimicos")">Agroquímicos</a>
+        </li>
+        <li class="@Fertilizantes">
+            <a href="@Url.Action("Index", "Fertilizantes")">Fertilizantes</a>
+        </li>
+        <li class="@Financiamiento">
+            <a href="@Url.Action("Index", "Financiamiento")">
+                Financiamiento
+            </a>
+        </li>
+
+    </ul>
+
+
+
+</div>

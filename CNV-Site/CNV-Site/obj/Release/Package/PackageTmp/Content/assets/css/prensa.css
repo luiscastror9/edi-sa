@@ -1,0 +1,280 @@
+@charset "UTF-8";
+/* CSS Document */
+
+#title-int.prensa {
+	 background: url(../img/shadow-top.png), url(../img/shadow-bottom.png), url(../img/bg-header-marco-regulatorio.jpg);
+    background-repeat: repeat-x,repeat-x,no-repeat;
+    background-position: top center,bottom center,center right;
+    background-size: 100%,100%,cover;
+}
+#title-int.prensa h1 {
+    color: #001e62;
+    text-align: center;
+    font-size: 45px;
+    font-weight: bold;
+	margin-bottom: 0
+}
+#title-int.prensa p{margin-bottom:1em;}
+.bg-prensa{
+	padding-top:100px;
+	padding-bottom: 100px;
+		 background: url(../img/shadow-blue.png), url(../img/bg-prensa.jpg);
+    background-repeat: repeat-x,no-repeat;
+    background-position: top center,center center;
+    background-size: 100%,cover;
+}
+.bg-prensa-2{
+	padding-top:50px;
+	padding-bottom: 50px;
+		 background: url(../img/shadow-top.png), url(../img/bg-prensa-2.jpg);
+    background-repeat: repeat-x,no-repeat;
+    background-position: top center,center center;
+    background-size: 100%,cover;
+}
+.bg-prensa h1{color:white;font-weight: bold}
+.bg-prensa h1 small{color:white;margin-left: 20px}
+.noticia{padding-left:5px; padding-right:5px;margin-bottom: 10px;position: relative;
+    float: left;}
+.noticia .inner{position:relative;float:left;background:white; padding:5px}
+.fecha-noticia{background:#001e62; color:white;padding:2px 5px; position: relative;float: left;font-weight: bold; font-size:11px;}
+#content .noticia img {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    position: relative;
+    float: left;
+	width: 100%;
+}
+.noticia .text-noticia{position:relative; float:left;font-size: 13px; font-weight: bold; line-height: 18px;margin-bottom:0!important}
+.months{list-style: none; margin:0; padding:0;}
+.months a{color:white;font-size:24px;    font-weight: 100;}
+.sidebar{padding-left:80px;}
+.sidebar h1{margin-top:0;}
+.sidebar a:hover{text-decoration:underline;}
+.gallery-block{padding:20px 50px; background:white;}
+.gallery-block .pic{padding-left:5px; padding-right:5px;margin-bottom:10px;}
+.gallery-block .pic img{width:100%;}
+.gallery-block h1{margin-top:0;margin-bottom: 10px;color:#001e62; font-weight: bold;}
+.gallery-block h2{margin-top:0;margin-bottom: 10px;color:#001e62; font-weight: bold;font-size:18px;}
+.btn-blue {
+    background: #0066cc;
+    text-align: center;
+    color: white;
+	width:initial;
+    text-decoration: none;
+    border-radius: 0;
+    display: block;
+    margin: 33px 0 0;
+    line-height: 40px;
+    font-size: 20px;
+    position: relative;
+    float: right;
+    padding: 0 20px;
+}
+.twitter-block{padding:20px; background:#34a5d4;}
+.twitter-block h1{margin-top:0;margin-bottom: 20px;color:white; font-weight: bold;}
+.btn-ver-twitter {
+    font-size: 22px;
+    color: white;
+	font-weight: 100;
+    text-align: right;
+    float: right;
+    line-height: 40px;
+}
+.btn-ver-twitter .fa{margin-left:10px}
+.bg-contacto-periodistas{padding-top:100px; padding-bottom:50px; }
+.contacto-periodistas{background:url(../img/bg-contacto-periodistas.jpg) center no-repeat;background-size:cover;padding-left:50px;padding-bottom:20px}
+.contacto-periodistas h1 {
+    background: url(../img/icon-mic.png)center left no-repeat;
+    font-size: 30px;
+    color: white;
+    line-height: 60px;
+    padding-left: 70px;
+	    margin-bottom: 30px;
+}
+.contacto-periodistas h2 {
+   margin-top:0;
+    font-size: 22px;
+    color: white;
+    
+}
+.contacto-periodistas p{font-size:22px; color:white; font-weight: 100;}
+.contacto-periodistas ul{position:relative; float:left; clear:both;list-style: none; padding:0;}
+.contacto-periodistas li{position:relative; float:left;margin:10px;color:white; font-size: 15px;text-align: center;}
+.contacto-periodistas li a{color:white; text-align: center;font-weight: 100;}
+
+.contacto-periodistas li a:hover{opacity:.5}
+.contacto-periodistas li img{margin-bottom:5px;}
+.contacto-periodistas .mail{position:relative; float:left; color:white;text-decoration: underline;font-size:20px;font-weight: 100;}
+.border-right{min-height: 100px; border-right: solid 3px white}
+.post .fecha{color:white;}
+.post h1{    font-weight: 300;
+    font-size: 26px;
+    margin-bottom: 30px;}
+.post p{text-align:justify;color:white!important;    font-weight: 100;
+    font-size: 17px;
+    line-height: 25px;}
+.post .btn-volver {
+    background: transparent;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    border-radius: 0;
+    display: block;
+    margin: 20px 0;
+    width: auto;
+    line-height: 40px;
+    font-size: 16px;
+    position: relative;
+    float: left;
+    padding: 0 20px;
+    clear: both;
+}
+.post .btn-volver:hover {
+    background: white;
+    text-align: center;
+    color: #0066cc;
+    text-decoration: none;
+    border-radius: 0;
+    display: block;
+    
+    width: auto;
+    line-height: 40px;
+    font-size: 16px;
+    position: relative;
+    float: left;
+    padding: 0 20px;
+    clear: both;
+}
+
+@media (max-width: 991px) {
+	.sidebar h1 {
+    margin-top: 0;
+    font-size: 20px;
+    margin-bottom: 0;
+}
+	.noticia{padding-left:15px; padding-right:15px;margin-bottom: 10px;position: relative;
+    float: left;}
+	.contacto-periodistas {
+    background: url(../img/bg-contacto-periodistas.jpg) center no-repeat;
+    background-size: cover;
+    padding-left: 15px;
+    padding-bottom: 20px;
+		text-align: center;
+}
+	.contacto-periodistas h1 {
+    background: url(../img/icon-mic.png)center left no-repeat;
+    font-size: 30px;
+    color: white;
+    line-height: 30px;
+    padding-left: 70px;
+    margin-bottom: 30px;
+		text-align: left;
+}
+	.bg-contacto-periodistas {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+	.contacto-periodistas .mail {
+    position: relative;
+    float: left;
+    color: white;
+    text-decoration: underline;
+    font-size: 20px;
+    font-weight: 100;
+    text-align: center;
+    width: 100%;
+}
+	.gallery-block {
+    padding: 20px 20px;
+    background: white;
+}
+	.twitter-block h1 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+}
+	.gallery-block h1 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #001e62;
+    font-weight: bold;
+    font-size: 25px;
+}
+	.contacto-periodistas ul {
+    position: relative;
+    float: left;
+    clear: both;
+    list-style: none;
+    padding: 0;
+    width: 100%;
+}
+	.contacto-periodistas li {
+    position: relative;
+    float: left;
+    margin: 0;
+    color: white;
+    font-size: 15px;
+    text-align: center;
+    width: 33.3%;
+    margin-top: 25px;
+}
+	.border-right {
+    min-height: 100px;
+    border-right: 0;
+}
+	.btn-blue {
+    background: #0066cc;
+    text-align: center;
+    color: white;
+    width: initial;
+    text-decoration: none;
+    border-radius: 0;
+    display: block;
+    margin: 33px 0 0;
+    line-height: 40px;
+    font-size: 12px;
+    position: relative;
+    float: right;
+    padding: 0 20px;
+}
+	.bg-prensa{
+	padding-top:50px;
+	padding-bottom: 20px;
+		
+}
+.sidebar{padding-left:15px;}
+	.months li {
+    position: relative;
+		display: table-cell;
+}
+	.months li a{font-size: 12px;    margin: 3px;}
+	.months {
+    padding: 10px 0;
+    border-bottom: solid 1px white;
+    position: relative;
+    float: left;
+    width: 100%;
+    margin-bottom: 25px;
+		display:table;
+}
+	#title-int.prensa h1 {
+    color: #001e62;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+	.btn-ver-twitter {
+    font-size: 22px;
+    color: white;
+    font-weight: 100;
+    text-align: right;
+    float: left;
+    line-height: 40px;
+}
+	.bg-prensa h1 small:before{
+		content: '\A';
+		white-space: pre-wrap;
+	}
+}

@@ -1,0 +1,42 @@
+﻿    @model CofcoInd.Models.ViewModelHome
+    @{
+        ViewBag.Title = "Cofco Ind";
+    }
+    @{
+        Layout = "~/Views/Shared/_LayoutHome.cshtml";
+    }
+<div class="container-fluid">
+    <div class="home-negocios">
+        <ul class="menu-negocios">
+            <li class="one"><a href="#" class="negocio1"><div class="over"></div></a></li>
+            <li class="two"><a href="#" class="negocio2"><div class="over"></div></a></li>
+            <li class="two"><a href="#" class="negocio3"><div class="over"></div></a></li>
+            <li class="one"><a href="#" class="negocio4"><div class="over"></div></a></li>
+            <li class="two"><a href="#" class="negocio5"><div class="over"></div></a></li>
+            <li class="two"><a href="#" class="negocio6"><div class="over"></div></a></li>
+        </ul>
+    </div>
+    <div class="row display-flex">
+        <div class="col-sm-3 col-md-2 sidebar wow slideInLeft">
+            <a href="@Url.Action("Index", "Home")"><img src="~/Content/assets/img/logo.png" class="img-responsive"></a>
+            @Html.Partial("_Menu")
+
+
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main  wow fadeIn" data-wow-delay=".5s">
+
+            <div id="background-carousel">
+
+                <div class="caption-home"><h1>Satisfacer <br>la demanda <br>del mañana </h1><p>haciendo negocios de manera<br> responsable y sustentable.</p></div>
+
+                <div id="slider-home" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="item active" style="background-image:url(Content/assets/img/slider-1.jpg)"></div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+   

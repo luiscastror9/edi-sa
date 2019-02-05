@@ -1,0 +1,128 @@
+C:\Users\fede\Documents\Visual Studio 2015\Projects\CNV\Intranet\bin\ApplicationInsights.config
+C:\Users\fede\Documents\Visual Studio 2015\Projects\CNV\Intranet\bin\roslyn\csc.exe
+C:\Users\fede\Documents\Visual Studio 2015\Projects\CNV\Intranet\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\fede\Documents\Visual Studio 2015\Projects\CNV\Intranet\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\fede\Documents\Visual Studio 2015\Projects\CNV\Intranet\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\fede\Documents\Visual Studio 2015\Projects\CNV\Intranet\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\fede\Documents\Visual Studio 2015\Projects\CNV\Intranet\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\fede\Documents\Visual Studio 2015\Projects\CNV\Intranet\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\fede\Documents\Visual Studio 2015\Projects\CNV\Intranet\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\fede\Documents\Visual Studio 2015\Projects\CNV\Intranet\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\fede\Documents\Visual Studio 2015\Projects\CNV\Intranet\bin\roslyn\vbc.exe
+C:\Users\fede\Documents\Visual Studio 2015\Projects\CNV\Intranet\bin\roslyn\VBCSCompiler.exe
+C:\Users\fede\Documents\Visual Studio 2015\Projects\CNV\Intranet\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\fede\Documents\Visual Studio 2015\Projects\CNV\Intranet\bin\Intranet.dll.config
+C:\Users\fede\Documents\Visual Studio 2015\Projects\CNV\Intranet\bin\Intranet.dll
+C:\Users\fede\Documents\Visual Studio 2015\Projects\CNV\Intranet\bin\Intranet.pdb
+C:\Users\fede\Documents\Visual Studio 2015\Projects\CNV\Intranet\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\fede\Documents\Visual Studio 2015\Projects\CNV\Intranet\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\fede\Documents\Visual Studio 2015\Projects\CNV\Intranet\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\fede\Documents\Visual Studio 2015\Projects\CNV\Intranet\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\fede\Documents\Visual Studio 2015\Projects\CNV\Intranet\bin\Microsoft.AI.Web.dll
+C:\Users\fede\Documents\Visual Studio 2015\Projects\CNV\Intranet\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\fede\Documents\Visual Studio 2015\Projects\CNV\Intranet\bin\Microsoft.ApplicationInsights.dll
+C:\Users\fede\Documents\Visual Studio 2015\Projects\CNV\Intranet\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\fede\Documents\Visual Studio 2015\Projects\CNV\Intranet\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\fede\Documents\Visual Studio 2015\Projects\CNV\Intranet\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\fede\Documents\Visual Studio 2015\Projects\CNV\Intranet\bin\Microsoft.AI.Web.xml
+C:\Users\fede\Documents\Visual Studio 2015\Projects\CNV\Intranet\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\fede\Documents\Visual Studio 2015\Projects\CNV\Intranet\bin\Microsoft.ApplicationInsights.xml
+C:\Users\fede\Documents\Visual Studio 2015\Projects\CNV\Intranet\obj\Debug\Intranet.dll
+C:\Users\fede\Documents\Visual Studio 2015\Projects\CNV\Intranet\obj\Debug\Intranet.pdb
+F:\Gerardo\Escritorio\Intranet_V004\Intranet\bin\ApplicationInsights.config
+F:\Gerardo\Escritorio\Intranet_V004\Intranet\bin\roslyn\csc.exe
+F:\Gerardo\Escritorio\Intranet_V004\Intranet\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+F:\Gerardo\Escritorio\Intranet_V004\Intranet\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+F:\Gerardo\Escritorio\Intranet_V004\Intranet\bin\roslyn\Microsoft.CodeAnalysis.dll
+F:\Gerardo\Escritorio\Intranet_V004\Intranet\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+F:\Gerardo\Escritorio\Intranet_V004\Intranet\bin\roslyn\Microsoft.CSharp.Core.targets
+F:\Gerardo\Escritorio\Intranet_V004\Intranet\bin\roslyn\Microsoft.VisualBasic.Core.targets
+F:\Gerardo\Escritorio\Intranet_V004\Intranet\bin\roslyn\System.Collections.Immutable.dll
+F:\Gerardo\Escritorio\Intranet_V004\Intranet\bin\roslyn\System.Reflection.Metadata.dll
+F:\Gerardo\Escritorio\Intranet_V004\Intranet\bin\roslyn\vbc.exe
+F:\Gerardo\Escritorio\Intranet_V004\Intranet\bin\roslyn\VBCSCompiler.exe
+F:\Gerardo\Escritorio\Intranet_V004\Intranet\bin\roslyn\VBCSCompiler.exe.config
+F:\Gerardo\Escritorio\Intranet_V004\Intranet\bin\Intranet.dll.config
+F:\Gerardo\Escritorio\Intranet_V004\Intranet\bin\Intranet.dll
+F:\Gerardo\Escritorio\Intranet_V004\Intranet\bin\Intranet.pdb
+F:\Gerardo\Escritorio\Intranet_V004\Intranet\bin\Microsoft.AI.Agent.Intercept.dll
+F:\Gerardo\Escritorio\Intranet_V004\Intranet\bin\Microsoft.AI.DependencyCollector.dll
+F:\Gerardo\Escritorio\Intranet_V004\Intranet\bin\Microsoft.AI.PerfCounterCollector.dll
+F:\Gerardo\Escritorio\Intranet_V004\Intranet\bin\Microsoft.AI.ServerTelemetryChannel.dll
+F:\Gerardo\Escritorio\Intranet_V004\Intranet\bin\Microsoft.AI.Web.dll
+F:\Gerardo\Escritorio\Intranet_V004\Intranet\bin\Microsoft.AI.WindowsServer.dll
+F:\Gerardo\Escritorio\Intranet_V004\Intranet\bin\Microsoft.ApplicationInsights.dll
+F:\Gerardo\Escritorio\Intranet_V004\Intranet\bin\Microsoft.Web.Infrastructure.dll
+F:\Gerardo\Escritorio\Intranet_V004\Intranet\bin\Microsoft.AI.DependencyCollector.xml
+F:\Gerardo\Escritorio\Intranet_V004\Intranet\bin\Microsoft.AI.ServerTelemetryChannel.xml
+F:\Gerardo\Escritorio\Intranet_V004\Intranet\bin\Microsoft.AI.Web.xml
+F:\Gerardo\Escritorio\Intranet_V004\Intranet\bin\Microsoft.AI.WindowsServer.xml
+F:\Gerardo\Escritorio\Intranet_V004\Intranet\bin\Microsoft.ApplicationInsights.xml
+F:\Gerardo\Escritorio\Intranet_V004\Intranet\obj\Debug\Intranet.csprojResolveAssemblyReference.cache
+F:\Gerardo\Escritorio\Intranet_V004\Intranet\obj\Debug\Intranet.dll
+F:\Gerardo\Escritorio\Intranet_V004\Intranet\obj\Debug\Intranet.pdb
+D:\Desarrollo\IntranetNew\Deploy\Proyecto\Mas54\Intranet\Intranet\bin\ApplicationInsights.config
+D:\Desarrollo\IntranetNew\Deploy\Proyecto\Mas54\Intranet\Intranet\bin\roslyn\csc.exe
+D:\Desarrollo\IntranetNew\Deploy\Proyecto\Mas54\Intranet\Intranet\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Desarrollo\IntranetNew\Deploy\Proyecto\Mas54\Intranet\Intranet\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Desarrollo\IntranetNew\Deploy\Proyecto\Mas54\Intranet\Intranet\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Desarrollo\IntranetNew\Deploy\Proyecto\Mas54\Intranet\Intranet\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Desarrollo\IntranetNew\Deploy\Proyecto\Mas54\Intranet\Intranet\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Desarrollo\IntranetNew\Deploy\Proyecto\Mas54\Intranet\Intranet\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Desarrollo\IntranetNew\Deploy\Proyecto\Mas54\Intranet\Intranet\bin\roslyn\System.Collections.Immutable.dll
+D:\Desarrollo\IntranetNew\Deploy\Proyecto\Mas54\Intranet\Intranet\bin\roslyn\System.Reflection.Metadata.dll
+D:\Desarrollo\IntranetNew\Deploy\Proyecto\Mas54\Intranet\Intranet\bin\roslyn\vbc.exe
+D:\Desarrollo\IntranetNew\Deploy\Proyecto\Mas54\Intranet\Intranet\bin\roslyn\VBCSCompiler.exe
+D:\Desarrollo\IntranetNew\Deploy\Proyecto\Mas54\Intranet\Intranet\bin\roslyn\VBCSCompiler.exe.config
+D:\Desarrollo\IntranetNew\Deploy\Proyecto\Mas54\Intranet\Intranet\bin\Intranet.dll.config
+D:\Desarrollo\IntranetNew\Deploy\Proyecto\Mas54\Intranet\Intranet\bin\Intranet.dll
+D:\Desarrollo\IntranetNew\Deploy\Proyecto\Mas54\Intranet\Intranet\bin\Intranet.pdb
+D:\Desarrollo\IntranetNew\Deploy\Proyecto\Mas54\Intranet\Intranet\bin\Microsoft.AI.Agent.Intercept.dll
+D:\Desarrollo\IntranetNew\Deploy\Proyecto\Mas54\Intranet\Intranet\bin\Microsoft.AI.DependencyCollector.dll
+D:\Desarrollo\IntranetNew\Deploy\Proyecto\Mas54\Intranet\Intranet\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\Desarrollo\IntranetNew\Deploy\Proyecto\Mas54\Intranet\Intranet\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\Desarrollo\IntranetNew\Deploy\Proyecto\Mas54\Intranet\Intranet\bin\Microsoft.AI.Web.dll
+D:\Desarrollo\IntranetNew\Deploy\Proyecto\Mas54\Intranet\Intranet\bin\Microsoft.AI.WindowsServer.dll
+D:\Desarrollo\IntranetNew\Deploy\Proyecto\Mas54\Intranet\Intranet\bin\Microsoft.ApplicationInsights.dll
+D:\Desarrollo\IntranetNew\Deploy\Proyecto\Mas54\Intranet\Intranet\bin\Microsoft.Web.Infrastructure.dll
+D:\Desarrollo\IntranetNew\Deploy\Proyecto\Mas54\Intranet\Intranet\bin\Microsoft.AI.DependencyCollector.xml
+D:\Desarrollo\IntranetNew\Deploy\Proyecto\Mas54\Intranet\Intranet\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\Desarrollo\IntranetNew\Deploy\Proyecto\Mas54\Intranet\Intranet\bin\Microsoft.AI.Web.xml
+D:\Desarrollo\IntranetNew\Deploy\Proyecto\Mas54\Intranet\Intranet\bin\Microsoft.AI.WindowsServer.xml
+D:\Desarrollo\IntranetNew\Deploy\Proyecto\Mas54\Intranet\Intranet\bin\Microsoft.ApplicationInsights.xml
+D:\Desarrollo\IntranetNew\Deploy\Proyecto\Mas54\Intranet\Intranet\obj\Debug\Intranet.csprojResolveAssemblyReference.cache
+D:\Desarrollo\IntranetNew\Deploy\Proyecto\Mas54\Intranet\Intranet\obj\Debug\Intranet.dll
+D:\Desarrollo\IntranetNew\Deploy\Proyecto\Mas54\Intranet\Intranet\obj\Debug\Intranet.pdb
+D:\CNV\CNV-Intranet\CNV-OLD Intranet\bin\ApplicationInsights.config
+D:\CNV\CNV-Intranet\CNV-OLD Intranet\bin\roslyn\csc.exe
+D:\CNV\CNV-Intranet\CNV-OLD Intranet\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\CNV\CNV-Intranet\CNV-OLD Intranet\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\CNV\CNV-Intranet\CNV-OLD Intranet\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\CNV\CNV-Intranet\CNV-OLD Intranet\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\CNV\CNV-Intranet\CNV-OLD Intranet\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\CNV\CNV-Intranet\CNV-OLD Intranet\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\CNV\CNV-Intranet\CNV-OLD Intranet\bin\roslyn\System.Collections.Immutable.dll
+D:\CNV\CNV-Intranet\CNV-OLD Intranet\bin\roslyn\System.Reflection.Metadata.dll
+D:\CNV\CNV-Intranet\CNV-OLD Intranet\bin\roslyn\vbc.exe
+D:\CNV\CNV-Intranet\CNV-OLD Intranet\bin\roslyn\VBCSCompiler.exe
+D:\CNV\CNV-Intranet\CNV-OLD Intranet\bin\roslyn\VBCSCompiler.exe.config
+D:\CNV\CNV-Intranet\CNV-OLD Intranet\bin\Intranet.dll.config
+D:\CNV\CNV-Intranet\CNV-OLD Intranet\bin\Intranet.dll
+D:\CNV\CNV-Intranet\CNV-OLD Intranet\bin\Intranet.pdb
+D:\CNV\CNV-Intranet\CNV-OLD Intranet\bin\Microsoft.AI.Agent.Intercept.dll
+D:\CNV\CNV-Intranet\CNV-OLD Intranet\bin\Microsoft.AI.DependencyCollector.dll
+D:\CNV\CNV-Intranet\CNV-OLD Intranet\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\CNV\CNV-Intranet\CNV-OLD Intranet\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\CNV\CNV-Intranet\CNV-OLD Intranet\bin\Microsoft.AI.Web.dll
+D:\CNV\CNV-Intranet\CNV-OLD Intranet\bin\Microsoft.AI.WindowsServer.dll
+D:\CNV\CNV-Intranet\CNV-OLD Intranet\bin\Microsoft.ApplicationInsights.dll
+D:\CNV\CNV-Intranet\CNV-OLD Intranet\bin\Microsoft.Web.Infrastructure.dll
+D:\CNV\CNV-Intranet\CNV-OLD Intranet\bin\Microsoft.AI.DependencyCollector.xml
+D:\CNV\CNV-Intranet\CNV-OLD Intranet\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\CNV\CNV-Intranet\CNV-OLD Intranet\bin\Microsoft.AI.Web.xml
+D:\CNV\CNV-Intranet\CNV-OLD Intranet\bin\Microsoft.AI.WindowsServer.xml
+D:\CNV\CNV-Intranet\CNV-OLD Intranet\bin\Microsoft.ApplicationInsights.xml
+D:\CNV\CNV-Intranet\CNV-OLD Intranet\obj\Debug\Intranet.csprojResolveAssemblyReference.cache
+D:\CNV\CNV-Intranet\CNV-OLD Intranet\obj\Debug\Intranet.csproj.CoreCompileInputs.cache
+D:\CNV\CNV-Intranet\CNV-OLD Intranet\obj\Debug\Intranet.dll
+D:\CNV\CNV-Intranet\CNV-OLD Intranet\obj\Debug\Intranet.pdb

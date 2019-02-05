@@ -1,0 +1,57 @@
+﻿
+@{
+    ViewBag.Title = "Mercados";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link type="text/css" href="~/Content/assets/css/registros-publicos.css" rel="stylesheet">
+
+
+<section id="title-int" class="registros-publicos">
+    <div class="container-fluid no-padding">
+        <h1>Registros Públicos</h1>
+        <p>
+            Encontrá aquí información pública sobre agentes intermediarios  e
+            infraestructura del mercado de capitales, autorizados y registrados en CNV.
+        </p>
+    </div>
+</section>
+
+<section id="content">
+
+    <div class="container">
+
+        <div class="panel-group wrap accordion" id="accordionb" role="tablist" aria-multiselectable="true">
+            <div class="panel">
+                <div class="panel-heading" role="tab" id="headingb1">
+                    <h4 class="panel-title center-title"><a href="@Url.Action("Index", "RegistrosPublicos")" class="btn-blue back"><i class="fa fa-caret-left"></i> VOLVER</a> <a role="button" data-toggle="collapse" data-parent="#accordionb" href="#collapseb1" aria-expanded="true" aria-controls="collapseb1" class=""> <strong>MERCADOS Y CÁMARAS COMPENSADORAS (CCP)</strong></a> </h4>
+                </div>
+                <div id="collapseb1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading1" aria-expanded="true" style="">
+                    <div class="panel-body  bg-gray">
+                        <h2>Mercado</h2>
+                        <p>
+                            Ámbito donde se negocian los títulos y otros activos financieros entre las empresas emisoras y los Inversores, a través de los Agentes.
+                        </p>
+                        <h2>
+                            Cámara Compensadora
+                        </h2>
+                        <p>
+                            Organismo que se encarga de compensar los cheques, talones y otros medios de pago que un banco tiene contra otros como resultado de operaciones que en él realizan sus clientes. En la cámara de compensación cada banco salda con los otros los títulos u operaciones a su favor y en su contra.
+                        </p>
+
+                        <h2>MERCADOS</h2>
+                        <div class="box-mercado"><div class="pic-mercado"><img src="~/Content/assets/img/pic-mercado.jpg"></div><h2>BYMA (Bolsas y Mercados Argentinos S. A.)</h2><a href="registros-publicos-a-ver-mas.html" class="btn-blue">VER MÁS</a></div>
+                        <div class="box-mercado"><div class="pic-mercado"><img src="~/Content/assets/img/pic-mercado.jpg"></div><h2>BYMA (Bolsas y Mercados Argentinos S. A.)</h2><a href="registros-publicos-a-ver-mas.html" class="btn-blue">VER MÁS</a></div>
+                        <div class="box-mercado"><div class="pic-mercado"><img src="~/Content/assets/img/pic-mercado.jpg"></div><h2>BYMA (Bolsas y Mercados Argentinos S. A.)</h2><a href="registros-publicos-a-ver-mas.html" class="btn-blue">VER MÁS</a></div>
+                        <div class="sep"></div>
+                        <h2>CAMARAS COMPENSADORAS</h2>
+                        <div class="box-mercado"><div class="pic-mercado"><img src="~/Content/assets/img/pic-mercado.jpg"></div><h2>BYMA (Bolsas y Mercados Argentinos S. A.)</h2><a href="registros-publicos-a-ver-mas.html" class="btn-blue">VER MÁS</a></div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</section>
+
+@Html.Partial("_Nav_int_Institucional")

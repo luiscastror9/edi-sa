@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewBag.Title = "Registros Publicos";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link type="text/css" href="~/Content/assets/css/registros-publicos.css" rel="stylesheet">
+
+<section id="title-int" class="registros-publicos">
+    <div class="container-fluid no-padding">
+        <h1>Registros Públicos</h1>
+        <p>
+            Encontrá aquí información pública sobre agentes intermediarios  e
+            infraestructura del mercado de capitales, autorizados y registrados en CNV.
+        </p>
+    </div>
+</section>
+<section id="content">
+
+    <div class="container">
+        <a href="@Url.Action("Agentes", "RegistrosPublicos")" class="btn-registros">AGENTES <i class="fa fa-caret-right"></i></a>
+        <a href="@Url.Action("Agentes", "RegistrosPublicos")" class="btn-registros">AGENTES DE PRODUCTOS DE INVERSIÓN COLECTIVA <i class="fa fa-caret-right"></i></a>
+        <a href="@Url.Action("Mercados", "RegistrosPublicos")" class="btn-registros">MERCADOS Y CÁMARAS COMPENSADORAS (CCP) <i class="fa fa-caret-right"></i></a>
+        <a href="@Url.Action("Agentes", "RegistrosPublicos")" class="btn-registros">AGENTES DE DEPÓSITO COLECTIVO <i class="fa fa-caret-right"></i></a>
+        <a href="@Url.Action("Custodia", "RegistrosPublicos")" class="btn-registros">AGENTES DE CUSTODIA, REGISTRO Y PAGO <i class="fa fa-caret-right"></i></a>
+        <a href="@Url.Action("Calificacion", "RegistrosPublicos")" class="btn-registros">CALIFICADORAS DE RIESGO <i class="fa fa-caret-right"></i></a>
+        <a href="@Url.Action("Auditores", "RegistrosPublicos")" class="btn-registros">AUDITORES EXTERNOS <i class="fa fa-caret-right"></i></a>
+        <a href="@Url.Action("Idoneos", "RegistrosPublicos")" class="btn-registros">IDÓNEOS <i class="fa fa-caret-right"></i></a>
+
+
+
+    </div>
+</section>
+@Html.Partial("_Nav_int_Institucional")
+
+
